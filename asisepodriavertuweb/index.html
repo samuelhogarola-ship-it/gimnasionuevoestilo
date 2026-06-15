@@ -51,7 +51,7 @@
       font-size: 16px;
       color: var(--text);
       background-color: #ffffff;
-      background-image: url('../nuevoestilo.hero.png');
+      background-image: url('/nuevoestilo.hero.png');
       background-attachment: fixed;
       background-size: cover;
       background-position: center top;
@@ -730,6 +730,15 @@
     .tarifa-btn-fill:hover { background: var(--gold-lt); }
     @media (max-width: 860px) {
       .tarifas-grid { grid-template-columns: 1fr; max-width: 400px; margin-inline: auto; }
+    }
+
+    /* iOS/móvil: background-attachment:fixed no funciona, usar scroll */
+    @media (max-width: 860px) {
+      body {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center top;
+      }
     }
 
     /* ── CTA ── */
