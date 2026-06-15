@@ -1,0 +1,9 @@
+# Archivos de referencia / trabajo (no van a producción)
+clueso-og.jpg
+hero.jpg
+
+# Claude Code internals
+.claude/
+
+# macOS
+.DS_Store
