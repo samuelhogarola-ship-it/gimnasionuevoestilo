@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Borde redondeado -->
+  <rect x="4" y="4" width="92" height="92" rx="14" ry="14" fill="none" stroke="#000" stroke-width="6"/>
+  <!-- Barra central -->
+  <rect x="12" y="46" width="76" height="8" rx="4" fill="#000"/>
+  <!-- Pesa izquierda -->
+  <rect x="10" y="30" width="10" height="40" rx="3" fill="#000"/>
+  <!-- Pesa derecha -->
+  <rect x="80" y="30" width="10" height="40" rx="3" fill="#000"/>
+  <!-- Figura agarre (simplificada) -->
+  <ellipse cx="50" cy="38" rx="7" ry="8" fill="#000"/>
+  <path d="M38 50 Q50 58 62 50" stroke="#000" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>
