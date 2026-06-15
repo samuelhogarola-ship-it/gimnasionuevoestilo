@@ -18,15 +18,13 @@
       --pink: #E8186A;
     }
 
-    html, body { height: 100%; }
+    html, body { 
+      min-height: 100vh; 
+      background-color: #000; 
+    }
 
     body {
       font-family: 'Inter', sans-serif;
-      background-image: url('nuevoestilo.hero.png');
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center top;
-      background-color: #000;
     }
 
     .overlay {
@@ -36,7 +34,11 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: rgba(0,0,0,0.62);
+      
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('/nuevoestilo.hero.png');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center top;
       padding: 2rem;
     }
 
@@ -60,6 +62,15 @@
       margin-bottom: 3rem;
     }
 
+    .sub-paco {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.8);
+      margin-top: -2.5rem;
+      margin-bottom: 3rem;
+    }
+
     .badge {
       display: inline-block;
       font-size: 0.65rem;
@@ -76,22 +87,46 @@
       font-size: 0.8rem;
       color: rgba(255,255,255,0.5);
       letter-spacing: 0.05em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      align-items: center;
     }
 
     .contact a {
       color: var(--pink);
       text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .contact-divider {
+      display: none;
+    }
+
+    @media (min-width: 480px) {
+      .contact {
+        gap: 0;
+      }
+      .contact-divider {
+        display: inline;
+        margin: 0 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="overlay">
     <div class="sub">Gimnasio · Fuengirola</div>
+    
+    <h1 class="logo">Nuevo <span>Estilo</span></h1>
+    <div class="sub-paco">Paco Mula</div>
+    
     <div class="badge">Web en progreso</div>
     <div class="contact">
-      📞 <a href="tel:+34952470044">952 470 044</a>
-      &nbsp;·&nbsp;
-      📍 Fuengirola, Málaga
+      <span>📞 <a href="tel:+34952470044">952 470 044</a></span>
+      <span class="contact-divider">&nbsp;·&nbsp;</span>
+      <span>📍 Fuengirola, Málaga</span>
     </div>
   </div>
 </body>
