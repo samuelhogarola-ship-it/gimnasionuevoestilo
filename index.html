@@ -18,13 +18,15 @@
       --pink: #E8186A;
     }
 
-    html, body { 
-      min-height: 100vh; 
-      background-color: #000; 
-    }
+    html, body { height: 100%; }
 
     body {
       font-family: 'Inter', sans-serif;
+      background-image: url('nuevoestilo.hero.png');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center top;
+      background-color: #000;
     }
     @media (max-width: 860px) {
       body { background-attachment: scroll; }
@@ -37,12 +39,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      
-      /* Carga de imagen con ruta absoluta de la demo para que funcione inmediatamente */
-      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://gimnasionuevoestilo.com/asisepodriavertuweb/assets/hero-bg.jpg');
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center top;
+      background: rgba(0,0,0,0.62);
       padding: 2rem;
     }
 
@@ -102,10 +99,6 @@
 <body>
   <div class="overlay">
     <div class="sub">Gimnasio · Fuengirola</div>
-    
-    <h1 class="logo">Nuevo <span>Estilo</span></h1>
-    <div class="sub-paco">Paco Mula</div>
-    
     <div class="badge">Web en progreso</div>
     <div class="contact">
       📞 <a href="tel:+34952470044">952 470 044</a>
