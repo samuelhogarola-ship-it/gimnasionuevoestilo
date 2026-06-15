@@ -1,13 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Borde redondeado -->
-  <rect x="4" y="4" width="92" height="92" rx="14" ry="14" fill="none" stroke="#000" stroke-width="6"/>
+  <!-- Marco redondeado -->
+  <rect x="3" y="3" width="94" height="94" rx="12" ry="12" fill="none" stroke="#000" stroke-width="7"/>
+
+  <!-- Disco izquierdo exterior -->
+  <rect x="6" y="32" width="8" height="36" rx="2" fill="#000"/>
+  <!-- Disco izquierdo interior -->
+  <rect x="16" y="36" width="6" height="28" rx="2" fill="#000"/>
+
   <!-- Barra central -->
-  <rect x="12" y="46" width="76" height="8" rx="4" fill="#000"/>
-  <!-- Pesa izquierda -->
-  <rect x="10" y="30" width="10" height="40" rx="3" fill="#000"/>
-  <!-- Pesa derecha -->
-  <rect x="80" y="30" width="10" height="40" rx="3" fill="#000"/>
-  <!-- Figura agarre (simplificada) -->
-  <ellipse cx="50" cy="38" rx="7" ry="8" fill="#000"/>
-  <path d="M38 50 Q50 58 62 50" stroke="#000" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <rect x="22" y="45" width="56" height="10" rx="3" fill="#000"/>
+
+  <!-- Disco derecho interior -->
+  <rect x="78" y="36" width="6" height="28" rx="2" fill="#000"/>
+  <!-- Disco derecho exterior -->
+  <rect x="86" y="32" width="8" height="36" rx="2" fill="#000"/>
+
+  <!-- Cabeza figura -->
+  <circle cx="50" cy="24" r="7" fill="#000"/>
+  <!-- Torso / brazos bajando a la barra -->
+  <path d="M43 31 L36 45 L64 45 L57 31 Z" fill="#000"/>
 </svg>
