@@ -107,6 +107,15 @@
     nav.scrolled .nav-links a { color: rgba(0,0,0,0.55); }
     .nav-links a:hover { color: var(--white); }
     nav.scrolled .nav-links a:hover { color: var(--dark); }
+    .lang-btn {
+      background: none; border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.7); font-size: 0.65rem; font-weight: 600;
+      letter-spacing: 0.12em; padding: 0.3rem 0.6rem; cursor: pointer;
+      font-family: 'Inter', sans-serif; transition: all 0.2s;
+      display: flex; align-items: center; gap: 0.35rem;
+    }
+    nav.scrolled .lang-btn { border-color: rgba(0,0,0,0.18); color: var(--dim); }
+    .lang-btn:hover { border-color: var(--gold); color: var(--gold); }
     .nav-cta {
       color: var(--dark) !important;
       background: var(--gold);
@@ -902,14 +911,15 @@
 <nav id="nav">
   <a class="nav-logo" href="#hero">NUEVO<em>·</em>ESTILO</a>
   <ul class="nav-links">
-    <li><a href="#sobre">El gimnasio</a></li>
-    <li><a href="#galeria">Galería</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#horarios">Horarios</a></li>
-    <li><a href="#equipo">Equipo</a></li>
-    <li><a href="#tarifas">Tarifas</a></li>
-    <li><a href="#contacto" class="nav-cta">Únete</a></li>
+    <li><a href="#sobre" data-i18n="nav_about">El gimnasio</a></li>
+    <li><a href="#galeria" data-i18n="nav_gallery">Galería</a></li>
+    <li><a href="#servicios" data-i18n="nav_services">Servicios</a></li>
+    <li><a href="#horarios" data-i18n="nav_schedule">Horarios</a></li>
+    <li><a href="#equipo" data-i18n="nav_team">Equipo</a></li>
+    <li><a href="#tarifas" data-i18n="nav_pricing">Tarifas</a></li>
+    <li><a href="#contacto" class="nav-cta" data-i18n="nav_join">Únete</a></li>
   </ul>
+  <button class="lang-btn" id="langBtn" onclick="toggleLang()">🇬🇧 EN</button>
 </nav>
 
 <!-- ══ HERO ══ -->
@@ -919,10 +929,10 @@
     NUEVO<br>
     <span class="stroke">ESTILO</span>
   </h1>
-  <p class="hero-sub">El gimnasio donde el esfuerzo se convierte en <em style="font-family:'Playfair Display',serif;font-style:italic;color:var(--white)">identidad.</em> Más de 25 años transformando cuerpos y vidas en el corazón de Fuengirola.</p>
+  <p class="hero-sub" data-i18n="hero_sub">El gimnasio donde el esfuerzo se convierte en <em style="font-family:'Playfair Display',serif;font-style:italic;color:var(--white)">identidad.</em> Más de 25 años transformando cuerpos y vidas en el corazón de Fuengirola.</p>
   <div class="hero-actions">
-    <a href="#sobre" class="btn-fill">Descubrir →</a>
-    <a href="#contacto" class="btn-line">Primer día gratis</a>
+    <a href="#sobre" class="btn-fill" data-i18n="hero_cta1">Descubrir →</a>
+    <a href="#contacto" class="btn-line" data-i18n="hero_cta2">Primer día gratis</a>
   </div>
   <div class="hero-scroll">scroll</div>
 </section>
@@ -1208,6 +1218,44 @@
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   document.querySelectorAll('.r').forEach(el => observer.observe(el));
+</script>
+
+<script>
+const translations = {
+  nav_about:    { es: 'El gimnasio', en: 'The gym' },
+  nav_gallery:  { es: 'Galería',     en: 'Gallery' },
+  nav_services: { es: 'Servicios',   en: 'Services' },
+  nav_schedule: { es: 'Horarios',    en: 'Schedule' },
+  nav_team:     { es: 'Equipo',      en: 'Team' },
+  nav_pricing:  { es: 'Tarifas',     en: 'Pricing' },
+  nav_join:     { es: 'Únete',       en: 'Join' },
+  hero_sub:     {
+    es: 'El gimnasio donde el esfuerzo se convierte en <em style="font-family:\'Playfair Display\',serif;font-style:italic;color:var(--white)">identidad.</em> Más de 25 años transformando cuerpos y vidas en el corazón de Fuengirola.',
+    en: 'The gym where effort becomes <em style="font-family:\'Playfair Display\',serif;font-style:italic;color:var(--white)">identity.</em> Over 25 years transforming bodies and lives in the heart of Fuengirola.'
+  },
+  hero_cta1:    { es: 'Descubrir →', en: 'Discover →' },
+  hero_cta2:    { es: 'Primer día gratis', en: 'First day free' },
+};
+
+let lang = localStorage.getItem('lang') || 'es';
+
+function toggleLang() {
+  lang = lang === 'es' ? 'en' : 'es';
+  localStorage.setItem('lang', lang);
+  applyLang();
+}
+
+function applyLang() {
+  const btn = document.getElementById('langBtn');
+  btn.innerHTML = lang === 'es' ? '🇬🇧 EN' : '🇪🇸 ES';
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (translations[key]) el.innerHTML = translations[key][lang];
+  });
+  document.documentElement.lang = lang;
+}
+
+applyLang();
 </script>
 </body>
 </html>
