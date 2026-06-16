@@ -4,3 +4,6 @@ Options -Indexes
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^(www\.)?nuevoestilofuengirola\.com$ [NC]
 RewriteRule ^(.*)$ https://gimnasionuevoestilo.com/$1 [R=301,L]
+
+# Demo desactivada: bloquear acceso a /asisepodriavertuweb/
+RewriteRule ^asisepodriavertuweb/?.*$ - [R=404,L]
