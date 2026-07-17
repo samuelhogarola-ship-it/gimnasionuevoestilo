@@ -1,90 +1,338 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gimnasio Nuevo Estilo Fuengirola — Paco Mula</title>
-  <meta name="description" content="Gimnasio Nuevo Estilo en Fuengirola, dirigido por Paco Mula. Más de 25 años de historia. Nueva web próximamente." />
-  <link rel="canonical" href="https://gimnasionuevoestilo.com/" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --pink: #E8186A;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gimnasio Nuevo Estilo en Fuengirola | Paco Mula</title>
+  <meta name="description" content="Gimnasio Nuevo Estilo en Fuengirola: sala de musculación, actividades dirigidas y atención cercana bajo la dirección de Paco Mula. Ven a conocernos.">
+  <meta name="theme-color" content="#080808">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://gimnasionuevoestilo.com/">
+  <link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/">
+  <link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:site_name" content="Gimnasio Nuevo Estilo">
+  <meta property="og:title" content="Gimnasio Nuevo Estilo · Fuengirola">
+  <meta property="og:description" content="Un gimnasio con identidad propia, sala de musculación y actividades dirigidas en el corazón de Fuengirola.">
+  <meta property="og:url" content="https://gimnasionuevoestilo.com/">
+  <meta property="og:image" content="https://gimnasionuevoestilo.com/assets/img/nuevo-estilo-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Fachada del Gimnasio Nuevo Estilo en Fuengirola">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gimnasio Nuevo Estilo · Fuengirola">
+  <meta name="twitter:description" content="Sala de musculación, actividades dirigidas y atención cercana en Fuengirola.">
+  <meta name="twitter:image" content="https://gimnasionuevoestilo.com/assets/img/nuevo-estilo-og.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/img/hero-768.avif" as="image" type="image/avif" media="(max-width: 800px)">
+  <link rel="preload" href="/assets/img/hero-1122.avif" as="image" type="image/avif" media="(min-width: 801px)">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "@id": "https://gimnasionuevoestilo.com/#gym",
+    "name": "Gimnasio Nuevo Estilo",
+    "url": "https://gimnasionuevoestilo.com/",
+    "image": "https://gimnasionuevoestilo.com/assets/img/nuevo-estilo-og.jpg",
+    "description": "Gimnasio en Fuengirola con sala de musculación y actividades dirigidas, bajo la dirección de Paco Mula.",
+    "telephone": "+34952470044",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenida Jesús Santos Rein, 11",
+      "postalCode": "29640",
+      "addressLocality": "Fuengirola",
+      "addressRegion": "Málaga",
+      "addressCountry": "ES"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Fuengirola"
+    },
+    "sameAs": [
+      "https://www.instagram.com/gimnasionuevoestilo/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios del gimnasio",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sala de musculación"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Actividades dirigidas"}}
+      ]
     }
-
-    html, body { height: 100%; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-image: url('nuevoestilo.hero.png');
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center top;
-      background-color: #000;
-    }
-    @media (max-width: 860px) {
-      body { background-attachment: scroll; }
-    }
-
-    .overlay {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      text-align: center;
-      background: rgba(0,0,0,0.62);
-      padding: 2rem 2rem 8vh;
-    }
-
-    .sub {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
-      margin-bottom: 3rem;
-    }
-
-    .badge {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      border: 1px solid rgba(255,255,255,0.3);
-      color: rgba(255,255,255,0.7);
-      padding: 0.6rem 1.4rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .contact {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.05em;
-    }
-
-    .contact a {
-      color: var(--pink);
-      text-decoration: none;
-    }
-  </style>
+  }
+  </script>
+  <script src="/assets/js/site.js" defer></script>
 </head>
 <body>
-  <div class="overlay">
-    <div class="sub">Gimnasio · Fuengirola</div>
-    <div class="badge">Web en progreso</div>
-    <div class="contact">
-      📞 <a href="tel:+34952470044">952 470 044</a>
-      &nbsp;·&nbsp;
-      📍 Fuengirola, Málaga
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <div class="header-inner">
+      <a class="brand" href="#inicio">NUEVO<span class="brand-mark">·</span>ESTILO</a>
+      <div class="nav-shell" id="menu-principal" data-nav data-open="false">
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="#gimnasio">El gimnasio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#horarios">Horarios</a>
+          <a href="#tarifas">Tarifas</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="nav-utility">
+          <a class="language-link" href="/en/" lang="en" hreflang="en" aria-label="Read this page in English">EN</a>
+          <a class="header-call" href="tel:+34952470044" data-contact-primary>
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#phone"></use></svg>
+            Llamar
+          </a>
+        </div>
+      </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú" data-label-open="Abrir menú" data-label-close="Cerrar menú" data-nav-toggle><span></span></button>
     </div>
-  </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <picture class="hero-picture">
+          <source type="image/avif" srcset="/assets/img/hero-480.avif 480w, /assets/img/hero-768.avif 768w, /assets/img/hero-1122.avif 1122w" sizes="100vw">
+          <source type="image/webp" srcset="/assets/img/hero-480.webp 480w, /assets/img/hero-768.webp 768w, /assets/img/hero-1122.webp 1122w" sizes="100vw">
+          <img src="/assets/img/hero-1122.jpg" srcset="/assets/img/hero-480.jpg 480w, /assets/img/hero-768.jpg 768w, /assets/img/hero-1122.jpg 1122w" sizes="100vw" width="1122" height="1402" alt="Fachada del Gimnasio Nuevo Estilo en Fuengirola" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Gimnasio independiente · Fuengirola</p>
+        <h1 id="hero-title">Entrena con <span>propósito.</span></h1>
+        <p class="hero-lead">Sala de musculación, actividades dirigidas y una forma cercana de entender el entrenamiento. Nuevo Estilo es un gimnasio con identidad propia, dirigido por Paco Mula.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="tel:+34952470044" data-contact-primary>
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#phone"></use></svg>
+            Llamar al gimnasio
+          </a>
+          <a class="button button-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Gimnasio+Nuevo+Estilo+Fuengirola" target="_blank" rel="noopener noreferrer">
+            Cómo llegar
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-facts" aria-label="Datos destacados">
+        <div class="hero-fact"><strong>+25</strong><span>Años de historia</span></div>
+        <div class="hero-fact"><strong>29640</strong><span>Fuengirola centro</span></div>
+        <div class="hero-fact"><strong>PM</strong><span>Dirección Paco Mula</span></div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="gimnasio" aria-labelledby="gym-title">
+      <div class="section-inner">
+        <div class="section-heading" data-reveal>
+          <span class="section-index">01 · El gimnasio</span>
+          <h2 id="gym-title">Un sitio para entrenar. <em>De verdad.</em></h2>
+        </div>
+        <div class="intro-grid">
+          <div class="intro-copy" data-reveal>
+            <p>Nuevo Estilo lleva más de 25 años formando parte de Fuengirola con una idea sencilla: ofrecer un espacio donde la constancia, el trato personal y el entrenamiento serio vayan juntos.</p>
+            <p>Aquí no encontrarás promesas rápidas ni cifras infladas. Encontrarás un gimnasio para trabajar, aprender y avanzar a tu ritmo, con un equipo al que puedes preguntar.</p>
+            <div class="principles" aria-label="Nuestra forma de trabajar">
+              <div class="principle"><strong>Trabajo</strong><span>Un espacio pensado para venir a entrenar.</span></div>
+              <div class="principle"><strong>Cercanía</strong><span>Atención directa, sin procesos impersonales.</span></div>
+              <div class="principle"><strong>Constancia</strong><span>Progreso construido sesión a sesión.</span></div>
+            </div>
+          </div>
+          <article class="founder-card" data-reveal>
+            <p class="founder-kicker">Al frente de Nuevo Estilo</p>
+            <h3>Paco Mula</h3>
+            <p class="founder-role">Dirección del gimnasio</p>
+            <p>Una forma de entender el entrenamiento basada en experiencia, disciplina y contacto directo con las personas que entrenan aquí.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="servicios" aria-labelledby="services-title">
+      <div class="section-inner">
+        <div class="section-heading" data-reveal>
+          <span class="section-index">02 · Servicios</span>
+          <h2 id="services-title">Lo esencial para <em>entrenar bien.</em></h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card" data-reveal>
+            <span class="service-number">01</span>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#barbell"></use></svg>
+            <h3>Sala de musculación</h3>
+            <p>Un espacio dedicado al trabajo de fuerza y acondicionamiento. Ven a conocer el equipamiento disponible y encuentra la forma de entrenar que mejor encaja contigo.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-number">02</span>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#group"></use></svg>
+            <h3>Actividades dirigidas</h3>
+            <p>La programación puede cambiar durante el año. Consulta en recepción las actividades disponibles, sus horarios y las condiciones de acceso.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-number">03</span>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#pin"></use></svg>
+            <h3>Primera visita</h3>
+            <p>Acércate al gimnasio, conoce las instalaciones y habla con el equipo antes de decidir. Te explicaremos las opciones actuales sin compromiso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="horarios" aria-labelledby="schedule-title">
+      <div class="section-inner info-layout">
+        <div class="info-intro" data-reveal>
+          <span class="section-index">03 · Horarios</span>
+          <h2 id="schedule-title">Organiza tu <em>visita.</em></h2>
+          <p>Los horarios y las actividades pueden variar. Para evitar información desactualizada, confirma con recepción antes de desplazarte.</p>
+          <div class="button-row">
+            <a class="button button-dark" href="tel:+34952470044" data-contact-primary>Confirmar por teléfono</a>
+          </div>
+        </div>
+        <table class="schedule-table" data-reveal>
+          <thead>
+            <tr><th>Consulta</th><th>Información</th><th>Acción</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Consulta">Apertura general</td>
+              <td data-label="Información">Confirma el horario del día</td>
+              <td data-label="Acción"><a class="table-action" href="tel:+34952470044">Llamar <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a></td>
+            </tr>
+            <tr>
+              <td data-label="Consulta">Actividades dirigidas</td>
+              <td data-label="Información">Pregunta por la programación actual</td>
+              <td data-label="Acción"><a class="table-action" href="https://www.instagram.com/gimnasionuevoestilo/" target="_blank" rel="noopener noreferrer">Instagram <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#external"></use></svg></a></td>
+            </tr>
+            <tr>
+              <td data-label="Consulta">Festivos y cambios</td>
+              <td data-label="Información">Consulta aperturas especiales</td>
+              <td data-label="Acción"><a class="table-action" href="tel:+34952470044">Confirmar <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="pricing-panel" id="tarifas" aria-labelledby="pricing-title">
+      <div class="pricing-inner">
+        <div class="pricing-copy" data-reveal>
+          <span class="section-index">04 · Tarifas</span>
+          <h2 id="pricing-title">Elige con toda la información.</h2>
+          <p>Las tarifas y promociones pueden cambiar. En recepción te indicarán el precio vigente y qué incluye cada opción antes de que tomes una decisión.</p>
+        </div>
+        <aside class="pricing-card" data-reveal>
+          <strong>Consulta actual</strong>
+          <span>Información directa, sin precios de maqueta.</span>
+          <ul class="check-list">
+            <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Opciones de acceso disponibles</li>
+            <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Condiciones explicadas en recepción</li>
+            <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Programación de actividades actualizada</li>
+          </ul>
+          <a class="button button-dark" href="tel:+34952470044" data-contact-primary>Consultar tarifas</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-soft-dark" aria-labelledby="reviews-title">
+      <div class="section-inner">
+        <div class="review-band" data-reveal>
+          <div>
+            <span class="section-index">Experiencias públicas</span>
+            <h2 id="reviews-title">La comunidad habla por nosotros.</h2>
+            <p>Preferimos que consultes opiniones publicadas por personas reales en una plataforma independiente antes que mostrar testimonios sin verificar.</p>
+          </div>
+          <a class="button button-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Gimnasio+Nuevo+Estilo+Fuengirola" target="_blank" rel="noopener noreferrer">Ver en Google Maps <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#external"></use></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="preguntas" aria-labelledby="faq-title">
+      <div class="section-inner faq-grid">
+        <div class="faq-intro" data-reveal>
+          <span class="section-index">05 · Preguntas</span>
+          <h2 id="faq-title">Antes de venir.</h2>
+          <p>La información operativa cambia. Estas respuestas te indican la forma más segura de confirmar cada detalle.</p>
+        </div>
+        <div class="faq-list" data-reveal>
+          <details>
+            <summary>¿Cómo puedo apuntarme?</summary>
+            <div class="faq-answer">Llama o ven directamente a recepción. Te explicarán las opciones vigentes y qué necesitas para empezar.</div>
+          </details>
+          <details>
+            <summary>¿Hay permanencia?</summary>
+            <div class="faq-answer">Las condiciones dependen de la opción elegida. Confírmalas con recepción antes de formalizar el alta.</div>
+          </details>
+          <details>
+            <summary>¿Puedo conocer el gimnasio antes de apuntarme?</summary>
+            <div class="faq-answer">Sí. Puedes acercarte a conocer las instalaciones y resolver tus dudas. Para asegurar que puedan atenderte, recomendamos llamar antes.</div>
+          </details>
+          <details>
+            <summary>¿Dónde consulto el horario actualizado?</summary>
+            <div class="faq-answer">Puedes confirmarlo llamando al 952 47 00 44 o consultando las novedades publicadas en Instagram.</div>
+          </details>
+          <details>
+            <summary>¿Hay aparcamiento?</summary>
+            <div class="faq-answer">El gimnasio está en una zona céntrica de Fuengirola y no garantiza plazas de aparcamiento. Revisa las opciones cercanas al planificar tu ruta.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="contacto" aria-labelledby="contact-title">
+      <div class="section-inner contact-grid">
+        <div class="contact-copy" data-reveal>
+          <span class="section-index">06 · Contacto</span>
+          <h2 id="contact-title">Ven a conocer <em>Nuevo Estilo.</em></h2>
+          <p>Estamos en Fuengirola. Llámanos para confirmar horarios, actividades y tarifas, o acércate a conocer el gimnasio.</p>
+          <div class="contact-actions button-row">
+            <a class="button button-primary" href="tel:+34952470044" data-contact-primary><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#phone"></use></svg>Llamar ahora</a>
+            <a class="button button-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Gimnasio+Nuevo+Estilo+Fuengirola" target="_blank" rel="noopener noreferrer">Abrir ruta <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
+          </div>
+        </div>
+        <address class="contact-card" data-reveal>
+          <div class="contact-item">
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#pin"></use></svg>
+            <div><span class="contact-label">Dirección</span><span class="contact-value">Av. Jesús Santos Rein, 11<br>29640 Fuengirola, Málaga</span></div>
+          </div>
+          <div class="contact-item">
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#phone"></use></svg>
+            <div><span class="contact-label">Teléfono</span><span class="contact-value"><a href="tel:+34952470044">952 47 00 44</a></span></div>
+          </div>
+          <div class="contact-item">
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#instagram"></use></svg>
+            <div><span class="contact-label">Instagram</span><span class="contact-value"><a href="https://www.instagram.com/gimnasionuevoestilo/" target="_blank" rel="noopener noreferrer">@gimnasionuevoestilo</a></span></div>
+          </div>
+          <div class="contact-item">
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#calendar"></use></svg>
+            <div><span class="contact-label">Horario</span><span class="contact-value">Confírmalo antes de tu visita</span></div>
+          </div>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="brand" href="#inicio">NUEVO<span class="brand-mark">·</span>ESTILO</a>
+      <nav class="footer-links" aria-label="Enlaces legales">
+        <a href="/legal/#aviso-legal">Aviso legal</a>
+        <a href="/legal/#privacidad">Privacidad</a>
+        <a href="/legal/#cookies">Cookies</a>
+        <a href="/en/" lang="en" hreflang="en">English</a>
+      </nav>
+      <span class="footer-copy">© <span data-year>2026</span> Gimnasio Nuevo Estilo · Fuengirola</span>
+    </div>
+  </footer>
+
+  <a class="mobile-action" href="tel:+34952470044" data-contact-primary aria-label="Llamar al Gimnasio Nuevo Estilo">
+    <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#phone"></use></svg>
+    Llamar
+  </a>
 </body>
 </html>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /asisepodriavertuweb/
+
+Sitemap: https://gimnasionuevoestilo.com/sitemap.xml
