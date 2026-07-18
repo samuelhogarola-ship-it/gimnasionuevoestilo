@@ -180,19 +180,35 @@ h3 {
   position: relative;
   z-index: 2;
   display: inline-flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
   color: var(--white);
-  font-family: var(--display);
-  font-size: 1.55rem;
-  letter-spacing: 0.055em;
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.brand-mark {
-  color: var(--pink);
-  margin: 0 0.08em;
+.brand-main {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.68rem;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  line-height: 0.92;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 8px 18px rgba(0, 0, 0, 0.42);
+}
+
+.brand-sub {
+  padding-left: 0.14em;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--body);
+  font-size: 0.43rem;
+  font-weight: 700;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
 }
 
 .nav-shell {
@@ -311,7 +327,7 @@ h3 {
 
 .hero-picture img {
   object-fit: cover;
-  object-position: center 24%;
+  object-position: center 12%;
   animation: hero-scale 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
@@ -339,7 +355,8 @@ h3 {
   z-index: 1;
   width: var(--wrap);
   margin: 0 auto;
-  padding: 130px 0 74px;
+  padding: 130px 0 48px;
+  transform: translateY(38px);
 }
 
 .eyebrow {
@@ -1167,7 +1184,7 @@ h3 {
 }
 
 @keyframes hero-scale {
-  from { transform: scale(1.035); opacity: 0.75; }
+  from { transform: scale(1.0138); opacity: 0.75; }
   to { transform: scale(1); opacity: 1; }
 }
 
@@ -1279,11 +1296,12 @@ h3 {
   }
 
   .hero-picture img {
-    object-position: center 18%;
+    object-position: center 10%;
   }
 
   .hero-content {
-    padding-bottom: 54px;
+    padding-bottom: 40px;
+    transform: translateY(22px);
   }
 
   .hero h1 {
@@ -1361,8 +1379,13 @@ h3 {
     --wrap: calc(100% - 32px);
   }
 
-  .brand {
-    font-size: 1.35rem;
+  .brand-main {
+    font-size: 1.4rem;
+  }
+
+  .brand-sub {
+    font-size: 0.4rem;
+    letter-spacing: 0.28em;
   }
 
   .hero {
