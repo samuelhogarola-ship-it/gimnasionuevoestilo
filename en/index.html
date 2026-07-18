@@ -40,13 +40,44 @@
     "@type": "HealthClub",
     "@id": "https://gimnasionuevoestilo.com/#gym",
     "name": "Nuevo Estilo Gym",
+    "legalName": "Gimnasio Nuevo Estilo, S.C.",
     "url": "https://gimnasionuevoestilo.com/en/",
     "image": "https://gimnasionuevoestilo.com/assets/img/nuevo-estilo-og.jpg",
     "description": "Gym in Fuengirola offering strength training and instructor-led activities under the direction of Paco Mula.",
     "telephone": "+34952470044",
+    "taxID": "J29227907",
+    "openingHours": [
+      "Mo-Fr 07:30-23:00",
+      "Sa-Su 08:30-14:00",
+      "PH 08:30-14:00"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "07:30",
+        "closes": "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Saturday",
+          "Sunday",
+          "PublicHolidays"
+        ],
+        "opens": "08:30",
+        "closes": "14:00"
+      }
+    ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Avenida Jesús Santos Rein, 11",
+      "streetAddress": "Avd. Jesus Santos Rein, Edif. Vega, Bajo",
       "postalCode": "29640",
       "addressLocality": "Fuengirola",
       "addressRegion": "Málaga",
@@ -75,16 +106,17 @@
       <div class="nav-shell" id="main-menu" data-nav data-open="false">
         <nav class="site-nav" aria-label="Main navigation">
           <a href="#gym">The gym</a>
+          <a href="/en/classes/">Classes</a>
+          <a href="/en/paco-mula/">Paco Mula team</a>
           <a href="#services">Services</a>
           <a href="#hours">Hours</a>
-          <a href="#membership">Membership</a>
           <a href="#contact">Contact</a>
         </nav>
         <div class="nav-utility">
           <a class="language-link" href="/" lang="es" hreflang="es" aria-label="Leer esta página en español">ES</a>
           <a class="header-call" href="tel:+34952470044" data-contact-primary>
             <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#phone"></use></svg>
-            Call us
+            952 47 00 44
           </a>
         </div>
       </div>
@@ -118,7 +150,7 @@
         </div>
       </div>
       <div class="hero-facts" aria-label="Key facts">
-        <div class="hero-fact"><strong>25+</strong><span>Years of history</span></div>
+        <div class="hero-fact"><strong>952</strong><span>Direct contact</span></div>
         <div class="hero-fact"><strong>29640</strong><span>Central Fuengirola</span></div>
         <div class="hero-fact"><strong>PM</strong><span>Led by Paco Mula</span></div>
       </div>
@@ -132,7 +164,7 @@
         </div>
         <div class="intro-grid">
           <div class="intro-copy" data-reveal>
-            <p>Nuevo Estilo has been part of Fuengirola for more than 25 years, with a simple idea: to offer a space where consistency, personal attention and serious training come together.</p>
+            <p>Nuevo Estilo is part of Fuengirola with a simple idea: to offer a space where consistency, personal attention and serious training come together.</p>
             <p>No quick promises or inflated claims. Just a gym where you can work, learn and progress at your own pace, with a team you can talk to.</p>
             <div class="principles" aria-label="How we work">
               <div class="principle"><strong>Work</strong><span>A space designed for focused training.</span></div>
@@ -145,6 +177,27 @@
             <h3>Paco Mula</h3>
             <p class="founder-role">Gym management</p>
             <p>An approach to training grounded in experience, discipline and direct contact with the people who train here.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" aria-labelledby="facilities-title">
+      <div class="section-inner">
+        <div class="section-heading" data-reveal>
+          <span class="section-index">Facilities · Pending</span>
+          <h2 id="facilities-title">See the gym <em>from inside.</em></h2>
+        </div>
+        <div class="placeholder-grid" aria-label="Facility photography awaiting publication">
+          <article class="content-placeholder is-wide" data-reveal>
+            <span class="placeholder-status">Photo pending</span>
+            <h3>Strength room</h3>
+            <p>Add a real horizontal photograph showing the room layout and available equipment.</p>
+          </article>
+          <article class="content-placeholder" data-reveal>
+            <span class="placeholder-status">Photo pending</span>
+            <h3>Training area</h3>
+            <p>Add an authorised image of a second representative area inside the gym.</p>
           </article>
         </div>
       </div>
@@ -184,7 +237,7 @@
         <div class="info-intro" data-reveal>
           <span class="section-index">03 · Hours</span>
           <h2 id="schedule-title">Plan your <em>visit.</em></h2>
-          <p>Opening hours and activities can change. To avoid relying on outdated information, please confirm with reception before travelling.</p>
+          <p>We open Monday to Friday from 7:30 to 23:00. Weekends and public holidays are open from 8:30 to 14:00.</p>
           <div class="button-row">
             <a class="button button-dark" href="tel:+34952470044" data-contact-primary>Confirm by phone</a>
           </div>
@@ -195,19 +248,19 @@
           </thead>
           <tbody>
             <tr>
-              <td data-label="Enquiry">General opening</td>
-              <td data-label="Information">Confirm today's opening hours</td>
+              <td data-label="Enquiry">Monday to Friday</td>
+              <td data-label="Information">7:30-23:00</td>
               <td data-label="Action"><a class="table-action" href="tel:+34952470044">Call <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a></td>
             </tr>
             <tr>
-              <td data-label="Enquiry">Instructor-led activities</td>
-              <td data-label="Information">Ask about the current programme</td>
-              <td data-label="Action"><a class="table-action" href="https://www.instagram.com/gimnasionuevoestilo/" target="_blank" rel="noopener noreferrer">Instagram <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#external"></use></svg></a></td>
+              <td data-label="Enquiry">Weekends and public holidays</td>
+              <td data-label="Information">8:30-14:00</td>
+              <td data-label="Action"><a class="table-action" href="tel:+34952470044">Confirm <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a></td>
             </tr>
             <tr>
-              <td data-label="Enquiry">Holidays and changes</td>
-              <td data-label="Information">Check special opening times</td>
-              <td data-label="Action"><a class="table-action" href="tel:+34952470044">Confirm <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a></td>
+              <td data-label="Enquiry">Instructor-led activities</td>
+              <td data-label="Information"><span class="placeholder-status">Programme pending</span></td>
+              <td data-label="Action"><a class="table-action" href="https://www.instagram.com/gimnasionuevoestilo/" target="_blank" rel="noopener noreferrer">Instagram <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#external"></use></svg></a></td>
             </tr>
           </tbody>
         </table>
@@ -222,8 +275,9 @@
           <p>Prices and promotions may change. Reception will explain the current price and what each option includes before you make a decision.</p>
         </div>
         <aside class="pricing-card" data-reveal>
-          <strong>Current details</strong>
-          <span>Direct information, never placeholder prices.</span>
+          <span class="placeholder-status">Details pending</span>
+          <strong>Membership to publish</strong>
+          <span>Prices, membership types and conditions still need confirmation from the gym.</span>
           <ul class="check-list">
             <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Current access options</li>
             <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Conditions explained at reception</li>
@@ -269,7 +323,7 @@
           </details>
           <details>
             <summary>Where can I check the latest opening hours?</summary>
-            <div class="faq-answer">Call +34 952 47 00 44 or check the latest updates on Instagram.</div>
+            <div class="faq-answer">General opening hours are Monday to Friday from 7:30 to 23:00, and weekends and public holidays from 8:30 to 14:00. For one-off changes, call +34 952 47 00 44.</div>
           </details>
           <details>
             <summary>Is parking available?</summary>
@@ -284,7 +338,7 @@
         <div class="contact-copy" data-reveal>
           <span class="section-index">06 · Contact</span>
           <h2 id="contact-title">Come and meet <em>Nuevo Estilo.</em></h2>
-          <p>We are in Fuengirola. Call us to confirm opening hours, activities and membership options, or come by and see the gym.</p>
+          <p>We are in Fuengirola. We open Monday to Friday from 7:30 to 23:00, and weekends and public holidays from 8:30 to 14:00.</p>
           <div class="contact-actions button-row">
             <a class="button button-primary" href="tel:+34952470044" data-contact-primary><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#phone"></use></svg>Call now</a>
             <a class="button button-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Gimnasio+Nuevo+Estilo+Fuengirola" target="_blank" rel="noopener noreferrer">Open route <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
@@ -293,7 +347,11 @@
         <address class="contact-card" data-reveal>
           <div class="contact-item">
             <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#pin"></use></svg>
-            <div><span class="contact-label">Address</span><span class="contact-value">Av. Jesús Santos Rein, 11<br>29640 Fuengirola, Málaga</span></div>
+            <div><span class="contact-label">Address</span><span class="contact-value">Avd. Jesus Santos Rein<br>Edif. Vega, Bajo<br>29640 Fuengirola, Malaga</span></div>
+          </div>
+          <div class="contact-item">
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>
+            <div><span class="contact-label">Tax details</span><span class="contact-value">Gimnasio Nuevo Estilo, S.C.<br>Tax ID J-29 227 907</span></div>
           </div>
           <div class="contact-item">
             <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#phone"></use></svg>
@@ -305,7 +363,7 @@
           </div>
           <div class="contact-item">
             <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#calendar"></use></svg>
-            <div><span class="contact-label">Opening hours</span><span class="contact-value">Please confirm before visiting</span></div>
+            <div><span class="contact-label">Opening hours</span><span class="contact-value">Mon-Fri 7:30-23:00<br>Weekends and public holidays 8:30-14:00</span></div>
           </div>
         </address>
       </div>
