@@ -229,13 +229,23 @@ h3 {
   font-size: 0.69rem;
   font-weight: 700;
   letter-spacing: 0.14em;
+  line-height: 1.35;
   text-decoration: none;
   text-transform: uppercase;
   transition: color 160ms ease;
+  white-space: nowrap;
 }
 
 .site-nav a {
   position: relative;
+}
+
+.site-nav .nav-break {
+  white-space: normal;
+}
+
+.site-nav .nav-break-start {
+  margin-left: clamp(4px, 1vw, 14px);
 }
 
 .site-nav a:hover,
@@ -273,8 +283,7 @@ h3 {
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--pink);
   color: var(--white);
   font-size: 0.69rem;
   font-weight: 700;
@@ -285,8 +294,7 @@ h3 {
 }
 
 .header-call:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.16);
+  background: var(--pink-deep);
   transform: translateY(-1px);
 }
 
@@ -347,7 +355,7 @@ h3 {
 
 .hero-picture img {
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center top;
   animation: hero-scale 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
@@ -795,6 +803,24 @@ h3 {
   transform: translateY(-4px);
 }
 
+.service-card-light {
+  border-color: rgba(13, 13, 13, 0.14);
+  background: #fffaf5;
+  color: var(--ink);
+}
+
+.service-card-light:hover {
+  background: #ffffff;
+}
+
+.service-card-light p {
+  color: var(--muted-light);
+}
+
+.service-card-light .service-number {
+  color: rgba(13, 13, 13, 0.28);
+}
+
 .service-number {
   margin-bottom: 60px;
   color: rgba(255, 255, 255, 0.28);
@@ -821,6 +847,35 @@ h3 {
   margin-bottom: 0;
   color: var(--muted-dark);
   font-size: 0.9rem;
+}
+
+.service-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.mini-action {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--white);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.mini-action:hover {
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--ink);
 }
 
 .info-layout {
@@ -967,6 +1022,79 @@ h3 {
 .check-list .icon {
   margin-top: 3px;
   color: var(--pink);
+}
+
+.price-catalog {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 10px;
+  background: var(--line-light);
+  border: 1px solid var(--line-light);
+}
+
+.price-card {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(24px, 3vw, 34px);
+  background:
+    linear-gradient(145deg, rgba(8, 8, 8, 0.045), transparent 44%),
+    var(--white);
+  color: var(--ink);
+}
+
+.price-card.is-featured {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.price-card.is-pending {
+  background:
+    repeating-linear-gradient(135deg, rgba(8, 8, 8, 0.035) 0 1px, transparent 1px 12px),
+    #f7f4ef;
+}
+
+.price-kicker {
+  display: block;
+  margin-bottom: 28px;
+  color: var(--muted-light);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.price-card.is-featured .price-kicker {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.price-card h3 {
+  margin-bottom: 12px;
+  font-family: var(--display);
+  font-size: clamp(3.1rem, 5vw, 5.9rem);
+  letter-spacing: 0.01em;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+
+.price-card p {
+  margin-bottom: 28px;
+  color: var(--muted-light);
+  font-size: 0.86rem;
+}
+
+.price-card.is-featured p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.price-card .table-action {
+  margin-top: auto;
+}
+
+.price-card.is-featured .table-action {
+  color: var(--pink-bright);
 }
 
 .review-band {
@@ -1399,6 +1527,10 @@ h3 {
     letter-spacing: 0.02em;
   }
 
+  .site-nav .nav-break-start {
+    margin-left: 0;
+  }
+
   .nav-utility {
     justify-content: flex-start;
   }
@@ -1419,7 +1551,7 @@ h3 {
   }
 
   .hero-picture img {
-    object-position: center 10%;
+    object-position: center top;
   }
 
   .hero-content {
@@ -1446,6 +1578,10 @@ h3 {
 
   .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .price-catalog {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .placeholder-grid { grid-template-columns: 1fr 1fr; }
@@ -1565,6 +1701,14 @@ h3 {
   }
 
   .placeholder-grid { grid-template-columns: 1fr; }
+
+  .price-catalog {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card {
+    min-height: 240px;
+  }
 
   .content-placeholder,
   .content-placeholder.is-wide {
