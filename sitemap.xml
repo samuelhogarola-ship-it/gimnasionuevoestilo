@@ -37,6 +37,78 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/servicios/"/>
   </url>
   <url>
+    <loc>https://gimnasionuevoestilo.com/peso-libre/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/peso-libre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/free-weights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/peso-libre/"/>
+  </url>
+  <url>
+    <loc>https://gimnasionuevoestilo.com/en/free-weights/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/peso-libre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/free-weights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/peso-libre/"/>
+  </url>
+  <url>
+    <loc>https://gimnasionuevoestilo.com/maquinas/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/maquinas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/machines/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/maquinas/"/>
+  </url>
+  <url>
+    <loc>https://gimnasionuevoestilo.com/en/machines/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/maquinas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/machines/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/maquinas/"/>
+  </url>
+  <url>
+    <loc>https://gimnasionuevoestilo.com/equipo-paco-mula/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/equipo-paco-mula/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/paco-mula/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/equipo-paco-mula/"/>
+  </url>
+  <url>
+    <loc>https://gimnasionuevoestilo.com/en/paco-mula/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/equipo-paco-mula/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/paco-mula/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/equipo-paco-mula/"/>
+  </url>
+  <url>
+    <loc>https://gimnasionuevoestilo.com/actividades-dirigidas/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/actividades-dirigidas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/classes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/actividades-dirigidas/"/>
+  </url>
+  <url>
+    <loc>https://gimnasionuevoestilo.com/en/classes/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/actividades-dirigidas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/classes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/actividades-dirigidas/"/>
+  </url>
+  <url>
     <loc>https://gimnasionuevoestilo.com/horarios-contacto/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>

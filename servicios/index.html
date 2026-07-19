@@ -24,6 +24,47 @@
   <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://gimnasionuevoestilo.com/servicios/#webpage",
+        "url": "https://gimnasionuevoestilo.com/servicios/",
+        "name": "Servicios | Gimnasio Nuevo Estilo Fuengirola",
+        "description": "Servicios, sala de musculación y catálogo de precios de Gimnasio Nuevo Estilo en Fuengirola.",
+        "isPartOf": {"@id": "https://gimnasionuevoestilo.com/#website"},
+        "inLanguage": "es"
+      },
+      {
+        "@type": "OfferCatalog",
+        "@id": "https://gimnasionuevoestilo.com/servicios/#tarifas",
+        "name": "Tarifas Gimnasio Nuevo Estilo",
+        "itemListElement": [
+          {"@type": "Offer", "name": "Mensualidad", "price": "40", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"},
+          {"@type": "Offer", "name": "Trimestre", "price": "100", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"}
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://gimnasionuevoestilo.com/servicios/#sala-musculacion",
+        "name": "Zonas de sala de musculación",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Peso libre", "url": "https://gimnasionuevoestilo.com/peso-libre/"},
+          {"@type": "ListItem", "position": 2, "name": "Máquinas", "url": "https://gimnasionuevoestilo.com/maquinas/"}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://gimnasionuevoestilo.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://gimnasionuevoestilo.com/servicios/"}
+        ]
+      }
+    ]
+  }
+  </script>
   <script src="/assets/js/site.js" defer></script>
 </head>
 <body>
@@ -34,10 +75,10 @@
       <div class="nav-shell" id="menu-principal" data-nav data-open="false">
         <nav class="site-nav" aria-label="Navegación principal">
           <a href="/">El gimnasio</a>
-          <a href="/actividades-dirigidas/">Actividades dirigidas</a>
-          <a href="/equipo-paco-mula/">Equipo Paco Mula</a>
           <a href="/servicios/" aria-current="page">Servicios</a>
-          <a href="/horarios-contacto/">Horarios y contacto</a>
+          <a href="/horarios-contacto/">Contacto</a>
+          <a href="/actividades-dirigidas/" class="nav-break nav-break-start">Actividades<br>dirigidas</a>
+          <a href="/equipo-paco-mula/" class="nav-break">Paco Mula<br>Team</a>
         </nav>
         <div class="nav-utility">
           <a class="language-link" href="/en/services/" lang="en" hreflang="en" aria-label="Read this page in English">EN</a>
@@ -53,7 +94,7 @@
       <div class="legal-hero-inner">
         <p class="section-index">Nuevo Estilo · Fuengirola</p>
         <h1 id="services-title">Servicios</h1>
-        <p>Un gimnasio directo: sala de musculación, actividades dirigidas y una primera visita para conocer el espacio antes de decidir.</p>
+        <p>Sala de musculación, peso libre, máquinas, actividades dirigidas y opciones sencillas para empezar a entrenar en Fuengirola.</p>
       </div>
     </section>
 
@@ -69,18 +110,64 @@
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#barbell"></use></svg>
             <h3>Sala de musculación</h3>
             <p>Espacio dedicado al trabajo de fuerza y acondicionamiento, con atención directa para orientarte según tu experiencia y objetivos.</p>
+            <div class="service-actions" aria-label="Secciones de sala de musculación">
+              <a class="mini-action" href="/peso-libre/">Peso libre</a>
+              <a class="mini-action" href="/maquinas/">Máquinas</a>
+            </div>
           </article>
           <article class="service-card" data-reveal>
             <span class="service-number">02</span>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#group"></use></svg>
             <h3>Actividades dirigidas</h3>
-            <p>La programación se confirma en recepción para evitar horarios antiguos. Consulta la página específica antes de venir.</p>
+            <p>Clases para entrenar acompañado, mantener rutina y sumar variedad a la semana.</p>
           </article>
           <article class="service-card" data-reveal>
             <span class="service-number">03</span>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#pin"></use></svg>
             <h3>Primera visita</h3>
-            <p>Ven a conocer el gimnasio, pregunta por tarifas vigentes y decide con información clara, sin precios de maqueta.</p>
+            <p>Acércate, mira la sala y resuelve tus dudas antes de empezar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" aria-labelledby="catalog-title">
+      <div class="section-inner">
+        <div class="section-heading" data-reveal>
+          <span class="section-index">02 · Tarifas</span>
+          <h2 id="catalog-title">Catálogo de <em>precios.</em></h2>
+          <p>Precios claros para empezar. Si necesitas una opción puntual, bono o anual, pregúntanos y te orientamos.</p>
+        </div>
+        <div class="price-catalog" aria-label="Listado de precios del gimnasio">
+          <article class="price-card is-featured" data-reveal>
+            <span class="price-kicker">Mensual</span>
+            <h3>40€</h3>
+            <p>Acceso durante un mes.</p>
+            <a class="table-action" href="tel:+34952470044">Consultar alta <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
+          </article>
+          <article class="price-card" data-reveal>
+            <span class="price-kicker">Trimestre</span>
+            <h3>100€</h3>
+            <p>Acceso durante 3 meses.</p>
+            <a class="table-action" href="tel:+34952470044">Consultar condiciones <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
+          </article>
+          <article class="price-card is-pending" data-reveal>
+            <span class="placeholder-status">Consultar</span>
+            <span class="price-kicker">Anual</span>
+            <h3>1 año</h3>
+            <p>Opción para quienes quieren entrenar todo el año con continuidad.</p>
+          </article>
+          <article class="price-card is-pending" data-reveal>
+            <span class="placeholder-status">Consultar</span>
+            <span class="price-kicker">Entrada puntual</span>
+            <h3>1 día</h3>
+            <p>Entrada puntual para conocer el gimnasio o entrenar un día suelto.</p>
+          </article>
+          <article class="price-card is-pending" data-reveal>
+            <span class="placeholder-status">Consultar</span>
+            <span class="price-kicker">Sesiones</span>
+            <h3>Bono 10</h3>
+            <p>Formato pensado para entrenar por sesiones sin mensualidad completa.</p>
           </article>
         </div>
       </div>
@@ -90,12 +177,12 @@
       <div class="section-inner">
         <div class="review-band" data-reveal>
           <div>
-            <h2>Consulta lo actual.</h2>
-            <p>Para actividades, tarifas y condiciones, el dato bueno es el de recepción. Te atienden en el 952 47 00 44.</p>
+            <h2>Ven a entrenar.</h2>
+            <p>Llama al 952 47 00 44, pásate por el gimnasio o mira Instagram para ver el ambiente de Nuevo Estilo.</p>
           </div>
           <div class="button-row">
             <a class="button button-dark" href="tel:+34952470044">Llamar ahora</a>
-            <a class="button button-outline" href="/actividades-dirigidas/">Ver actividades <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
+            <a class="button button-outline" href="https://www.instagram.com/gimnasionuevoestilo/" target="_blank" rel="noopener noreferrer">Instagram <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#external"></use></svg></a>
           </div>
         </div>
       </div>
@@ -109,6 +196,7 @@
         <a href="/legal/#aviso-legal">Aviso legal</a>
         <a href="/legal/#privacidad">Privacidad</a>
         <a href="/legal/#cookies">Cookies</a>
+        <a href="https://www.instagram.com/gimnasionuevoestilo/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="/en/services/" lang="en" hreflang="en">English</a>
       </nav>
       <a class="studio-credit" href="https://webfuengirola.com/" target="_blank" rel="noopener noreferrer"><span>Web by</span><strong>WF-Studio</strong></a>
