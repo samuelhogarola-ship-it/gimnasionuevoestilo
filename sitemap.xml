@@ -73,6 +73,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/maquinas/"/>
   </url>
   <url>
+    <loc>https://gimnasionuevoestilo.com/cardio/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/cardio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/cardio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/cardio/"/>
+  </url>
+  <url>
+    <loc>https://gimnasionuevoestilo.com/en/cardio/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/cardio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/cardio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/cardio/"/>
+  </url>
+  <url>
     <loc>https://gimnasionuevoestilo.com/equipo-paco-mula/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
