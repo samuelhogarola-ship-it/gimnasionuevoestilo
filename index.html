@@ -94,7 +94,9 @@
       "@type": "OfferCatalog",
       "name": "Servicios del gimnasio",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sala de musculación"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Zona de máquinas"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Zona de peso libre"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Zona de cardio"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Actividades dirigidas"}}
       ]
     }
@@ -192,16 +194,27 @@
           <span class="section-index">Instalaciones</span>
           <h2 id="facilities-title">Conoce el espacio <em>por dentro.</em></h2>
         </div>
-        <div class="placeholder-grid" aria-label="Instalaciones de Gimnasio Nuevo Estilo">
-          <article class="content-placeholder is-wide" data-reveal>
-            <span class="placeholder-status">Muy pronto</span>
-            <h3>Sala de musculación</h3>
-            <p>Pronto mostraremos más detalles de la sala, el equipamiento y las zonas de entrenamiento.</p>
+        <div class="facility-grid" aria-label="Instalaciones de Gimnasio Nuevo Estilo">
+          <article class="facility-card facility-machines" data-reveal>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#barbell"></use></svg>
+            <span class="placeholder-status">Zona 01</span>
+            <h3>Máquinas</h3>
+            <p>Trabajo guiado para fuerza, acondicionamiento y rutinas con control de movimiento.</p>
+            <a class="table-action" href="/maquinas/">Ver zona <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
           </article>
-          <article class="content-placeholder" data-reveal>
-            <span class="placeholder-status">Muy pronto</span>
-            <h3>Zona de entrenamiento</h3>
-            <p>Seguiremos incorporando imágenes reales del gimnasio para que puedas conocer el espacio antes de venir.</p>
+          <article class="facility-card facility-free" data-reveal>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#barbell"></use></svg>
+            <span class="placeholder-status">Zona 02</span>
+            <h3>Peso libre</h3>
+            <p>Barras, mancuernas y bancos para entrenar fuerza de forma directa y progresiva.</p>
+            <a class="table-action" href="/peso-libre/">Ver zona <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
+          </article>
+          <article class="facility-card facility-cardio" data-reveal>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#treadmill"></use></svg>
+            <span class="placeholder-status">Zona 03</span>
+            <h3>Cardio</h3>
+            <p>Espacio para calentar, sumar resistencia y completar sesiones de entrenamiento semanal.</p>
+            <a class="table-action" href="/cardio/">Ver zona <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
           </article>
         </div>
       </div>
@@ -261,7 +274,7 @@
             </tr>
             <tr>
               <td data-label="Consulta">Actividades dirigidas</td>
-              <td data-label="Información"><a class="table-action" href="https://www.instagram.com/gimnasionuevoestilo/" target="_blank" rel="noopener noreferrer">Ver en Instagram <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#external"></use></svg></a></td>
+              <td data-label="Información"><a class="table-action" href="/actividades-dirigidas/">Ver horario <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a></td>
             </tr>
           </tbody>
         </table>

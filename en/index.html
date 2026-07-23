@@ -89,7 +89,9 @@
       "@type": "OfferCatalog",
       "name": "Gym services",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Strength training area"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Machines area"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Free weights area"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cardio area"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Instructor-led activities"}}
       ]
     }
@@ -187,16 +189,27 @@
           <span class="section-index">Facilities</span>
           <h2 id="facilities-title">See the gym <em>from inside.</em></h2>
         </div>
-        <div class="placeholder-grid" aria-label="Nuevo Estilo Gym facilities">
-          <article class="content-placeholder is-wide" data-reveal>
-            <span class="placeholder-status">Coming soon</span>
-            <h3>Strength room</h3>
-            <p>More details of the room, equipment and training areas will be added soon.</p>
+        <div class="facility-grid" aria-label="Nuevo Estilo Gym facilities">
+          <article class="facility-card facility-machines" data-reveal>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#barbell"></use></svg>
+            <span class="placeholder-status">Zone 01</span>
+            <h3>Machines</h3>
+            <p>Guided strength and conditioning work with controlled movement and clear progression.</p>
+            <a class="table-action" href="/en/machines/">View zone <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
           </article>
-          <article class="content-placeholder" data-reveal>
-            <span class="placeholder-status">Coming soon</span>
-            <h3>Training area</h3>
-            <p>We will keep adding real images so you can get a better feel for the space before visiting.</p>
+          <article class="facility-card facility-free" data-reveal>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#barbell"></use></svg>
+            <span class="placeholder-status">Zone 02</span>
+            <h3>Free weights</h3>
+            <p>Bars, dumbbells and benches for direct, progressive strength training.</p>
+            <a class="table-action" href="/en/free-weights/">View zone <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
+          </article>
+          <article class="facility-card facility-cardio" data-reveal>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#treadmill"></use></svg>
+            <span class="placeholder-status">Zone 03</span>
+            <h3>Cardio</h3>
+            <p>A space to warm up, build endurance and complete weekly training sessions.</p>
+            <a class="table-action" href="/en/cardio/">View zone <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
           </article>
         </div>
       </div>
@@ -256,7 +269,7 @@
             </tr>
             <tr>
               <td data-label="Enquiry">Instructor-led activities</td>
-              <td data-label="Information"><a class="table-action" href="https://www.instagram.com/gimnasionuevoestilo/" target="_blank" rel="noopener noreferrer">View on Instagram <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#external"></use></svg></a></td>
+              <td data-label="Information"><a class="table-action" href="/en/classes/">View timetable <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a></td>
             </tr>
           </tbody>
         </table>
