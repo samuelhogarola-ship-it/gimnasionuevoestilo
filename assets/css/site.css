@@ -953,6 +953,18 @@ h3 {
   color: rgba(255, 255, 255, 0.76);
 }
 
+.facility-card .facility-motivation {
+  max-width: 330px;
+  margin: 0 0 14px;
+  color: var(--pink-bright);
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  letter-spacing: 0.03em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 45, 119, 0.22);
+}
+
 .facility-card .table-action {
   margin-top: 22px;
 }
