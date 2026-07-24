@@ -746,6 +746,52 @@ h3 {
   text-transform: uppercase;
 }
 
+.founder-card-photo {
+  min-height: 420px;
+  isolation: isolate;
+}
+
+.founder-card-photo .founder-kicker {
+  max-width: 52%;
+  margin-bottom: 44px;
+}
+
+.founder-photo {
+  position: absolute;
+  inset: 0 0 0 auto;
+  z-index: -1;
+  width: 50%;
+  margin: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.founder-photo::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  background:
+    linear-gradient(90deg, var(--ink) 0%, rgba(8, 8, 8, 0.9) 20%, rgba(8, 8, 8, 0.16) 100%),
+    linear-gradient(0deg, rgba(8, 8, 8, 0.42), rgba(8, 8, 8, 0.12));
+}
+
+.founder-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0.74;
+  filter: saturate(0.72) contrast(1.08);
+}
+
+.founder-card-photo h3,
+.founder-card-photo .founder-role,
+.founder-card-photo p:last-child {
+  max-width: 52%;
+}
+
 .founder-card h3 {
   position: relative;
   margin-bottom: 10px;
@@ -843,7 +889,7 @@ h3 {
 
 .facility-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   margin-top: 42px;
 }
@@ -909,6 +955,43 @@ h3 {
 
 .facility-card .table-action {
   margin-top: 22px;
+}
+
+.facility-photo-card {
+  background: #111;
+}
+
+.facility-photo-card::before {
+  z-index: 1;
+}
+
+.facility-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.7;
+  filter: saturate(0.88) contrast(1.04);
+}
+
+.facility-photo-card::after {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0.1) 0%, rgba(8, 8, 8, 0.96) 82%),
+    radial-gradient(circle at 32% 20%, rgba(197, 27, 76, 0.42), transparent 42%);
+  content: "";
+}
+
+.facility-photo-card > *:not(.facility-photo) {
+  z-index: 2;
+}
+
+.facility-strength .facility-photo {
+  object-position: center top;
 }
 
 .facility-machines {
@@ -1788,6 +1871,10 @@ h3 {
   .contact-grid {
     gap: 54px;
   }
+
+  .facility-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 860px) {
@@ -1887,6 +1974,34 @@ h3 {
   .contact-grid,
   .pricing-inner {
     grid-template-columns: 1fr;
+  }
+
+  .founder-card-photo {
+    min-height: 390px;
+  }
+
+  .founder-card-photo .founder-kicker,
+  .founder-card-photo h3,
+  .founder-card-photo .founder-role,
+  .founder-card-photo p:last-child {
+    max-width: 64%;
+  }
+
+  .founder-photo {
+    top: 28px;
+    bottom: 28px;
+    width: 42%;
+  }
+
+  .founder-photo::before {
+    background:
+      linear-gradient(90deg, var(--ink) 0%, rgba(8, 8, 8, 0.94) 24%, rgba(8, 8, 8, 0.28) 100%),
+      linear-gradient(0deg, rgba(8, 8, 8, 0.58), rgba(8, 8, 8, 0.22));
+  }
+
+  .founder-photo img {
+    object-position: 58% top;
+    opacity: 0.58;
   }
 
   .service-grid {
@@ -2042,6 +2157,22 @@ h3 {
 
   .founder-card {
     padding: 34px 26px;
+  }
+
+  .founder-card-photo {
+    min-height: 360px;
+  }
+
+  .founder-card-photo .founder-kicker,
+  .founder-card-photo h3,
+  .founder-card-photo .founder-role,
+  .founder-card-photo p:last-child {
+    max-width: 64%;
+  }
+
+  .founder-photo {
+    top: 26px;
+    bottom: 26px;
   }
 
   .schedule-table,
