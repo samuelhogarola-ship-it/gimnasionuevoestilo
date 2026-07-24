@@ -1747,6 +1747,23 @@ h3 {
   color: var(--muted-dark);
 }
 
+.legal-hero .motivation-wall {
+  max-width: 760px;
+  margin: clamp(28px, 4vw, 46px) 0 0;
+  color: var(--pink-bright);
+  font-family: var(--display);
+  font-size: clamp(2.8rem, 7vw, 6.4rem);
+  letter-spacing: 0.02em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  text-wrap: balance;
+  text-shadow: 0 0 24px rgba(255, 45, 119, 0.18);
+}
+
+.legal-hero .motivation-wall + .button-row {
+  margin-top: clamp(28px, 4vw, 44px);
+}
+
 .legal-content {
   padding: 90px 0 130px;
   color: var(--ink);
