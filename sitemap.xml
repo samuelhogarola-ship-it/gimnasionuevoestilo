@@ -19,6 +19,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/"/>
   </url>
   <url>
+    <loc>https://gimnasionuevoestilo.com/arroyo/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/arroyo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/arroyo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/arroyo/"/>
+  </url>
+  <url>
+    <loc>https://gimnasionuevoestilo.com/en/arroyo/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/arroyo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/arroyo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/arroyo/"/>
+  </url>
+  <url>
     <loc>https://gimnasionuevoestilo.com/servicios/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
