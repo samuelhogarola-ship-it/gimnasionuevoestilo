@@ -127,6 +127,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/equipo-paco-mula/"/>
   </url>
   <url>
+    <loc>https://gimnasionuevoestilo.com/equipo-paco-mula/atletas/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/equipo-paco-mula/atletas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/paco-mula/athletes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/equipo-paco-mula/atletas/"/>
+  </url>
+  <url>
+    <loc>https://gimnasionuevoestilo.com/en/paco-mula/athletes/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/equipo-paco-mula/atletas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/paco-mula/athletes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/equipo-paco-mula/atletas/"/>
+  </url>
+  <url>
     <loc>https://gimnasionuevoestilo.com/actividades-dirigidas/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
