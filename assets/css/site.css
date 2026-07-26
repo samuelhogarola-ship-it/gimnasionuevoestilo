@@ -224,7 +224,8 @@ h3 {
 }
 
 .site-nav a,
-.language-link {
+.language-link,
+.location-link {
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.69rem;
   font-weight: 700;
@@ -249,7 +250,8 @@ h3 {
 }
 
 .site-nav a:hover,
-.language-link:hover {
+.language-link:hover,
+.location-link:hover {
   color: var(--white);
 }
 
@@ -276,6 +278,18 @@ h3 {
 .language-link {
   padding: 9px 10px;
   border: 1px solid var(--line-dark);
+}
+
+.location-link {
+  padding: 10px 13px;
+  border: 1px solid rgba(223, 76, 103, 0.44);
+  background: rgba(183, 32, 70, 0.12);
+  color: var(--white);
+}
+
+.location-link:hover {
+  border-color: var(--pink-bright);
+  background: rgba(183, 32, 70, 0.2);
 }
 
 .header-call {
@@ -2183,7 +2197,8 @@ h3 {
 
   .site-nav a:hover,
   .site-nav a[aria-current="page"],
-  .language-link:hover {
+  .language-link:hover,
+  .location-link:hover {
     color: var(--white);
   }
 
@@ -2204,9 +2219,14 @@ h3 {
     flex-wrap: wrap;
   }
 
-  .nav-shell .language-link {
+  .nav-shell .language-link,
+  .nav-shell .location-link {
     border-color: rgba(255, 255, 255, 0.25);
     color: var(--white);
+  }
+
+  .nav-shell .location-link {
+    background: rgba(183, 32, 70, 0.18);
   }
 
   .nav-utility .header-call {
