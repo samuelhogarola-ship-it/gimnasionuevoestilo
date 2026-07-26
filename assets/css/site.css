@@ -1658,32 +1658,92 @@ h3 {
   filter: contrast(1.04);
 }
 
+.athlete-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 34px);
+  align-items: start;
+}
+
+.athlete-card {
+  position: relative;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid rgba(8, 8, 8, 0.12);
+  background: #f7f5ef;
+  color: var(--ink);
+}
+
+.athlete-card h3 {
+  margin-bottom: 14px;
+  font-family: var(--display);
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.athlete-card p {
+  color: var(--muted-light);
+}
+
+.athlete-card .table-action {
+  margin-top: auto;
+}
+
+.athlete-card-pending {
+  min-height: 0;
+  grid-column: 1 / -1;
+  background:
+    linear-gradient(135deg, rgba(183, 32, 70, 0.08), transparent 44%),
+    #f7f5ef;
+}
+
+.athlete-card-featured {
+  padding: 0;
+  overflow: hidden;
+}
+
+.athlete-card-featured .service-number,
+.athlete-card-featured h3,
+.athlete-card-featured p,
+.athlete-card-featured .table-action {
+  margin-right: clamp(20px, 3vw, 30px);
+  margin-left: clamp(20px, 3vw, 30px);
+}
+
+.athlete-card-featured .service-number {
+  margin-top: clamp(20px, 3vw, 30px);
+}
+
 .athlete-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin: -10px -10px 24px;
+  gap: 10px;
+  order: -1;
+  margin: 0 0 24px;
+  background: var(--ink);
 }
 
 .athlete-photo {
-  margin: -10px -10px 24px;
+  order: -1;
+  margin: 0 0 24px;
+  background: var(--ink);
 }
 
 .athlete-gallery img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border: 1px solid rgba(8, 8, 8, 0.12);
-  filter: contrast(1.03) saturate(1.02);
+  height: auto;
+  border: 0;
+  filter: contrast(1.04) saturate(1.03);
 }
 
 .athlete-photo img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center top;
-  border: 1px solid rgba(8, 8, 8, 0.12);
-  filter: contrast(1.03) saturate(1.02);
+  height: auto;
+  border: 0;
+  filter: contrast(1.04) saturate(1.03);
 }
 
 .faq-grid {
@@ -2299,6 +2359,18 @@ h3 {
   }
 
   .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .athlete-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .athlete-card-pending {
+    grid-column: auto;
+  }
+
+  .athlete-gallery {
     grid-template-columns: 1fr;
   }
 
