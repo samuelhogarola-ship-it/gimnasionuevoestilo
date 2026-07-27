@@ -4006,15 +4006,6 @@ body.call-sheet-open {
 }
 
 
-@media (min-width: 768px) and (max-width: 1100px) {
-  .mobile-action {
-    left: 50%;
-    right: auto;
-    width: min(280px, calc(100vw - 28px));
-    transform: translateX(-50%);
-  }
-}
-
 @media (max-width: 767px) {
   .mobile-action {
     left: auto;
