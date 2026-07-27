@@ -61,8 +61,8 @@
       const elementBelow = document.elementFromPoint(x, y);
       mobileAction.style.pointerEvents = originalPointerEvents;
 
-      const darkSection = elementBelow?.closest('.section-dark, .site-footer, .legal-hero, .hero, .contact-section');
-      const lightSection = elementBelow?.closest('.section-paper, .section-light, .legal-content');
+      const darkSection = elementBelow?.closest('.section-dark, .review-band-dark, .site-footer, .legal-hero, .hero, .contact-section');
+      const lightSection = elementBelow?.closest('.section-paper, .section-light, .legal-content, .review-band:not(.review-band-dark), .service-card-light, .contact-card');
 
       mobileAction.classList.toggle('is-over-dark', Boolean(darkSection && !lightSection));
     };
