@@ -31,7 +31,7 @@
   <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/img/arroyo-hero.jpg" as="image" type="image/jpeg">
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260726-mobile-inner-hero">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260727-mobile-cta-contrast">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -91,7 +91,7 @@
     }
   }
   </script>
-  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/site.js?v=20260727-mobile-cta-contrast" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -153,7 +153,7 @@
     <section class="section section-paper" id="gimnasio" aria-labelledby="gym-title">
       <div class="section-inner">
         <div class="section-heading" data-reveal>
-          <span class="section-index">01 · El gimnasio</span>
+          <span class="section-index">El gimnasio</span>
           <h2 id="gym-title">Un sitio para entrenar. <em>De verdad.</em></h2>
         </div>
         <div class="intro-grid">
@@ -180,29 +180,56 @@
       <div class="section-inner">
         <div class="section-heading" data-reveal>
           <span class="section-index">Instalaciones</span>
-          <h2 id="facilities-title">Fotos de instalaciones <em>próximamente.</em></h2>
+          <h2 id="facilities-title">Instalaciones para entrenar <em>con continuidad.</em></h2>
         </div>
         <div class="facility-grid" aria-label="Instalaciones de Gimnasio Nuevo Estilo Arroyo de la Miel">
           <article class="facility-card facility-machines" data-reveal>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#barbell"></use></svg>
-            <span class="placeholder-status">Zona 01</span>
             <h3>Máquinas</h3>
-            <p>Próximamente añadiremos fotos reales de esta zona cuando estén listas las instalaciones.</p>
-            <a class="table-action" href="#contacto">Próximamente <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
+            <p>Zona de trabajo guiado para entrenar fuerza, ajustar cargas y mantener una rutina clara.</p>
+            <button class="table-action facility-toggle" type="button" aria-expanded="false" aria-controls="galeria-maquinas" data-gallery-toggle>
+              Ver galería <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg>
+            </button>
+            <div class="facility-gallery" id="galeria-maquinas" hidden>
+              <div class="facility-gallery-grid" aria-label="Galería de máquinas pendiente de fotos">
+                <span class="facility-shot">Foto máquinas 01</span>
+                <span class="facility-shot">Foto máquinas 02</span>
+                <span class="facility-shot">Foto máquinas 03</span>
+              </div>
+              <button class="gallery-close" type="button" data-gallery-close>Plegar galería</button>
+            </div>
           </article>
           <article class="facility-card facility-free" data-reveal>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#barbell"></use></svg>
-            <span class="placeholder-status">Zona 02</span>
             <h3>Peso libre</h3>
-            <p>Próximamente añadiremos fotos reales de peso libre y material de fuerza.</p>
-            <a class="table-action" href="#contacto">Próximamente <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
+            <p>Espacio para barras, mancuernas y ejercicios básicos con margen para progresar a tu nivel.</p>
+            <button class="table-action facility-toggle" type="button" aria-expanded="false" aria-controls="galeria-peso-libre" data-gallery-toggle>
+              Ver galería <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg>
+            </button>
+            <div class="facility-gallery" id="galeria-peso-libre" hidden>
+              <div class="facility-gallery-grid" aria-label="Galería de peso libre pendiente de fotos">
+                <span class="facility-shot">Foto peso libre 01</span>
+                <span class="facility-shot">Foto peso libre 02</span>
+                <span class="facility-shot">Foto peso libre 03</span>
+              </div>
+              <button class="gallery-close" type="button" data-gallery-close>Plegar galería</button>
+            </div>
           </article>
           <article class="facility-card facility-cardio" data-reveal>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#treadmill"></use></svg>
-            <span class="placeholder-status">Zona 03</span>
             <h3>Cardio</h3>
-            <p>Próximamente añadiremos fotos reales del espacio de cardio y distribución final.</p>
-            <a class="table-action" href="#contacto">Próximamente <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
+            <p>Área para calentar, completar el entrenamiento y sumar trabajo aeróbico a la semana.</p>
+            <button class="table-action facility-toggle" type="button" aria-expanded="false" aria-controls="galeria-cardio" data-gallery-toggle>
+              Ver galería <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg>
+            </button>
+            <div class="facility-gallery" id="galeria-cardio" hidden>
+              <div class="facility-gallery-grid" aria-label="Galería de cardio pendiente de fotos">
+                <span class="facility-shot">Foto cardio 01</span>
+                <span class="facility-shot">Foto cardio 02</span>
+                <span class="facility-shot">Foto cardio 03</span>
+              </div>
+              <button class="gallery-close" type="button" data-gallery-close>Plegar galería</button>
+            </div>
           </article>
         </div>
       </div>
@@ -211,7 +238,7 @@
     <section class="section section-dark" id="servicios" aria-labelledby="services-title">
       <div class="section-inner">
         <div class="section-heading" data-reveal>
-          <span class="section-index">02 · Servicios</span>
+          <span class="section-index">Servicios</span>
           <h2 id="services-title">Lo esencial para <em>entrenar bien.</em></h2>
         </div>
         <div class="service-grid">
@@ -240,7 +267,7 @@
     <section class="section section-paper" id="horarios" aria-labelledby="schedule-title">
       <div class="section-inner info-layout">
         <div class="info-intro" data-reveal>
-          <span class="section-index">03 · Horarios</span>
+          <span class="section-index">Horarios</span>
           <h2 id="schedule-title">Organiza tu <em>visita.</em></h2>
           <p>Abrimos de lunes a viernes de 6:30 a 23:00, y sábados y domingos de 9:00 a 14:00.</p>
           <div class="button-row">
@@ -272,7 +299,7 @@
     <section class="pricing-panel" id="tarifas" aria-labelledby="pricing-title">
       <div class="pricing-inner">
         <div class="pricing-copy" data-reveal>
-          <span class="section-index">04 · Tarifas</span>
+          <span class="section-index">Tarifas</span>
           <h2 id="pricing-title">Elige con toda la información.</h2>
           <p>Consulta en recepción las tarifas disponibles para la sede de Arroyo de la Miel. No hay permanencia: pagas según lo que vayas a entrenar. Se aceptan pagos con móvil NFC, tarjetas de crédito y tarjetas de débito.</p>
         </div>
@@ -307,7 +334,7 @@
     <section class="section section-paper" id="preguntas" aria-labelledby="faq-title">
       <div class="section-inner faq-grid">
         <div class="faq-intro" data-reveal>
-          <span class="section-index">05 · Preguntas</span>
+          <span class="section-index">Preguntas</span>
           <h2 id="faq-title">Antes de venir.</h2>
           <p>Respuestas rápidas para venir con las cosas claras.</p>
         </div>
@@ -339,7 +366,7 @@
     <section class="section section-dark" id="contacto" aria-labelledby="contact-title">
       <div class="section-inner contact-grid">
         <div class="contact-copy" data-reveal>
-          <span class="section-index">06 · Contacto</span>
+          <span class="section-index">Contacto</span>
           <h2 id="contact-title">Nuevo Estilo <em>Arroyo.</em></h2>
           <p>Estamos en Conjunto Pueblo Sol, Calle Mercurio, Bloque 6, 29631 Benalmádena, Málaga.</p>
           <div class="contact-actions button-row">

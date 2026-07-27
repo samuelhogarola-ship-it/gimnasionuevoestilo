@@ -1038,6 +1038,73 @@ h3 {
   margin-top: 22px;
 }
 
+.facility-toggle {
+  width: fit-content;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.facility-toggle .icon {
+  transition: transform 180ms ease;
+}
+
+.facility-toggle[aria-expanded="true"] .icon {
+  transform: rotate(90deg);
+}
+
+.facility-gallery {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.facility-gallery[hidden] {
+  display: none;
+}
+
+.facility-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.facility-shot {
+  min-height: 92px;
+  display: grid;
+  place-items: end start;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background:
+    linear-gradient(160deg, rgba(196, 31, 78, 0.18), transparent 52%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0 1px, transparent 1px 12px),
+    rgba(255, 255, 255, 0.045);
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.gallery-close {
+  margin-top: 14px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.72);
+  cursor: pointer;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.gallery-close:hover {
+  color: var(--white);
+}
+
 .facility-photo-card {
   background: #111;
 }
@@ -1128,7 +1195,7 @@ h3 {
   background: #ffffff;
 }
 
-.service-card-light p {
+.service-card.service-card-light p {
   color: var(--muted-light);
 }
 
@@ -1658,32 +1725,91 @@ h3 {
   filter: contrast(1.04);
 }
 
+.athlete-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 34px);
+  align-items: start;
+}
+
+.athlete-card {
+  position: relative;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid rgba(8, 8, 8, 0.12);
+  background: #f7f5ef;
+  color: var(--ink);
+}
+
+.athlete-card h3 {
+  margin-bottom: 14px;
+  font-family: var(--display);
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.athlete-card p {
+  color: var(--muted-light);
+}
+
+.athlete-card .table-action {
+  margin-top: auto;
+}
+
+.athlete-card-pending {
+  min-height: 0;
+  grid-column: 1 / -1;
+  background:
+    linear-gradient(135deg, rgba(183, 32, 70, 0.08), transparent 44%),
+    #f7f5ef;
+}
+
+.athlete-card-featured {
+  padding: 0;
+  overflow: hidden;
+}
+
+.athlete-card-featured h3,
+.athlete-card-featured p,
+.athlete-card-featured .table-action {
+  margin-right: clamp(20px, 3vw, 30px);
+  margin-left: clamp(20px, 3vw, 30px);
+}
+
+.athlete-card-featured h3 {
+  margin-top: clamp(22px, 3vw, 32px);
+}
+
 .athlete-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin: -10px -10px 24px;
+  gap: 10px;
+  order: -1;
+  margin: 0 0 24px;
+  background: var(--ink);
 }
 
 .athlete-photo {
-  margin: -10px -10px 24px;
+  order: -1;
+  margin: 0 0 24px;
+  background: var(--ink);
 }
 
 .athlete-gallery img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border: 1px solid rgba(8, 8, 8, 0.12);
-  filter: contrast(1.03) saturate(1.02);
+  height: auto;
+  border: 0;
+  filter: contrast(1.04) saturate(1.03);
 }
 
 .athlete-photo img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center top;
-  border: 1px solid rgba(8, 8, 8, 0.12);
-  filter: contrast(1.03) saturate(1.02);
+  height: auto;
+  border: 0;
+  filter: contrast(1.04) saturate(1.03);
 }
 
 .faq-grid {
@@ -1909,10 +2035,12 @@ h3 {
 
 .legal-hero h1,
 .error-page h1 {
+  padding-top: 0.08em;
+  margin-top: 8px;
   margin-bottom: 16px;
   font-family: var(--display);
   font-size: clamp(4.8rem, 11vw, 9.5rem);
-  line-height: 0.88;
+  line-height: 0.96;
   text-transform: uppercase;
   text-wrap: balance;
 }
@@ -1921,6 +2049,10 @@ h3 {
   max-width: 650px;
   margin-bottom: 0;
   color: var(--muted-dark);
+}
+
+.legal-hero .button-row {
+  margin-top: 12px;
 }
 
 .hero-with-side-cards {
@@ -2302,11 +2434,27 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .athlete-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .athlete-card-pending {
+    grid-column: auto;
+  }
+
+  .athlete-gallery {
+    grid-template-columns: 1fr;
+  }
+
   .price-catalog {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .facility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .facility-gallery-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2362,6 +2510,13 @@ h3 {
     letter-spacing: 0.09em;
     text-decoration: none;
     text-transform: uppercase;
+    transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+  }
+
+  .mobile-action.is-over-dark {
+    border-color: rgba(196, 31, 78, 0.78);
+    background: var(--pink);
+    color: var(--white);
   }
 
   .site-footer {
@@ -2433,7 +2588,7 @@ h3 {
   .error-page h1 {
     margin-bottom: 18px;
     font-size: clamp(3.7rem, 18vw, 5.25rem);
-    line-height: 0.9;
+    line-height: 1;
     overflow-wrap: normal;
   }
 
