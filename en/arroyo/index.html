@@ -32,7 +32,7 @@
   <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/img/arroyo-hero.jpg" as="image" type="image/jpeg">
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260727-mobile-cta-contrast">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260727-victor-photo">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -86,13 +86,14 @@
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Free weights area"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cardio area"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Instructor-led activities"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Minibar with coffee, protein shakes and omelettes"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Toilets"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NFC mobile and card payments"}}
       ]
     }
   }
   </script>
-  <script src="/assets/js/site.js?v=20260727-mobile-cta-contrast" defer></script>
+  <script src="/assets/js/site.js?v=20260727-mobile-cta-contrast-v2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -192,10 +193,25 @@
               View gallery <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg>
             </button>
             <div class="facility-gallery" id="gallery-machines" hidden>
-              <div class="facility-gallery-grid" aria-label="Machines gallery awaiting photos">
-                <span class="facility-shot">Machines photo 01</span>
-                <span class="facility-shot">Machines photo 02</span>
-                <span class="facility-shot">Machines photo 03</span>
+              <div class="facility-gallery-grid" aria-label="Machines room gallery">
+                <span class="facility-shot facility-shot-photo">
+                  <picture>
+                    <source type="image/webp" srcset="/assets/img/responsive/sala-maquinas-arroyo-02-720.webp 720w, /assets/img/responsive/sala-maquinas-arroyo-02-1100.webp 1100w, /assets/img/sala-maquinas-arroyo-02.webp 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px">
+                    <img src="/assets/img/sala-maquinas-arroyo-02.jpg" srcset="/assets/img/responsive/sala-maquinas-arroyo-02-720.jpg 720w, /assets/img/responsive/sala-maquinas-arroyo-02-1100.jpg 1100w, /assets/img/sala-maquinas-arroyo-02.jpg 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px" alt="Machines room at Nuevo Estilo Arroyo de la Miel" loading="lazy" decoding="async" width="1600" height="1896">
+                  </picture>
+                </span>
+                <span class="facility-shot facility-shot-photo">
+                  <picture>
+                    <source type="image/webp" srcset="/assets/img/responsive/sala-maquinas-arroyo-01-720.webp 720w, /assets/img/responsive/sala-maquinas-arroyo-01-1100.webp 1100w, /assets/img/sala-maquinas-arroyo-01.webp 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px">
+                    <img src="/assets/img/sala-maquinas-arroyo-01.jpg" srcset="/assets/img/responsive/sala-maquinas-arroyo-01-720.jpg 720w, /assets/img/responsive/sala-maquinas-arroyo-01-1100.jpg 1100w, /assets/img/sala-maquinas-arroyo-01.jpg 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px" alt="Guided machines and strength area at Nuevo Estilo Arroyo" loading="lazy" decoding="async" width="1600" height="2048">
+                  </picture>
+                </span>
+                <span class="facility-shot facility-shot-photo">
+                  <picture>
+                    <source type="image/webp" srcset="/assets/img/responsive/zona-poleas-arroyo-720.webp 720w, /assets/img/responsive/zona-poleas-arroyo-1100.webp 1100w, /assets/img/zona-poleas-arroyo.webp 1163w" sizes="(max-width: 760px) calc(100vw - 86px), 520px">
+                    <img src="/assets/img/zona-poleas-arroyo.jpg" srcset="/assets/img/responsive/zona-poleas-arroyo-720.jpg 720w, /assets/img/responsive/zona-poleas-arroyo-1100.jpg 1100w, /assets/img/zona-poleas-arroyo.jpg 1163w" sizes="(max-width: 760px) calc(100vw - 86px), 520px" alt="Cable machine area at Nuevo Estilo Arroyo de la Miel" loading="lazy" decoding="async" width="1163" height="1600">
+                  </picture>
+                </span>
               </div>
               <button class="gallery-close" type="button" data-gallery-close>Close gallery</button>
             </div>
@@ -208,10 +224,19 @@
               View gallery <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg>
             </button>
             <div class="facility-gallery" id="gallery-free-weights" hidden>
-              <div class="facility-gallery-grid" aria-label="Free weights gallery awaiting photos">
-                <span class="facility-shot">Free weights photo 01</span>
-                <span class="facility-shot">Free weights photo 02</span>
-                <span class="facility-shot">Free weights photo 03</span>
+              <div class="facility-gallery-grid" aria-label="Free weights gallery">
+                <span class="facility-shot facility-shot-photo">
+                  <picture>
+                    <source type="image/webp" srcset="/assets/img/responsive/peso-libre-arroyo-01-720.webp 720w, /assets/img/responsive/peso-libre-arroyo-01-1100.webp 1100w, /assets/img/peso-libre-arroyo-01.webp 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px">
+                    <img src="/assets/img/peso-libre-arroyo-01.jpg" srcset="/assets/img/responsive/peso-libre-arroyo-01-720.jpg 720w, /assets/img/responsive/peso-libre-arroyo-01-1100.jpg 1100w, /assets/img/peso-libre-arroyo-01.jpg 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px" alt="Dumbbell and bar area at Nuevo Estilo Arroyo de la Miel" loading="lazy" decoding="async" width="1600" height="1970">
+                  </picture>
+                </span>
+                <span class="facility-shot facility-shot-photo">
+                  <picture>
+                    <source type="image/webp" srcset="/assets/img/responsive/peso-libre-arroyo-02-720.webp 720w, /assets/img/responsive/peso-libre-arroyo-02-1100.webp 1100w, /assets/img/peso-libre-arroyo-02.webp 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px">
+                    <img src="/assets/img/peso-libre-arroyo-02.jpg" srcset="/assets/img/responsive/peso-libre-arroyo-02-720.jpg 720w, /assets/img/responsive/peso-libre-arroyo-02-1100.jpg 1100w, /assets/img/peso-libre-arroyo-02.jpg 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px" alt="Free weights platform for squats and deadlifts at Nuevo Estilo Arroyo" loading="lazy" decoding="async" width="1600" height="2048">
+                  </picture>
+                </span>
               </div>
               <button class="gallery-close" type="button" data-gallery-close>Close gallery</button>
             </div>
@@ -228,6 +253,63 @@
                 <span class="facility-shot">Cardio photo 01</span>
                 <span class="facility-shot">Cardio photo 02</span>
                 <span class="facility-shot">Cardio photo 03</span>
+              </div>
+              <button class="gallery-close" type="button" data-gallery-close>Close gallery</button>
+            </div>
+          </article>
+          <article class="facility-card facility-spinning" data-reveal>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#treadmill"></use></svg>
+            <h3>Spinning</h3>
+            <p>Room for bike sessions, rhythm and endurance within the instructor-led activities programme.</p>
+            <button class="table-action facility-toggle" type="button" aria-expanded="false" aria-controls="gallery-spinning" data-gallery-toggle>
+              View gallery <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg>
+            </button>
+            <div class="facility-gallery" id="gallery-spinning" hidden>
+              <div class="facility-gallery-grid" aria-label="Spinning room gallery">
+                <span class="facility-shot facility-shot-photo">
+                  <picture>
+                    <source type="image/webp" srcset="/assets/img/responsive/sala-spinning-arroyo-720.webp 720w, /assets/img/responsive/sala-spinning-arroyo-1100.webp 1100w, /assets/img/sala-spinning-arroyo.webp 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px">
+                    <img src="/assets/img/sala-spinning-arroyo.jpg" srcset="/assets/img/responsive/sala-spinning-arroyo-720.jpg 720w, /assets/img/responsive/sala-spinning-arroyo-1100.jpg 1100w, /assets/img/sala-spinning-arroyo.jpg 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px" alt="Spinning room at Nuevo Estilo Arroyo de la Miel" loading="lazy" decoding="async" width="1600" height="2048">
+                  </picture>
+                </span>
+              </div>
+              <button class="gallery-close" type="button" data-gallery-close>Close gallery</button>
+            </div>
+          </article>
+          <article class="facility-card facility-activities" data-reveal>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#group"></use></svg>
+            <h3>Instructor-led activities</h3>
+            <p>A wide room for group classes, Pilates and guided functional work.</p>
+            <button class="table-action facility-toggle" type="button" aria-expanded="false" aria-controls="gallery-activities" data-gallery-toggle>
+              View gallery <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg>
+            </button>
+            <div class="facility-gallery" id="gallery-activities" hidden>
+              <div class="facility-gallery-grid" aria-label="Instructor-led activities room gallery">
+                <span class="facility-shot facility-shot-photo">
+                  <picture>
+                    <source type="image/webp" srcset="/assets/img/responsive/sala-actividades-arroyo-720.webp 720w, /assets/img/responsive/sala-actividades-arroyo-1100.webp 1100w, /assets/img/sala-actividades-arroyo.webp 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px">
+                    <img src="/assets/img/sala-actividades-arroyo.jpg" srcset="/assets/img/responsive/sala-actividades-arroyo-720.jpg 720w, /assets/img/responsive/sala-actividades-arroyo-1100.jpg 1100w, /assets/img/sala-actividades-arroyo.jpg 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px" alt="Instructor-led activities and Pilates room at Nuevo Estilo Arroyo de la Miel" loading="lazy" decoding="async" width="1600" height="1200">
+                  </picture>
+                </span>
+              </div>
+              <button class="gallery-close" type="button" data-gallery-close>Close gallery</button>
+            </div>
+          </article>
+          <article class="facility-card facility-reception" data-reveal>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#pin"></use></svg>
+            <h3>Reception</h3>
+            <p>Nuevo Estilo front desk for information, sign-ups and direct help before training.</p>
+            <button class="table-action facility-toggle" type="button" aria-expanded="false" aria-controls="gallery-reception" data-gallery-toggle>
+              View gallery <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg>
+            </button>
+            <div class="facility-gallery" id="gallery-reception" hidden>
+              <div class="facility-gallery-grid" aria-label="Reception and front desk gallery">
+                <span class="facility-shot facility-shot-photo">
+                  <picture>
+                    <source type="image/webp" srcset="/assets/img/responsive/mostrador-arroyo-720.webp 720w, /assets/img/responsive/mostrador-arroyo-1100.webp 1100w, /assets/img/mostrador-arroyo.webp 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px">
+                    <img src="/assets/img/mostrador-arroyo.jpg" srcset="/assets/img/responsive/mostrador-arroyo-720.jpg 720w, /assets/img/responsive/mostrador-arroyo-1100.jpg 1100w, /assets/img/mostrador-arroyo.jpg 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px" alt="Front desk at Nuevo Estilo Arroyo de la Miel" loading="lazy" decoding="async" width="1600" height="1130">
+                  </picture>
+                </span>
               </div>
               <button class="gallery-close" type="button" data-gallery-close>Close gallery</button>
             </div>
@@ -253,7 +335,7 @@
             <span class="service-number">02</span>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#group"></use></svg>
             <h3>Instructor-led activities</h3>
-            <p>The location also offers instructor-led activities. Call the gym to confirm current times and availability.</p>
+            <p>Room for group classes, Pilates and guided work. Check the 2026 timetable and call the gym to confirm any last-minute changes.</p>
           </article>
           <article class="service-card" data-reveal>
             <span class="service-number">03</span>
@@ -261,6 +343,136 @@
             <h3>First visit</h3>
             <p>Visit the location, ask reception about the available options and clear up any questions before starting. There is no commitment period: pay for what you are going to train.</p>
           </article>
+          <article class="service-card" data-reveal>
+            <span class="service-number">04</span>
+            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>
+            <h3>Minibar</h3>
+            <p>Machine coffee, protein shakes, egg-white omelettes and oat omelettes are available to complete your training.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="minibar" aria-labelledby="minibar-title">
+      <div class="section-inner info-layout">
+        <div class="info-intro" data-reveal>
+          <span class="section-index">Minibar</span>
+          <h2 id="minibar-title">Quick gym <em>menu.</em></h2>
+          <p>Coffee, shakes and omelettes to complete your training. Prices taken from the front desk menu.</p>
+        </div>
+        <table class="schedule-table" data-reveal>
+          <caption>Nuevo Estilo Arroyo minibar menu</caption>
+          <thead>
+            <tr><th>Product</th><th>Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Product">Machine coffee</td><td data-label="Price">€1</td></tr>
+            <tr><td data-label="Product">Egg-white omelette</td><td data-label="Price">€4</td></tr>
+            <tr><td data-label="Product">Oat omelette + egg white</td><td data-label="Price">€4.50</td></tr>
+            <tr><td data-label="Product">Shake with water</td><td data-label="Price">€3.50</td></tr>
+            <tr><td data-label="Product">Shake with milk</td><td data-label="Price">€4</td></tr>
+            <tr><td data-label="Product">Protein cake · portion</td><td data-label="Price">€2</td></tr>
+            <tr><td data-label="Product">Pre-workout</td><td data-label="Price">€2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="activities" aria-labelledby="activities-title">
+      <div class="section-inner">
+        <div class="section-heading" data-reveal>
+          <span class="section-index">Instructor-led activities</span>
+          <h2 id="activities-title">Arroyo de la Miel timetable <em>2026.</em></h2>
+          <p>Class timetable from Monday to Friday. Classes require a minimum of 2 people and Spinning lasts approximately 45 minutes.</p>
+        </div>
+        <div class="activity-table-wrap" data-reveal>
+          <div class="activity-poster-head">
+            <span>Arroyo de la Miel</span>
+            <strong>Instructor-led activities 2026</strong>
+          </div>
+          <table class="schedule-table activity-table">
+            <caption>Arroyo de la Miel instructor-led activities timetable 2026</caption>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Time">09:30-10:30</td>
+                <td data-label="Monday"><span class="activity-pill activity-gap">GAP</span></td>
+                <td data-label="Tuesday"><span class="activity-pill activity-upper">Upper Body</span></td>
+                <td data-label="Wednesday"><span class="activity-pill activity-legs">Legs</span></td>
+                <td data-label="Thursday"><span class="activity-pill activity-arms">Arms</span></td>
+                <td data-label="Friday"><span class="activity-pill activity-spinning">Spinning</span></td>
+              </tr>
+              <tr>
+                <td data-label="Time">10:30-11:30</td>
+                <td data-label="Monday"><span class="activity-pill activity-spinning">Spinning</span></td>
+                <td data-label="Tuesday"><span class="activity-pill activity-pilates">Pilates</span></td>
+                <td data-label="Wednesday"><span class="activity-pill activity-spinning">Spinning</span></td>
+                <td data-label="Thursday"><span class="activity-pill activity-pilates">Pilates</span></td>
+                <td data-label="Friday"><span class="activity-pill activity-gap">GAP</span></td>
+              </tr>
+              <tr>
+                <td data-label="Time">14:30-15:30</td>
+                <td data-label="Monday"><span class="activity-pill activity-gap">GAP</span></td>
+                <td data-label="Tuesday"><span class="activity-pill activity-upper">Upper Body</span></td>
+                <td data-label="Wednesday"><span class="activity-pill activity-legs">Legs</span></td>
+                <td data-label="Thursday"><span class="activity-pill activity-fitbox">Arms · Fit Box</span></td>
+                <td data-label="Friday"><span class="activity-pill activity-power">Power Bar</span></td>
+              </tr>
+              <tr>
+                <td data-label="Time">17:00-18:00</td>
+                <td data-label="Monday"><span class="activity-empty">-</span></td>
+                <td data-label="Tuesday"><span class="activity-empty">-</span></td>
+                <td data-label="Wednesday"><span class="activity-empty">-</span></td>
+                <td data-label="Thursday"><span class="activity-pill activity-arms">Arms</span></td>
+                <td data-label="Friday"><span class="activity-pill activity-power">Power Bar</span></td>
+              </tr>
+              <tr>
+                <td data-label="Time">18:00-19:00</td>
+                <td data-label="Monday"><span class="activity-pill activity-gap">GAP</span></td>
+                <td data-label="Tuesday"><span class="activity-pill activity-upper">Upper Body</span></td>
+                <td data-label="Wednesday"><span class="activity-pill activity-legs">Legs</span></td>
+                <td data-label="Thursday"><span class="activity-pill activity-pilates">Pilates</span></td>
+                <td data-label="Friday"><span class="activity-pill activity-spinning">Spinning</span></td>
+              </tr>
+              <tr>
+                <td data-label="Time">19:00-20:00</td>
+                <td data-label="Monday"><span class="activity-pill activity-spinning">Spinning</span></td>
+                <td data-label="Tuesday"><span class="activity-pill activity-step">Step</span></td>
+                <td data-label="Wednesday"><span class="activity-pill activity-spinning">Spinning</span></td>
+                <td data-label="Thursday"><span class="activity-empty">-</span></td>
+                <td data-label="Friday"><span class="activity-empty">-</span></td>
+              </tr>
+              <tr>
+                <td data-label="Time">20:00-21:00</td>
+                <td data-label="Monday"><span class="activity-empty">-</span></td>
+                <td data-label="Tuesday"><span class="activity-pill activity-pilates">Pilates</span></td>
+                <td data-label="Wednesday"><span class="activity-empty">-</span></td>
+                <td data-label="Thursday"><span class="activity-empty">-</span></td>
+                <td data-label="Friday"><span class="activity-empty">-</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="activity-legend" aria-label="Activity legend">
+            <span><i class="legend-dot activity-spinning"></i> Spinning</span>
+            <span><i class="legend-dot activity-gap"></i> GAP</span>
+            <span><i class="legend-dot activity-upper"></i> Upper Body</span>
+            <span><i class="legend-dot activity-legs"></i> Legs</span>
+            <span><i class="legend-dot activity-arms"></i> Arms</span>
+            <span><i class="legend-dot activity-pilates"></i> Pilates</span>
+            <span><i class="legend-dot activity-fitbox"></i> Fit Box</span>
+            <span><i class="legend-dot activity-step"></i> Step</span>
+            <span><i class="legend-dot activity-power"></i> Power Bar</span>
+          </div>
+          <p class="activity-note">2026 timetable based on the information displayed at the location. For last-minute changes or to confirm a specific class, call 951 21 10 28.</p>
         </div>
       </div>
     </section>
@@ -302,14 +514,17 @@
         <div class="pricing-copy" data-reveal>
           <span class="section-index">Prices</span>
           <h2 id="pricing-title">Choose with all the information.</h2>
-          <p>Ask reception for the current prices at the Arroyo de la Miel location. There is no commitment period: pay for what you are going to train. NFC mobile payments, credit cards and debit cards are accepted.</p>
+          <p>Published prices for the Arroyo de la Miel location. There is no commitment period: pay for what you are going to train. For active offers or specific conditions, confirm at reception.</p>
         </div>
         <aside class="pricing-card" data-reveal>
-          <span class="placeholder-status">Prices</span>
-          <strong>No-commitment options</strong>
-          <span>Pay for what you are going to train and ask for the option that best fits you.</span>
+          <span class="placeholder-status">Featured offer</span>
+          <strong>3 months · 75€</strong>
+          <span>Nuevo Estilo Gym Arroyo de la Miel.</span>
           <ul class="check-list">
-            <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>No commitment period</li>
+            <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Gym + classes: women 30€</li>
+            <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Gym + classes: men 35€</li>
+            <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Group classes: Spinning, Pilates, Jumping Dance and Conditioning</li>
+            <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>No commitment period: pay for what you are going to train</li>
             <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>NFC mobile payments</li>
             <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Credit cards</li>
             <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Debit cards</li>
@@ -382,7 +597,7 @@
           </div>
           <div class="contact-item">
             <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>
-            <div><span class="contact-label">Services</span><span class="contact-value">Instructor-led activities<br>Toilets available</span></div>
+            <div><span class="contact-label">Services</span><span class="contact-value">Instructor-led activities<br>Toilets available<br>Minibar with coffee, shakes and omelettes</span></div>
           </div>
           <div class="contact-item">
             <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#phone"></use></svg>

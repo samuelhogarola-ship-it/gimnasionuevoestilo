@@ -1088,6 +1088,25 @@ h3 {
   text-transform: uppercase;
 }
 
+.facility-shot-photo {
+  min-height: 170px;
+  grid-column: 1 / -1;
+  padding: 0;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.facility-shot-photo picture,
+.facility-shot-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.facility-shot-photo img {
+  object-fit: cover;
+}
+
 .gallery-close {
   margin-top: 14px;
   padding: 0;
@@ -1448,6 +1467,31 @@ h3 {
 
 .activity-gap {
   background: #eee100;
+}
+
+.activity-upper {
+  background: #a99c4f;
+}
+
+.activity-legs {
+  background: #df5a34;
+  color: var(--white);
+}
+
+.activity-arms {
+  background: #82a9d6;
+}
+
+.activity-fitbox {
+  background: #d8c990;
+}
+
+.activity-step {
+  background: #a9d1e2;
+}
+
+.activity-power {
+  background: #b2a2c5;
 }
 
 .activity-empty {
