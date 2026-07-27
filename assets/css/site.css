@@ -3280,7 +3280,8 @@ body.call-sheet-open {
   }
 
   .hero {
-    min-height: 730px;
+    min-height: 860px;
+    height: auto;
   }
 
   .hero-picture img[src*="/assets/img/Fuengirola/hero-"] {
