@@ -5,6 +5,26 @@
   const nav = document.querySelector('[data-nav]');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  const deckStackRoots = Array.from(document.querySelectorAll('[data-deck-stack]'));
+
+  if (deckStackRoots.length && typeof window.initDeckStack === 'function') {
+    deckStackRoots.forEach((deckStackRoot) => {
+      window.initDeckStack(deckStackRoot, {
+        mobileBreakpoint: 820,
+        desktopCardShift: 44,
+        desktopCardScaleLoss: 0.02,
+        desktopMediaShift: -22,
+        desktopMediaRotate: -4.5,
+        desktopMediaScaleGain: 0.03,
+        mobileCardShift: 28,
+        mobileCardScaleLoss: 0.016,
+        mobileMediaShift: -14,
+        mobileMediaRotate: -2.4,
+        mobileMediaScaleGain: 0.02,
+      });
+    });
+  }
+
   root.classList.add('js');
 
   const setMenu = (open) => {
