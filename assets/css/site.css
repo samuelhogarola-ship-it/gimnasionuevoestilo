@@ -1498,10 +1498,7 @@ h3 {
 }
 
 .service-number {
-  margin-bottom: 60px;
-  color: rgba(255, 255, 255, 0.28);
-  font-family: var(--display);
-  font-size: 1.2rem;
+  display: none;
 }
 
 .service-icon {
@@ -1531,6 +1528,49 @@ h3 {
   gap: 10px;
   margin-top: auto;
   padding-top: 28px;
+}
+
+.minibar-section {
+  padding-top: 64px;
+}
+
+.minibar-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.35fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: start;
+}
+
+.minibar-intro p {
+  max-width: 34rem;
+}
+
+.minibar-catalog {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.minibar-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 1px solid var(--line-light);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.minibar-item strong {
+  font-size: 0.96rem;
+}
+
+.minibar-item span {
+  color: var(--pink);
+  font-family: var(--display);
+  font-size: 1.35rem;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .mini-action {
@@ -3188,7 +3228,7 @@ body.call-sheet-open {
   }
 
   .service-number {
-    margin-bottom: 36px;
+    display: none;
   }
 
   .pricing-inner {
@@ -3287,7 +3327,7 @@ body.call-sheet-open {
   .hero-picture img[src*="/assets/img/Fuengirola/hero-"] {
     object-fit: contain;
     object-position: center top;
-    transform: scale(0.92);
+    transform: translateY(18px) scale(0.92);
     transform-origin: center top;
     animation: none;
   }
@@ -3297,8 +3337,8 @@ body.call-sheet-open {
   }
 
   .hero-content {
-    margin-top: 84px;
-    padding-bottom: 92px;
+    margin-top: 92px;
+    padding-bottom: 176px;
     transform: none;
   }
 
@@ -3324,7 +3364,7 @@ body.call-sheet-open {
   }
 
   .hero-actions {
-    margin-bottom: 22px;
+    margin-bottom: 48px;
   }
 
   .button {
@@ -3369,6 +3409,10 @@ body.call-sheet-open {
     padding: 78px 0;
   }
 
+  #gimnasio {
+    padding-top: 96px;
+  }
+
   .section-heading h2,
   .display-title {
     font-size: clamp(3.25rem, 17vw, 5rem);
@@ -3382,6 +3426,15 @@ body.call-sheet-open {
 
   .price-catalog {
     grid-template-columns: 1fr;
+  }
+
+  .minibar-layout,
+  .minibar-catalog {
+    grid-template-columns: 1fr;
+  }
+
+  .minibar-item {
+    padding: 16px 18px;
   }
 
   .price-card {
