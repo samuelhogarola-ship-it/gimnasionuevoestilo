@@ -3280,7 +3280,7 @@ body.call-sheet-open {
   }
 
   .hero {
-    min-height: 1010px;
+    min-height: 860px;
     height: auto;
   }
 
@@ -3297,8 +3297,9 @@ body.call-sheet-open {
   }
 
   .hero-content {
-    padding-bottom: 72px;
-    transform: translateY(132px);
+    margin-top: 84px;
+    padding-bottom: 92px;
+    transform: none;
   }
 
   .eyebrow {
