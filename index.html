@@ -158,12 +158,17 @@
           </a>
         </div>
       </div>
-      <div class="hero-facts" aria-label="Datos destacados">
-        <div class="hero-fact"><strong>952</strong><span>Contacto directo</span></div>
-        <div class="hero-fact"><strong>29640</strong><span>Fuengirola centro</span></div>
-        <div class="hero-fact"><strong>PM</strong><span>Dirección Paco Mula</span></div>
-      </div>
-    </section>
+  <div class="hero-facts" aria-label="Datos destacados">
+    <a class="hero-fact hero-fact-call" href="tel:+34952470044" aria-label="Llámanos al 952 47 00 44">
+      <strong><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#phone"></use></svg></strong>
+      <span>Llámanos</span>
+      <small class="hero-fact-bubble">952 47 00 44</small>
+    </a>
+    <div class="hero-fact"><strong>29640</strong><span>Fuengirola centro</span></div>
+    <div class="hero-fact"><strong>Dirección</strong><span>Paco Mula</span></div>
+  </div>
+</section>
+
 
     <section class="section section-paper" id="gimnasio" aria-labelledby="gym-title">
       <div class="section-inner">
@@ -252,18 +257,12 @@
             <h3>Actividades dirigidas</h3>
             <p>Entrena en grupo, mantén ritmo y pregunta por las actividades disponibles cuando pases por el gimnasio.</p>
           </article>
-          <article class="service-card" data-reveal>
+          <a class="service-card service-card-link" href="#minibar" data-reveal>
             <span class="service-number">03</span>
-            <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#pin"></use></svg>
-            <h3>Primera visita</h3>
-            <p>Acércate al gimnasio, conoce las instalaciones y habla con el equipo antes de decidir. Te explicaremos las opciones actuales sin compromiso.</p>
-          </article>
-          <article class="service-card" data-reveal>
-            <span class="service-number">04</span>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>
             <h3>Minibar</h3>
             <p>Disponemos de café de máquina, batidos de proteína, tortillas de claras y tortillas de avena para tomar antes o después de entrenar.</p>
-          </article>
+          </a>
         </div>
       </div>
     </section>
@@ -282,11 +281,11 @@
           </thead>
           <tbody>
             <tr><td data-label="Producto">Café de máquina</td><td data-label="Precio">1€</td></tr>
+            <tr><td data-label="Producto">Agua</td><td data-label="Precio">1€</td></tr>
             <tr><td data-label="Producto">Tortilla de claras</td><td data-label="Precio">4€</td></tr>
             <tr><td data-label="Producto">Tortilla de avena + clara</td><td data-label="Precio">4,50€</td></tr>
             <tr><td data-label="Producto">Batido con agua</td><td data-label="Precio">3,50€</td></tr>
             <tr><td data-label="Producto">Batido con leche</td><td data-label="Precio">4€</td></tr>
-            <tr><td data-label="Producto">Bizcocho proteico · porción</td><td data-label="Precio">2€</td></tr>
             <tr><td data-label="Producto">Pre-entreno</td><td data-label="Precio">2€</td></tr>
           </tbody>
         </table>
@@ -329,7 +328,7 @@
       <div class="pricing-inner">
         <div class="pricing-copy" data-reveal>
           <span class="section-index">Tarifas</span>
-          <h2 id="pricing-title">Elige con toda la información.</h2>
+          <h2 id="pricing-title">Elige la opción que más te convenga.</h2>
           <p>Mensualidad desde 40€, estudiantes y jubilados 35€/mes, bonos de 1 semana por 25€, 2 semanas por 35€, trimestre por 100€ y chip de acceso por 5€. No hay permanencia.</p>
         </div>
         <aside class="pricing-card" data-reveal>
@@ -341,9 +340,9 @@
             <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Estudiantes y jubilados 35€/mes</li>
             <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Bono 1 semana 25€</li>
             <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Bono 2 semanas 35€</li>
-            <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Chip de acceso 5€</li>
             <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Trimestre 100€</li>
             <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>Sin permanencia: pagas lo que vayas a entrenar</li>
+            <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>* Chip de acceso 5€</li>
           </ul>
           <a class="button button-dark" href="tel:+34952470044" data-contact-primary>Consultar tarifas</a>
         </aside>
