@@ -31,6 +31,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/core/deck-stack.css?v=20260727-deck-stack">
   <link rel="stylesheet" href="/assets/css/site.css?v=20260727-mobile-cta-contrast">
   <script type="application/ld+json">
   {
@@ -64,9 +65,10 @@
     ]
   }
   </script>
+  <script src="/core/deck-stack.js?v=20260727-deck-stack" defer></script>
   <script src="/assets/js/site.js?v=20260727-mobile-cta-contrast" defer></script>
 </head>
-<body>
+<body class="activities-page">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="site-header is-scrolled" data-header>
@@ -103,7 +105,9 @@
       </div>
     </section>
 
-    <section class="section section-paper">
+    <div class="activities-deck" data-deck-stack>
+      <div class="activities-deck-list" data-deck-stack-list>
+    <section class="section section-paper activities-deck-card activities-deck-card-intro" data-deck-stack-card>
       <div class="section-inner">
         <div class="section-heading" data-reveal>
           <span class="section-index">Sala de boxeo y actividades</span>
@@ -113,7 +117,7 @@
           <div class="intro-copy" data-reveal>
             <p>Sala preparada para boxeo, actividades dirigidas y sesiones de Spinning: un entorno cómodo para entrenar acompañado o complementar tu rutina de fuerza.</p>
             <p>El acceso al gimnasio incluye sala y clases, sin permanencia. Si quieres probar una sesión puntual, también puedes pagar solo un día.</p>
-            <div class="activity-photo-pair" aria-label="Salas de actividades de Gimnasio Nuevo Estilo Fuengirola">
+            <div class="activity-photo-pair" data-deck-stack-media aria-label="Salas de actividades de Gimnasio Nuevo Estilo Fuengirola">
               <figure class="activity-photo-real">
                 <img src="/assets/img/Fuengirola/sala-boxeo-actividades-fuengirola.jpg" alt="Sala de boxeo y actividades con iluminación rosa en Gimnasio Nuevo Estilo Fuengirola" loading="lazy" width="4032" height="3024">
                 <figcaption>Sala de boxeo y actividades</figcaption>
@@ -134,7 +138,7 @@
       </div>
     </section>
 
-    <section class="section section-dark">
+    <section class="section section-dark activities-deck-card activities-deck-card-services" data-deck-stack-card>
       <div class="section-inner">
         <div class="section-heading" data-reveal>
           <span class="section-index">Actividades activas</span>
@@ -142,19 +146,16 @@
         </div>
         <div class="service-grid">
           <article class="service-card" data-reveal>
-            <span class="service-number">01</span>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#group"></use></svg>
             <h3>Sala de boxeo y actividades</h3>
             <p>Espacio para entrenamientos dinámicos, trabajo técnico y actividades dirigidas con amplitud.</p>
           </article>
           <article class="service-card" data-reveal>
-            <span class="service-number">02</span>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#bike"></use></svg>
             <h3>Spinning</h3>
             <p>Sesiones de bicicleta para trabajar resistencia, ritmo y energía en grupo.</p>
           </article>
           <article class="service-card" data-reveal>
-            <span class="service-number">03</span>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#pilates"></use></svg>
             <h3>Acondicionamiento · Pilates · GAP</h3>
             <p>Trabajo físico general, control corporal, piernas, glúteos y abdomen para sumar variedad a la semana.</p>
@@ -163,7 +164,7 @@
       </div>
     </section>
 
-    <section class="section section-paper" aria-labelledby="programme-title">
+    <section class="section section-paper activities-deck-card activities-deck-card-schedule" aria-labelledby="programme-title" data-deck-stack-card>
       <div class="section-inner">
         <div class="section-heading" data-reveal>
           <span class="section-index">Horario semanal</span>
@@ -231,6 +232,8 @@
         </div>
       </div>
     </section>
+      </div>
+    </div>
 
     <section class="section section-paper">
       <div class="section-inner">
