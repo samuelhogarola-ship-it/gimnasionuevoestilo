@@ -205,6 +205,7 @@
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/legal/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/legal/"/>
   </url>
   <url>
     <loc>https://gimnasionuevoestilo.com/en/legal/</loc>
@@ -213,5 +214,6 @@
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://gimnasionuevoestilo.com/legal/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://gimnasionuevoestilo.com/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gimnasionuevoestilo.com/legal/"/>
   </url>
 </urlset>
