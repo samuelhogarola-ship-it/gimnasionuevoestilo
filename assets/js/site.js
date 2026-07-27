@@ -48,6 +48,52 @@
   updateHeader();
   window.addEventListener('scroll', updateHeader, { passive: true });
 
+  const mobileAction = document.querySelector('.mobile-action');
+
+  if (mobileAction) {
+    const updateMobileActionContrast = () => {
+      const rect = mobileAction.getBoundingClientRect();
+      const x = rect.left + rect.width / 2;
+      const y = rect.top + rect.height / 2;
+      const originalPointerEvents = mobileAction.style.pointerEvents;
+
+      mobileAction.style.pointerEvents = 'none';
+      const elementBelow = document.elementFromPoint(x, y);
+      mobileAction.style.pointerEvents = originalPointerEvents;
+
+      const darkSection = elementBelow?.closest('.section-dark, .site-footer, .legal-hero, .hero, .contact-section');
+      const lightSection = elementBelow?.closest('.section-paper, .section-light, .legal-content');
+
+      mobileAction.classList.toggle('is-over-dark', Boolean(darkSection && !lightSection));
+    };
+
+    updateMobileActionContrast();
+    window.addEventListener('scroll', updateMobileActionContrast, { passive: true });
+    window.addEventListener('resize', updateMobileActionContrast);
+  }
+
+  document.querySelectorAll('[data-gallery-toggle]').forEach((button) => {
+    const panel = document.getElementById(button.getAttribute('aria-controls'));
+    if (!panel) return;
+
+    button.addEventListener('click', () => {
+      const willOpen = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(willOpen));
+      panel.hidden = !willOpen;
+    });
+  });
+
+  document.querySelectorAll('[data-gallery-close]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const panel = button.closest('.facility-gallery');
+      if (!panel) return;
+      const toggle = document.querySelector(`[data-gallery-toggle][aria-controls="${panel.id}"]`);
+      panel.hidden = true;
+      toggle?.setAttribute('aria-expanded', 'false');
+      toggle?.focus({ preventScroll: true });
+    });
+  });
+
   if (!reduceMotion && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
