@@ -255,23 +255,23 @@
             <h3>Actividades dirigidas</h3>
             <p>Entrena en grupo, mantén ritmo y pregunta por las actividades disponibles cuando pases por el gimnasio.</p>
           </article>
-          <a class="service-card service-card-link" href="#minibar" data-reveal>
+          <article class="service-card service-card-link minibar-service-card" data-reveal>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>
             <h3>Minibar</h3>
             <p>Disponemos de café de máquina, batidos de proteína, tortillas de claras y tortillas de avena para tomar antes o después de entrenar.</p>
-          </a>
+            <button class="mini-action minibar-card-action" type="button" data-minibar-open aria-controls="minibar-sheet" aria-expanded="false">Carta <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></button>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-paper minibar-section" id="minibar" aria-labelledby="minibar-title">
-      <div class="section-inner minibar-layout">
-        <div class="info-intro minibar-intro" data-reveal>
-          <span class="section-index">Minibar</span>
-          <h2 id="minibar-title">Pide algo rápido <em>y sigue.</em></h2>
-          <p>Café de máquina, agua, batidos y tortillas para antes o después de entrenar. Lo dejamos visible, corto y fácil de consultar.</p>
-        </div>
-        <div class="minibar-catalog" data-reveal aria-label="Carta rápida del minibar">
+    <div class="minibar-sheet" id="minibar-sheet" hidden aria-hidden="true">
+      <button class="minibar-sheet-backdrop" type="button" data-minibar-close aria-label="Cerrar carta del minibar"></button>
+      <div class="minibar-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="minibar-sheet-title">
+        <button class="minibar-sheet-close" type="button" data-minibar-close aria-label="Cerrar carta del minibar">×</button>
+        <p class="minibar-sheet-eyebrow">Minibar</p>
+        <h3 class="minibar-sheet-title" id="minibar-sheet-title">Carta</h3>
+        <div class="minibar-catalog" aria-label="Carta rápida del minibar">
           <div class="minibar-item"><strong>Café de máquina</strong><span>1€</span></div>
           <div class="minibar-item"><strong>Agua</strong><span>1€</span></div>
           <div class="minibar-item"><strong>Tortilla de claras</strong><span>4€</span></div>
@@ -281,7 +281,7 @@
           <div class="minibar-item"><strong>Pre-entreno</strong><span>2€</span></div>
         </div>
       </div>
-    </section>
+    </div>
 
     <section class="section section-paper" id="horarios" aria-labelledby="schedule-title">
       <div class="section-inner info-layout">

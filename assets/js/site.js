@@ -189,6 +189,60 @@
     });
   });
 
+
+  const minibarSheet = document.getElementById('minibar-sheet');
+  const minibarOpeners = Array.from(document.querySelectorAll('[data-minibar-open]'));
+
+  if (minibarSheet && minibarOpeners.length) {
+    const minibarCloser = Array.from(minibarSheet.querySelectorAll('[data-minibar-close]'));
+    const minibarCloseButton = minibarSheet.querySelector('.minibar-sheet-close');
+    let activeMinibarTrigger = null;
+
+    const closeMinibar = () => {
+      minibarSheet.classList.remove('is-open');
+      minibarSheet.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('minibar-sheet-open');
+      minibarOpeners.forEach((trigger) => trigger.setAttribute('aria-expanded', 'false'));
+      window.setTimeout(() => {
+        minibarSheet.hidden = true;
+      }, 220);
+      activeMinibarTrigger?.focus({ preventScroll: true });
+      activeMinibarTrigger = null;
+    };
+
+    const openMinibar = (trigger) => {
+      activeMinibarTrigger = trigger;
+      minibarSheet.hidden = false;
+      minibarSheet.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('minibar-sheet-open');
+      minibarOpeners.forEach((item) => item.setAttribute('aria-expanded', String(item === trigger)));
+      window.requestAnimationFrame(() => {
+        minibarSheet.classList.add('is-open');
+      });
+      window.setTimeout(() => minibarCloseButton?.focus({ preventScroll: true }), 80);
+    };
+
+    minibarOpeners.forEach((trigger) => {
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        const isOpen = minibarSheet.classList.contains('is-open');
+        if (isOpen) {
+          closeMinibar();
+          return;
+        }
+        openMinibar(trigger);
+      });
+    });
+
+    minibarCloser.forEach((button) => button.addEventListener('click', closeMinibar));
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && minibarSheet.classList.contains('is-open')) {
+        closeMinibar();
+      }
+    });
+  }
+
   if (mobileAction) {
     const updateMobileActionContrast = () => {
       const rect = mobileAction.getBoundingClientRect();
