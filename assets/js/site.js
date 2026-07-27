@@ -49,6 +49,145 @@
   window.addEventListener('scroll', updateHeader, { passive: true });
 
   const mobileAction = document.querySelector('.mobile-action');
+  const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+
+  const shouldUseCallSheet = () => window.matchMedia('(max-width: 860px)').matches || window.matchMedia('(pointer: coarse)').matches;
+
+  const getCallSheetLabels = () => {
+    const isEnglish = document.documentElement.lang?.toLowerCase().startsWith('en');
+    return isEnglish ? {
+      eyebrow: 'Direct contact',
+      call: 'Call now',
+      copy: 'Copy',
+      copied: 'Number copied',
+      copyError: 'Could not copy automatically',
+      close: 'Close',
+    } : {
+      eyebrow: 'Contacto directo',
+      call: 'Llamar ahora',
+      copy: 'Copiar',
+      copied: 'Número copiado',
+      copyError: 'No se ha podido copiar automáticamente',
+      close: 'Cerrar',
+    };
+  };
+
+  const formatPhoneNumber = (href) => {
+    const raw = href.replace(/^tel:/i, '').trim();
+
+    if (raw === '+34952470044') return '952 47 00 44';
+    if (raw === '+34951211028') return '951 21 10 28';
+
+    const digits = raw.replace(/\D/g, '');
+    if (digits.length === 11 && digits.startsWith('34')) {
+      return digits.slice(2).replace(/(\d{3})(\d{2})(\d{2})(\d{2})/, '$1 $2 $3 $4');
+    }
+
+    return raw;
+  };
+
+  const copyText = async (text) => {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+
+    const helper = document.createElement('textarea');
+    helper.value = text;
+    helper.setAttribute('readonly', 'readonly');
+    helper.style.position = 'absolute';
+    helper.style.left = '-9999px';
+    document.body.appendChild(helper);
+    helper.select();
+    document.execCommand('copy');
+    helper.remove();
+  };
+
+  const createCallSheet = () => {
+    const labels = getCallSheetLabels();
+    const sheet = document.createElement('div');
+    sheet.className = 'call-sheet';
+    sheet.hidden = true;
+    sheet.innerHTML = `
+      <button class="call-sheet-backdrop" type="button" aria-label="${labels.close}"></button>
+      <div class="call-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="call-sheet-number">
+        <button class="call-sheet-close" type="button" aria-label="${labels.close}">×</button>
+        <p class="call-sheet-eyebrow">${labels.eyebrow}</p>
+        <strong class="call-sheet-number" id="call-sheet-number"></strong>
+        <div class="call-sheet-actions">
+          <a class="button button-primary call-sheet-call" href="#"></a>
+          <button class="button button-outline call-sheet-copy" type="button"></button>
+        </div>
+        <p class="call-sheet-status" aria-live="polite"></p>
+      </div>
+    `;
+
+    const callButton = sheet.querySelector('.call-sheet-call');
+    const copyButton = sheet.querySelector('.call-sheet-copy');
+    const closeButton = sheet.querySelector('.call-sheet-close');
+    const backdrop = sheet.querySelector('.call-sheet-backdrop');
+    const numberNode = sheet.querySelector('.call-sheet-number');
+    const statusNode = sheet.querySelector('.call-sheet-status');
+    let activeTrigger = null;
+    let currentNumber = '';
+
+    callButton.textContent = labels.call;
+    copyButton.textContent = labels.copy;
+
+    const close = () => {
+      sheet.classList.remove('is-open');
+      document.body.classList.remove('call-sheet-open');
+      window.setTimeout(() => {
+        sheet.hidden = true;
+      }, 180);
+      if (activeTrigger) activeTrigger.focus({ preventScroll: true });
+      activeTrigger = null;
+    };
+
+    const open = (link) => {
+      activeTrigger = link;
+      currentNumber = formatPhoneNumber(link.getAttribute('href') || '');
+      numberNode.textContent = currentNumber;
+      callButton.setAttribute('href', link.getAttribute('href') || '#');
+      statusNode.textContent = '';
+      sheet.hidden = false;
+      document.body.classList.add('call-sheet-open');
+      window.requestAnimationFrame(() => {
+        sheet.classList.add('is-open');
+      });
+    };
+
+    copyButton.addEventListener('click', async () => {
+      try {
+        await copyText(currentNumber);
+        statusNode.textContent = labels.copied;
+      } catch (error) {
+        statusNode.textContent = labels.copyError;
+      }
+    });
+
+    [closeButton, backdrop].forEach((element) => element.addEventListener('click', close));
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && sheet.classList.contains('is-open')) {
+        close();
+      }
+    });
+
+    document.body.appendChild(sheet);
+    return { open };
+  };
+
+  const callSheet = phoneLinks.length ? createCallSheet() : null;
+
+  phoneLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (!callSheet || !shouldUseCallSheet()) return;
+      if (link.closest('.call-sheet')) return;
+      event.preventDefault();
+      callSheet.open(link);
+    });
+  });
 
   if (mobileAction) {
     const updateMobileActionContrast = () => {
