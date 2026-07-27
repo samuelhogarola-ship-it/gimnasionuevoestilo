@@ -786,6 +786,28 @@ h3 {
   text-transform: uppercase;
 }
 
+.machines-photo-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 18px;
+  margin: 46px 0 0;
+}
+
+.machines-photo-pair .activity-photo-real {
+  min-height: clamp(300px, 34vw, 430px);
+  margin: 0;
+}
+
+.machines-photo-pair .activity-photo-real img {
+  min-height: clamp(300px, 34vw, 430px);
+}
+
+@media (max-width: 760px) {
+  .machines-photo-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
 .founder-card {
   position: relative;
   padding: 42px 36px;
@@ -2100,6 +2122,35 @@ h3 {
   transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
+.hero-proof-stack .proof-cta-card {
+  border-color: rgba(255, 45, 119, 0.42);
+  background:
+    linear-gradient(135deg, rgba(196, 31, 78, 0.24), rgba(255, 45, 119, 0.06) 52%),
+    rgba(255, 255, 255, 0.06);
+}
+
+.proof-card-action {
+  width: fit-content;
+  margin-top: 22px;
+  padding: 13px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 45, 119, 0.58);
+  background: var(--pink);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.proof-card-action .icon {
+  width: 16px;
+  height: 16px;
+}
+
 .content-placeholder-link:hover,
 .content-placeholder-link:focus-visible {
   transform: translateY(-3px);
@@ -2444,6 +2495,13 @@ h3 {
 
   .athlete-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .athlete-photo img,
+  .athlete-gallery img {
+    max-height: 78vh;
+    object-fit: contain;
+    background: var(--ink);
   }
 
   .price-catalog {

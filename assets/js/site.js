@@ -51,6 +51,32 @@
   const mobileAction = document.querySelector('.mobile-action');
 
   if (mobileAction) {
+    const isDarkBackground = (element) => {
+      let current = element;
+
+      while (current && current !== document.documentElement) {
+        const background = window.getComputedStyle(current).backgroundColor;
+        const match = background.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?\)/);
+
+        if (match) {
+          const alpha = match[4] === undefined ? 1 : Number(match[4]);
+
+          if (alpha > 0.2) {
+            const red = Number(match[1]);
+            const green = Number(match[2]);
+            const blue = Number(match[3]);
+            const luminance = (red * 0.299) + (green * 0.587) + (blue * 0.114);
+
+            return luminance < 90;
+          }
+        }
+
+        current = current.parentElement;
+      }
+
+      return false;
+    };
+
     const updateMobileActionContrast = () => {
       const rect = mobileAction.getBoundingClientRect();
       const x = rect.left + rect.width / 2;
@@ -61,10 +87,13 @@
       const elementBelow = document.elementFromPoint(x, y);
       mobileAction.style.pointerEvents = originalPointerEvents;
 
-      const darkSection = elementBelow?.closest('.section-dark, .site-footer, .legal-hero, .hero, .contact-section');
-      const lightSection = elementBelow?.closest('.section-paper, .section-light, .legal-content');
+      const darkRegionBelow = elementBelow?.closest('.section-dark, .site-footer, .legal-hero, .hero, .contact-section');
+      const actionCenterInsideDarkRegion = Array.from(document.querySelectorAll('.section-dark, .site-footer, .legal-hero, .hero, .contact-section')).some((section) => {
+        const sectionRect = section.getBoundingClientRect();
+        return x >= sectionRect.left && x <= sectionRect.right && y >= sectionRect.top && y <= sectionRect.bottom;
+      });
 
-      mobileAction.classList.toggle('is-over-dark', Boolean(darkSection && !lightSection));
+      mobileAction.classList.toggle('is-over-dark', Boolean(isDarkBackground(elementBelow) || darkRegionBelow || actionCenterInsideDarkRegion));
     };
 
     updateMobileActionContrast();
