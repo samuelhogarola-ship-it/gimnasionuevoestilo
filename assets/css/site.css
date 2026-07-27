@@ -733,6 +733,42 @@ h3 {
   font-style: normal;
 }
 
+.machine-section-heading {
+  margin-bottom: clamp(42px, 5vw, 72px);
+}
+
+.machine-section-heading p {
+  max-width: min(100%, 1040px);
+  color: var(--muted);
+  font-size: clamp(1.22rem, 1.9vw, 1.75rem);
+  line-height: 1.55;
+}
+
+@media (min-width: 900px) {
+  .machine-section-heading {
+    grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1fr);
+    column-gap: clamp(42px, 6vw, 96px);
+  }
+
+  .machine-section-heading h2 {
+    max-width: 980px;
+  }
+
+  .machine-section-heading p {
+    grid-column: 1 / -1;
+    max-width: none;
+    padding-right: clamp(0px, 4vw, 48px);
+    font-size: clamp(1.45rem, 1.55vw, 1.95rem);
+  }
+}
+
+@media (max-width: 899px) {
+  .machine-section-heading p {
+    font-size: clamp(1.2rem, 5.8vw, 1.5rem);
+    line-height: 1.55;
+  }
+}
+
 .intro-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.62fr);
