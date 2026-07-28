@@ -173,7 +173,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 16px;
 }
 
 .brand {
@@ -214,22 +214,22 @@ h3 {
 .nav-shell {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 14px;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
-  gap: clamp(16px, 2vw, 30px);
+  gap: clamp(14px, 1.6vw, 26px);
 }
 
 .site-nav a,
 .language-link,
 .location-link {
   color: rgba(255, 255, 255, 0.82);
-  font-size: 0.69rem;
+  font-size: 0.66rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.10em;
   line-height: 1.35;
   text-decoration: none;
   text-transform: uppercase;
@@ -261,7 +261,7 @@ h3 {
 }
 
 .site-nav .nav-break-start {
-  margin-left: clamp(4px, 1vw, 14px);
+  margin-left: clamp(4px, 0.5vw, 8px);
 }
 
 .site-nav a:hover,
@@ -299,7 +299,7 @@ h3 {
 .nav-utility {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 }
 
 .language-link {
