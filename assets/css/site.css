@@ -3138,6 +3138,10 @@ body.call-sheet-open {
     box-shadow: 0 -34px 86px rgba(0, 0, 0, 0.38);
   }
 
+  .team-deck-section.section-soft-dark {
+    box-shadow: 0 -28px 78px rgba(0, 0, 0, 0.28);
+  }
+
   .deck-layer-1 {
     z-index: 11;
   }
