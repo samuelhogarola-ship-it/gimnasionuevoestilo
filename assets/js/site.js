@@ -43,6 +43,29 @@
     if (event.target.closest('a')) setMenu(false);
   });
 
+  const syncCurrentNavLink = () => {
+    const links = Array.from(document.querySelectorAll('.site-nav a[href]'));
+    if (!links.length) return;
+
+    const currentPath = window.location.pathname.replace(/\/index\.html$/, '/');
+    const currentHash = window.location.hash;
+
+    if (!currentHash) return;
+
+    const matchingLink = links.find((link) => {
+      const url = new URL(link.getAttribute('href'), window.location.origin);
+      return url.pathname.replace(/\/index\.html$/, '/') === currentPath && url.hash === currentHash;
+    });
+
+    if (!matchingLink) return;
+
+    links.forEach((link) => link.removeAttribute('aria-current'));
+    matchingLink.setAttribute('aria-current', 'page');
+  };
+
+  syncCurrentNavLink();
+  window.addEventListener('hashchange', syncCurrentNavLink);
+
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') {
       setMenu(false);
@@ -71,7 +94,7 @@
   const mobileAction = document.querySelector('.mobile-action');
   const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
 
-  const shouldUseCallSheet = () => window.matchMedia('(max-width: 860px)').matches || window.matchMedia('(pointer: coarse)').matches;
+  const shouldUseCallSheet = () => true;
 
   const getCallSheetLabels = () => {
     const isEnglish = document.documentElement.lang?.toLowerCase().startsWith('en');
