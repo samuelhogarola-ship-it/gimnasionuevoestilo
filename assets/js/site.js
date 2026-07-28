@@ -71,7 +71,7 @@
   const mobileAction = document.querySelector('.mobile-action');
   const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
 
-  const shouldUseCallSheet = () => window.matchMedia('(max-width: 860px)').matches || window.matchMedia('(pointer: coarse)').matches;
+  const shouldUseCallSheet = () => true;
 
   const getCallSheetLabels = () => {
     const isEnglish = document.documentElement.lang?.toLowerCase().startsWith('en');
