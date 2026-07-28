@@ -1,5 +1,8 @@
 # Next
 
+## Pendiente de UI
+- [ ] **Navbar PC apretada** — El header en desktop tiene los elementos demasiado juntos (nav links + utility block). Revisar spacing/gap entre elementos y si el `header-inner` necesita más padding o si los nav-links tienen que reducir `gap`/`font-size`. Comprobar entre ~1100px y 1440px donde más se nota el apretamiento.
+
 ## Pendiente de contenido
 - [ ] **Arreglar tarifas** — Confirmar si los precios actuales (40€/mes, 35€ estudiantes/jubilados, bonos 25€/35€, trimestre 100€, chip 5€) son correctos o hay nuevos precios. Actualizar en: `servicios/index.html` (price-catalog + JSON-LD), `en/services/index.html`, `index.html` (pricing-panel check-list), `arroyo/index.html`, `en/arroyo/index.html`, `en/free-weights/index.html` (FAQ).
 - [ ] **Foto "Máquinas y poleas"** — La facility-card de máquinas en `index.html` muestra el placeholder CSS "FOTO" en lugar de una imagen real. Las otras 3 (peso libre, cardio, sala de actividades) ya tienen foto.
