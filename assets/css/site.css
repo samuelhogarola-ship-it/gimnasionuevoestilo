@@ -2406,9 +2406,9 @@ body.minibar-sheet-open {
 }
 
 .team-deck-list {
-  width: min(100%, 1440px);
+  width: 100%;
   margin: 0 auto;
-  padding-inline: clamp(0px, 2vw, 28px);
+  padding-inline: 0;
 }
 
 .team-deck-section {
