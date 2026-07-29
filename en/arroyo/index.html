@@ -32,7 +32,7 @@
   <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/img/Arroyo/arroyo-hero.jpg" as="image" type="image/jpeg">
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260728-arroyo-facility-photos">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260729-paco-photo-sharp">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -260,8 +260,7 @@
               <button class="gallery-close" type="button" data-gallery-close>Close gallery</button>
             </div>
           </article>
-          <article class="facility-card facility-photo-card facility-spinning" data-reveal>
-            <picture><source type="image/webp" srcset="/assets/img/Arroyo/responsive/sala-spinning-arroyo-720.webp 720w, /assets/img/Arroyo/responsive/sala-spinning-arroyo-1100.webp 1100w, /assets/img/Arroyo/sala-spinning-arroyo.webp 1600w" sizes="(max-width: 760px) calc(100vw - 52px), 25vw"><img class="facility-photo" src="/assets/img/Arroyo/sala-spinning-arroyo.jpg" srcset="/assets/img/Arroyo/responsive/sala-spinning-arroyo-720.jpg 720w, /assets/img/Arroyo/responsive/sala-spinning-arroyo-1100.jpg 1100w, /assets/img/Arroyo/sala-spinning-arroyo.jpg 1600w" sizes="(max-width: 760px) calc(100vw - 52px), 25vw" alt="" loading="lazy" decoding="async" width="1600" height="2048"></picture>
+          <article class="facility-card facility-spinning" data-reveal>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#treadmill"></use></svg>
             <h3>Spinning</h3>
             <p>Room for bike sessions, rhythm and endurance within the instructor-led activities programme.</p>
@@ -269,13 +268,8 @@
               View gallery <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg>
             </button>
             <div class="facility-gallery" id="gallery-spinning" hidden>
-              <div class="facility-gallery-grid" aria-label="Spinning room gallery">
-                <span class="facility-shot facility-shot-photo">
-                  <picture>
-                    <source type="image/webp" srcset="/assets/img/Arroyo/responsive/sala-spinning-arroyo-720.webp 720w, /assets/img/Arroyo/responsive/sala-spinning-arroyo-1100.webp 1100w, /assets/img/Arroyo/sala-spinning-arroyo.webp 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px">
-                    <img src="/assets/img/Arroyo/sala-spinning-arroyo.jpg" srcset="/assets/img/Arroyo/responsive/sala-spinning-arroyo-720.jpg 720w, /assets/img/Arroyo/responsive/sala-spinning-arroyo-1100.jpg 1100w, /assets/img/Arroyo/sala-spinning-arroyo.jpg 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px" alt="Spinning room at Nuevo Estilo Arroyo de la Miel" loading="lazy" decoding="async" width="1600" height="2048">
-                  </picture>
-                </span>
+              <div class="facility-gallery-grid" aria-label="Spinning room gallery awaiting photos">
+                <span class="facility-shot">Spinning photo pending</span>
               </div>
               <button class="gallery-close" type="button" data-gallery-close>Close gallery</button>
             </div>
@@ -355,40 +349,34 @@
             <h3>First visit</h3>
             <p>Visit the location, ask reception about the available options and clear up any questions before starting. There is no commitment period: pay for what you are going to train.</p>
           </article>
-          <article class="service-card" data-reveal>
+          <article class="service-card service-card-link minibar-service-card" data-reveal>
             <span class="service-number">04</span>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#check"></use></svg>
             <h3>Minibar</h3>
             <p>Machine coffee, protein shakes, egg-white omelettes and oat omelettes are available to complete your training.</p>
+            <button class="mini-action minibar-card-action" type="button" data-minibar-open aria-controls="minibar-sheet" aria-expanded="false">Menu <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></button>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-paper" id="minibar" aria-labelledby="minibar-title">
-      <div class="section-inner info-layout">
-        <div class="info-intro" data-reveal>
-          <span class="section-index">Minibar</span>
-          <h2 id="minibar-title">Quick gym <em>menu.</em></h2>
-          <p>Coffee, shakes and omelettes to complete your training. Prices taken from the front desk menu.</p>
+    <div class="minibar-sheet" id="minibar-sheet" hidden aria-hidden="true">
+      <button class="minibar-sheet-backdrop" type="button" data-minibar-close aria-label="Close minibar menu"></button>
+      <div class="minibar-sheet-panel" role="dialog" aria-modal="true" aria-labelledby="minibar-sheet-title">
+        <button class="minibar-sheet-close" type="button" data-minibar-close aria-label="Close minibar menu">×</button>
+        <p class="minibar-sheet-eyebrow">Minibar</p>
+        <h3 class="minibar-sheet-title" id="minibar-sheet-title">Menu</h3>
+        <div class="minibar-catalog" aria-label="Minibar menu">
+          <div class="minibar-item"><strong>Machine coffee</strong><span>€1</span></div>
+          <div class="minibar-item"><strong>Egg-white omelette</strong><span>€4</span></div>
+          <div class="minibar-item"><strong>Oat omelette + egg white</strong><span>€4.50</span></div>
+          <div class="minibar-item"><strong>Shake with water</strong><span>€3.50</span></div>
+          <div class="minibar-item"><strong>Shake with milk</strong><span>€4</span></div>
+          <div class="minibar-item"><strong>Protein cake · portion</strong><span>€2</span></div>
+          <div class="minibar-item"><strong>Pre-workout</strong><span>€2</span></div>
         </div>
-        <table class="schedule-table" data-reveal>
-          <caption>Nuevo Estilo Arroyo minibar menu</caption>
-          <thead>
-            <tr><th>Product</th><th>Price</th></tr>
-          </thead>
-          <tbody>
-            <tr><td data-label="Product">Machine coffee</td><td data-label="Price">€1</td></tr>
-            <tr><td data-label="Product">Egg-white omelette</td><td data-label="Price">€4</td></tr>
-            <tr><td data-label="Product">Oat omelette + egg white</td><td data-label="Price">€4.50</td></tr>
-            <tr><td data-label="Product">Shake with water</td><td data-label="Price">€3.50</td></tr>
-            <tr><td data-label="Product">Shake with milk</td><td data-label="Price">€4</td></tr>
-            <tr><td data-label="Product">Protein cake · portion</td><td data-label="Price">€2</td></tr>
-            <tr><td data-label="Product">Pre-workout</td><td data-label="Price">€2</td></tr>
-          </tbody>
-        </table>
       </div>
-    </section>
+    </div>
 
     <section class="section section-paper" id="activities" aria-labelledby="activities-title">
       <div class="section-inner">

@@ -2464,7 +2464,7 @@ body.minibar-sheet-open {
 
 .career-medals div {
   display: grid;
-  grid-template-columns: 92px 1fr;
+  grid-template-columns: clamp(112px, 16vw, 150px) 1fr;
   gap: 20px;
   padding: 18px 0;
   border-bottom: 1px solid var(--line-light);
@@ -2473,7 +2473,7 @@ body.minibar-sheet-open {
 .career-medals strong {
   color: var(--pink);
   font-family: var(--display);
-  font-size: 2.2rem;
+  font-size: clamp(1.65rem, 4.8vw, 2.2rem);
   font-weight: 400;
   line-height: 0.9;
 }
@@ -2512,7 +2512,7 @@ body.minibar-sheet-open {
 
 .career-gallery figure:first-child img {
   object-position: center 42%;
-  filter: contrast(1.12) brightness(1.18);
+  filter: contrast(1.08) brightness(1.06);
 }
 
 .career-gallery figure:nth-child(2) img {
@@ -3517,7 +3517,24 @@ body.call-sheet-open {
   }
 
   .career-gallery figure {
-    min-height: 280px;
+    min-height: auto;
+  }
+
+  .career-gallery figure:first-child {
+    aspect-ratio: 4 / 3;
+  }
+
+  .career-gallery figure:first-child img {
+    object-position: 63% center;
+  }
+
+  .career-medals div {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .career-medals strong {
+    font-size: clamp(2rem, 10vw, 2.55rem);
   }
 
   .athlete-showcase {
@@ -3767,7 +3784,8 @@ body.call-sheet-open {
 
   .section-heading h2,
   .display-title {
-    font-size: clamp(3.25rem, 17vw, 5rem);
+    font-size: clamp(2.9rem, 15vw, 4.55rem);
+    overflow-wrap: break-word;
   }
 
   .principles {
