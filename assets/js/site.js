@@ -9,18 +9,19 @@
 
   if (deckStackRoots.length && typeof window.initDeckStack === 'function') {
     deckStackRoots.forEach((deckStackRoot) => {
+      const isTeamDeck = deckStackRoot.classList.contains('team-deck');
       window.initDeckStack(deckStackRoot, {
         mobileBreakpoint: 820,
-        desktopCardShift: 44,
-        desktopCardScaleLoss: 0.02,
-        desktopMediaShift: -22,
-        desktopMediaRotate: -4.5,
-        desktopMediaScaleGain: 0.03,
-        mobileCardShift: 28,
-        mobileCardScaleLoss: 0.016,
-        mobileMediaShift: -14,
-        mobileMediaRotate: -2.4,
-        mobileMediaScaleGain: 0.02,
+        desktopCardShift: isTeamDeck ? 40 : 44,
+        desktopCardScaleLoss: isTeamDeck ? 0.018 : 0.02,
+        desktopMediaShift: isTeamDeck ? -18 : -22,
+        desktopMediaRotate: isTeamDeck ? -3.2 : -4.5,
+        desktopMediaScaleGain: isTeamDeck ? 0.024 : 0.03,
+        mobileCardShift: isTeamDeck ? 42 : 28,
+        mobileCardScaleLoss: isTeamDeck ? 0.026 : 0.016,
+        mobileMediaShift: isTeamDeck ? -20 : -14,
+        mobileMediaRotate: isTeamDeck ? -3.2 : -2.4,
+        mobileMediaScaleGain: isTeamDeck ? 0.03 : 0.02,
       });
     });
   }
@@ -328,6 +329,49 @@
       toggle?.setAttribute('aria-expanded', 'false');
       toggle?.focus({ preventScroll: true });
     });
+  });
+
+  document.querySelectorAll('[data-freeweight-slider]').forEach((slider) => {
+    const slides = Array.from(slider.querySelectorAll('.freeweight-slide'));
+    const previous = slider.querySelector('[data-freeweight-prev]');
+    const next = slider.querySelector('[data-freeweight-next]');
+    if (slides.length < 2) return;
+
+    let activeIndex = Math.max(0, slides.findIndex((slide) => slide.classList.contains('is-active')));
+    let intervalId = null;
+
+    const showSlide = (index) => {
+      activeIndex = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle('is-active', slideIndex === activeIndex);
+      });
+    };
+
+    const start = () => {
+      if (reduceMotion || intervalId) return;
+      intervalId = window.setInterval(() => showSlide(activeIndex + 1), 5000);
+    };
+
+    const restart = () => {
+      if (intervalId) {
+        window.clearInterval(intervalId);
+        intervalId = null;
+      }
+      start();
+    };
+
+    previous?.addEventListener('click', () => {
+      showSlide(activeIndex - 1);
+      restart();
+    });
+
+    next?.addEventListener('click', () => {
+      showSlide(activeIndex + 1);
+      restart();
+    });
+
+    showSlide(activeIndex);
+    start();
   });
 
   if (!reduceMotion && 'IntersectionObserver' in window) {

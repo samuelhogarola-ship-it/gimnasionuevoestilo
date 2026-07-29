@@ -31,7 +31,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260729-paco-photo-sharp">
+  <link rel="stylesheet" href="/core/deck-stack.css?v=20260727-deck-stack">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260729-team-stack-mobile-2">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -64,7 +65,8 @@
     ]
   }
   </script>
-  <script src="/assets/js/site.js?v=20260728-deck-home" defer></script>
+  <script src="/core/deck-stack.js?v=20260727-deck-stack" defer></script>
+  <script src="/assets/js/site.js?v=20260729-team-stack-mobile-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -113,7 +115,9 @@
       </div>
     </section>
 
-    <section class="section section-paper team-deck-section deck-layer-1">
+    <div class="team-deck" data-deck-stack>
+      <div class="team-deck-list" data-deck-stack-list>
+    <section class="section section-paper team-deck-section deck-layer-1" data-deck-stack-card>
       <div class="section-inner">
         <div class="section-heading" data-reveal>
           <span class="section-index">What we offer</span>
@@ -134,7 +138,7 @@
       </div>
     </section>
 
-    <section class="section section-dark team-deck-section deck-layer-2">
+    <section class="section section-dark team-deck-section deck-layer-2" data-deck-stack-card>
       <div class="section-inner">
         <div class="section-heading" data-reveal>
           <span class="section-index">Direction and criteria</span>
@@ -150,7 +154,7 @@
               <div class="principle"><strong>Experience</strong><span>Led by Paco Mula, a gym reference and coach with a competitive background.</span></div>
             </div>
           </div>
-          <article class="founder-card founder-card-photo paco-team-card" data-reveal>
+          <article class="founder-card founder-card-photo paco-team-card" data-reveal data-deck-stack-media>
             <figure class="founder-photo" aria-hidden="true">
               <picture><source type="image/webp" srcset="/assets/img/Fuengirola/paco-mula-blanco-negro.webp"><img src="/assets/img/Fuengirola/paco-mula-blanco-negro.png" alt="" loading="lazy" width="1026" height="1484"></picture>
             </figure>
@@ -163,7 +167,7 @@
       </div>
     </section>
 
-    <section class="section section-paper team-deck-section deck-layer-3">
+    <section class="section section-paper team-deck-section deck-layer-3" data-deck-stack-card>
       <div class="section-inner">
         <div class="section-heading" data-reveal>
           <span class="section-index">Who it is for</span>
@@ -187,7 +191,7 @@
       </div>
     </section>
 
-    <section class="section section-dark team-deck-section deck-layer-4" aria-labelledby="athletes-title">
+    <section class="section section-dark team-deck-section deck-layer-4" aria-labelledby="athletes-title" data-deck-stack-card>
       <div class="section-inner">
         <div class="review-band review-band-dark review-band-media team-athletes-band" data-reveal>
           <div>
@@ -195,7 +199,7 @@
             <h2 id="athletes-title">Current competitors. Stage work.</h2>
             <p>Paco Mula Team athletes preparing physique, category and season with real follow-up, competitive criteria and clear direction before stepping on stage.</p>
           </div>
-          <figure class="team-media-card">
+          <figure class="team-media-card" data-deck-stack-media>
             <picture><source type="image/webp" srcset="/assets/img/Fuengirola/paco-mula-equipo-bn.webp?v=20260728-sharp"><img src="/assets/img/Fuengirola/paco-mula-equipo-bn.jpg" alt="Paco Mula Team athlete on a competition stage" loading="lazy" width="3594" height="2554"></picture>
           </figure>
           <div class="button-row">
@@ -206,7 +210,7 @@
       </div>
     </section>
 
-    <section class="section section-dark">
+    <section class="section section-dark team-deck-section deck-layer-5" data-deck-stack-card>
       <div class="section-inner faq-grid">
         <div class="faq-intro" data-reveal>
           <span class="section-index">Quick questions</span>
@@ -230,7 +234,7 @@
       </div>
     </section>
 
-    <section class="section section-paper">
+    <section class="section section-paper team-deck-section deck-layer-6" data-deck-stack-card>
       <div class="section-inner">
         <div class="review-band" data-reveal>
           <div>
@@ -244,6 +248,8 @@
         </div>
       </div>
     </section>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
