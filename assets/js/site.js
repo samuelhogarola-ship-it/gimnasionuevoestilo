@@ -290,18 +290,25 @@
   if (mobileAction) {
     const updateMobileActionContrast = () => {
       const rect = mobileAction.getBoundingClientRect();
-      const x = rect.left + rect.width / 2;
-      const y = rect.top + rect.height / 2;
       const originalPointerEvents = mobileAction.style.pointerEvents;
+      const points = [
+        [rect.left + rect.width / 2, rect.top + rect.height / 2],
+        [rect.left + rect.width * 0.22, rect.top + rect.height / 2],
+        [rect.left + rect.width * 0.78, rect.top + rect.height / 2],
+        [rect.left + rect.width / 2, rect.top + rect.height * 0.22],
+        [rect.left + rect.width / 2, rect.top + rect.height * 0.78],
+      ];
 
       mobileAction.style.pointerEvents = 'none';
-      const elementBelow = document.elementFromPoint(x, y);
+      const elementsBelow = points
+        .map(([x, y]) => document.elementFromPoint(x, y))
+        .filter(Boolean);
       mobileAction.style.pointerEvents = originalPointerEvents;
 
-      const darkSection = elementBelow?.closest('.section-dark, .review-band-dark, .site-footer, .legal-hero, .hero, .contact-section');
-      const lightSection = elementBelow?.closest('.section-paper, .section-light, .legal-content, .review-band:not(.review-band-dark), .service-card-light');
-
-      mobileAction.classList.toggle('is-over-dark', Boolean(darkSection && !lightSection));
+      const isDark = elementsBelow.some((elementBelow) => elementBelow.closest(
+        '.section-dark, .review-band-dark, .site-footer, .legal-hero, .hero, .contact-section, .founder-card, .content-placeholder, .facility-card, .activity-photo-real'
+      ));
+      mobileAction.classList.toggle('is-over-dark', isDark);
     };
 
     updateMobileActionContrast();

@@ -32,7 +32,7 @@
   <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/core/deck-stack.css?v=20260727-deck-stack">
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260729-mobile-menu-gap">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260729-team-image-sharp">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -66,7 +66,7 @@
   }
   </script>
   <script src="/core/deck-stack.js?v=20260727-deck-stack" defer></script>
-  <script src="/assets/js/site.js?v=20260729-mobile-action-dark" defer></script>
+  <script src="/assets/js/site.js?v=20260729-team-image-sharp" defer></script>
 </head>
 <body class="activities-page">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -122,9 +122,14 @@
                 <picture><source type="image/webp" srcset="/assets/img/Fuengirola/sala-boxeo-actividades-fuengirola.webp"><img src="/assets/img/Fuengirola/sala-boxeo-actividades-fuengirola.jpg" alt="Sala de boxeo y actividades con iluminación rosa en Gimnasio Nuevo Estilo Fuengirola" loading="lazy" width="4032" height="3024"></picture>
                 <figcaption>Sala de boxeo y actividades</figcaption>
               </figure>
-              <figure class="activity-photo-real activity-photo-secondary">
-                <picture><source type="image/webp" srcset="/assets/img/Fuengirola/sala-spinning-fuengirola.webp?v=20260728-upright"><img src="/assets/img/Fuengirola/sala-spinning-fuengirola.jpg?v=20260728-upright" alt="Sala de spinning de Gimnasio Nuevo Estilo Fuengirola con bicicletas indoor" loading="lazy" width="1100" height="1467"></picture>
+              <figure class="activity-photo-real activity-photo-secondary freeweight-slider" data-freeweight-slider>
+                <picture class="freeweight-slide is-active"><source type="image/webp" srcset="/assets/img/Fuengirola/sala-spinning-frontal-fuengirola.webp"><img src="/assets/img/Fuengirola/sala-spinning-frontal-fuengirola.jpg" alt="Sala de spinning de Gimnasio Nuevo Estilo Fuengirola vista frontal con bicicletas indoor" loading="lazy" width="1108" height="1419"></picture>
+                <picture class="freeweight-slide"><source type="image/webp" srcset="/assets/img/Fuengirola/sala-spinning-lateral-fuengirola.webp"><img src="/assets/img/Fuengirola/sala-spinning-lateral-fuengirola.jpg" alt="Sala de spinning de Gimnasio Nuevo Estilo Fuengirola con filas de bicicletas indoor" loading="lazy" width="1086" height="1448"></picture>
                 <figcaption>Sala de spinning</figcaption>
+                <div class="freeweight-controls" aria-label="Cambiar foto de sala de spinning">
+                  <button type="button" aria-label="Foto anterior" data-freeweight-prev>‹</button>
+                  <button type="button" aria-label="Foto siguiente" data-freeweight-next>›</button>
+                </div>
               </figure>
             </div>
           </div>

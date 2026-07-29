@@ -214,7 +214,7 @@ h3 {
 .nav-shell {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: clamp(18px, 2vw, 30px);
 }
 
 .site-nav {
@@ -299,16 +299,21 @@ h3 {
 .nav-utility {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: clamp(14px, 1.4vw, 22px);
+}
+
+.nav-utility .language-link,
+.nav-utility .location-link {
+  margin: 0;
 }
 
 .language-link {
-  padding: 9px 10px;
+  padding: 10px 12px;
   border: 1px solid var(--line-dark);
 }
 
 .location-link {
-  padding: 10px 13px;
+  padding: 11px 18px;
   border: 1px solid rgba(223, 76, 103, 0.44);
   background: rgba(183, 32, 70, 0.12);
   color: var(--white);
@@ -525,8 +530,22 @@ h3 {
   color: var(--white);
 }
 
+.legal-hero .button-primary:hover,
+.legal-hero .button-primary:focus-visible,
+.section-dark .button-row .button-primary:hover,
+.section-dark .button-row .button-primary:focus-visible {
+  border-color: rgba(255, 77, 123, 0.44);
+  background: linear-gradient(135deg, rgba(198, 37, 82, 0.96), rgba(255, 77, 123, 0.78));
+  box-shadow: 0 16px 34px rgba(198, 37, 82, 0.22);
+  color: var(--white);
+}
+
 .hero-actions .button-primary:hover .icon,
-.hero-actions .button-primary:focus-visible .icon {
+.hero-actions .button-primary:focus-visible .icon,
+.legal-hero .button-primary:hover .icon,
+.legal-hero .button-primary:focus-visible .icon,
+.section-dark .button-row .button-primary:hover .icon,
+.section-dark .button-row .button-primary:focus-visible .icon {
   color: currentColor;
 }
 
@@ -914,7 +933,9 @@ h3 {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(8, 8, 8, 0.04), rgba(8, 8, 8, 0.62));
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0.02), rgba(8, 8, 8, 0.34)),
+    radial-gradient(circle at 18% 16%, rgba(197, 27, 76, 0.12), transparent 46%);
   content: "";
 }
 
@@ -923,7 +944,7 @@ h3 {
   height: 100%;
   min-height: clamp(260px, 36vw, 430px);
   object-fit: cover;
-  filter: saturate(0.95) contrast(1.04);
+  filter: saturate(1.02) contrast(1.08) brightness(1.04);
 }
 
 .activity-photo-real figcaption {
@@ -955,10 +976,19 @@ h3 {
   min-height: clamp(260px, 30vw, 430px);
 }
 
+.activity-photo-secondary .freeweight-slide {
+  height: 100%;
+}
+
+.activity-photo-secondary .freeweight-controls {
+  right: clamp(14px, 2vw, 20px);
+  bottom: clamp(14px, 2vw, 20px);
+}
+
 .activity-photo-secondary img {
   min-height: clamp(260px, 30vw, 430px);
-  object-position: center center;
-  filter: saturate(0.98) contrast(1.06) brightness(1.04);
+  object-position: center 46%;
+  filter: saturate(1.03) contrast(1.1) brightness(1.06);
 }
 
 .activity-photo-secondary figcaption {
@@ -1470,8 +1500,8 @@ h3 {
 .facility-photo {
   object-fit: cover;
   object-position: center;
-  opacity: 0.7;
-  filter: saturate(0.88) contrast(1.04);
+  opacity: 0.9;
+  filter: saturate(1.02) contrast(1.08) brightness(1.04);
 }
 
 .facility-card-slider {
@@ -1498,8 +1528,8 @@ h3 {
   inset: 0;
   display: block;
   background:
-    linear-gradient(180deg, rgba(8, 8, 8, 0.1) 0%, rgba(8, 8, 8, 0.96) 82%),
-    radial-gradient(circle at 32% 20%, rgba(197, 27, 76, 0.42), transparent 42%);
+    linear-gradient(180deg, rgba(8, 8, 8, 0.04) 0%, rgba(8, 8, 8, 0.78) 86%),
+    radial-gradient(circle at 30% 18%, rgba(197, 27, 76, 0.2), transparent 40%);
   content: "";
 }
 
@@ -1524,8 +1554,8 @@ h3 {
 
 .facility-spinning .facility-photo {
   object-position: center 44%;
-  opacity: 0.82;
-  filter: saturate(0.98) contrast(1.08) brightness(1.08);
+  opacity: 0.94;
+  filter: saturate(1.04) contrast(1.1) brightness(1.06);
 }
 
 .facility-machines {
@@ -2489,14 +2519,14 @@ body.minibar-sheet-open {
 
 .team-athletes-band .team-media-card::after {
   background:
-    linear-gradient(180deg, rgba(8, 8, 8, 0.02), rgba(8, 8, 8, 0.12)),
-    linear-gradient(90deg, rgba(8, 8, 8, 0.18), transparent 35%);
+    linear-gradient(180deg, rgba(8, 8, 8, 0), rgba(8, 8, 8, 0.07)),
+    linear-gradient(90deg, rgba(8, 8, 8, 0.08), transparent 30%);
 }
 
 .team-athletes-band .team-media-card img {
   min-height: 370px;
   object-position: center 42%;
-  filter: contrast(1.14) brightness(1.2) grayscale(1);
+  filter: contrast(1.12) brightness(1.04);
 }
 
 .team-media-card {
@@ -3337,11 +3367,23 @@ body.call-sheet-open {
   }
 
   .site-nav {
-    gap: 16px;
+    gap: 14px;
   }
 
   .site-nav a {
     font-size: 0.63rem;
+  }
+
+  .nav-shell {
+    gap: 16px;
+  }
+
+  .nav-utility {
+    gap: 14px;
+  }
+
+  .location-link {
+    padding-inline: 16px;
   }
 
   .site-nav a[aria-current="page"]::after {
@@ -3386,9 +3428,9 @@ body.call-sheet-open {
     padding: 0 17px;
     border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 999px;
-    background: var(--ink);
+    background: var(--white);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-    color: var(--white);
+    color: var(--ink);
     font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 0.09em;
@@ -3756,9 +3798,9 @@ body.call-sheet-open {
 
   .team-athletes-band .team-media-card img {
     min-height: 260px;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center center;
-    filter: contrast(1.16) brightness(1.14) grayscale(1);
+    filter: contrast(1.12) brightness(1.04);
   }
 
   .team-deck-section {
@@ -3795,9 +3837,9 @@ body.call-sheet-open {
     padding: 0 17px;
     border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 999px;
-    background: var(--ink);
+    background: var(--white);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-    color: var(--white);
+    color: var(--ink);
     font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 0.09em;

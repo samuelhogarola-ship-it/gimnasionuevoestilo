@@ -31,7 +31,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260729-mobile-menu-gap">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260729-team-image-sharp">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -64,7 +64,7 @@
     ]
   }
   </script>
-  <script src="/assets/js/site.js?v=20260729-mobile-action-dark" defer></script>
+  <script src="/assets/js/site.js?v=20260729-team-image-sharp" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -118,9 +118,14 @@
                 <picture><source type="image/webp" srcset="/assets/img/Fuengirola/sala-boxeo-actividades-fuengirola.webp"><img src="/assets/img/Fuengirola/sala-boxeo-actividades-fuengirola.jpg" alt="Boxing and activities room with pink lighting at Nuevo Estilo Gym Fuengirola" loading="lazy" width="4032" height="3024"></picture>
                 <figcaption>Boxing and activities room</figcaption>
               </figure>
-              <figure class="activity-photo-real activity-photo-secondary">
-                <picture><source type="image/webp" srcset="/assets/img/Fuengirola/sala-spinning-fuengirola.webp?v=20260728-upright"><img src="/assets/img/Fuengirola/sala-spinning-fuengirola.jpg?v=20260728-upright" alt="Spinning room at Nuevo Estilo Gym Fuengirola with indoor bikes" loading="lazy" width="1100" height="1467"></picture>
+              <figure class="activity-photo-real activity-photo-secondary freeweight-slider" data-freeweight-slider>
+                <picture class="freeweight-slide is-active"><source type="image/webp" srcset="/assets/img/Fuengirola/sala-spinning-frontal-fuengirola.webp"><img src="/assets/img/Fuengirola/sala-spinning-frontal-fuengirola.jpg" alt="Front view of the spinning room at Nuevo Estilo Gym Fuengirola with indoor bikes" loading="lazy" width="1108" height="1419"></picture>
+                <picture class="freeweight-slide"><source type="image/webp" srcset="/assets/img/Fuengirola/sala-spinning-lateral-fuengirola.webp"><img src="/assets/img/Fuengirola/sala-spinning-lateral-fuengirola.jpg" alt="Spinning room at Nuevo Estilo Gym Fuengirola with rows of indoor bikes" loading="lazy" width="1086" height="1448"></picture>
                 <figcaption>Spinning room</figcaption>
+                <div class="freeweight-controls" aria-label="Change spinning room photo">
+                  <button type="button" aria-label="Previous photo" data-freeweight-prev>‹</button>
+                  <button type="button" aria-label="Next photo" data-freeweight-next>›</button>
+                </div>
               </figure>
             </div>
           </div>
