@@ -31,7 +31,7 @@
   <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/img/Arroyo/arroyo-hero.jpg" as="image" type="image/jpeg">
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260729-paco-photo-sharp">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260729-arroyo-free-slider">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -93,7 +93,7 @@
     }
   }
   </script>
-  <script src="/assets/js/site.js?v=20260728-deck-home-v2" defer></script>
+  <script src="/assets/js/site.js?v=20260729-arroyo-free-slider" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -218,7 +218,14 @@
             </div>
           </article>
           <article class="facility-card facility-photo-card facility-free" data-reveal>
-            <picture><source type="image/webp" srcset="/assets/img/Arroyo/responsive/peso-libre-arroyo-01-720.webp 720w, /assets/img/Arroyo/responsive/peso-libre-arroyo-01-1100.webp 1100w, /assets/img/Arroyo/peso-libre-arroyo-01.webp 1600w" sizes="(max-width: 760px) calc(100vw - 52px), 25vw"><img class="facility-photo" src="/assets/img/Arroyo/peso-libre-arroyo-01.jpg" srcset="/assets/img/Arroyo/responsive/peso-libre-arroyo-01-720.jpg 720w, /assets/img/Arroyo/responsive/peso-libre-arroyo-01-1100.jpg 1100w, /assets/img/Arroyo/peso-libre-arroyo-01.jpg 1600w" sizes="(max-width: 760px) calc(100vw - 52px), 25vw" alt="" loading="lazy" decoding="async" width="1600" height="1970"></picture>
+            <div class="facility-card-slider" data-freeweight-slider>
+              <picture class="freeweight-slide is-active"><source type="image/webp" srcset="/assets/img/Arroyo/responsive/peso-libre-arroyo-01-720.webp 720w, /assets/img/Arroyo/responsive/peso-libre-arroyo-01-1100.webp 1100w, /assets/img/Arroyo/peso-libre-arroyo-01.webp 1600w" sizes="(max-width: 760px) calc(100vw - 52px), 25vw"><img class="facility-photo" src="/assets/img/Arroyo/peso-libre-arroyo-01.jpg" srcset="/assets/img/Arroyo/responsive/peso-libre-arroyo-01-720.jpg 720w, /assets/img/Arroyo/responsive/peso-libre-arroyo-01-1100.jpg 1100w, /assets/img/Arroyo/peso-libre-arroyo-01.jpg 1600w" sizes="(max-width: 760px) calc(100vw - 52px), 25vw" alt="" loading="lazy" decoding="async" width="1600" height="1970"></picture>
+              <picture class="freeweight-slide"><source type="image/webp" srcset="/assets/img/Arroyo/peso-libre-arroyo-03.webp"><img class="facility-photo" src="/assets/img/Arroyo/peso-libre-arroyo-03.jpg" alt="" loading="lazy" decoding="async" width="1086" height="1448"></picture>
+              <div class="freeweight-controls" aria-label="Cambiar foto de peso libre">
+                <button type="button" aria-label="Foto anterior" data-freeweight-prev>‹</button>
+                <button type="button" aria-label="Foto siguiente" data-freeweight-next>›</button>
+              </div>
+            </div>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#barbell"></use></svg>
             <h3>Peso libre</h3>
             <p>Espacio para barras, mancuernas y ejercicios básicos con margen para progresar a tu nivel.</p>
@@ -239,11 +246,18 @@
                     <img src="/assets/img/Arroyo/peso-libre-arroyo-02.jpg" srcset="/assets/img/Arroyo/responsive/peso-libre-arroyo-02-720.jpg 720w, /assets/img/Arroyo/responsive/peso-libre-arroyo-02-1100.jpg 1100w, /assets/img/Arroyo/peso-libre-arroyo-02.jpg 1600w" sizes="(max-width: 760px) calc(100vw - 86px), 520px" alt="Plataforma de peso libre para sentadilla y peso muerto en Nuevo Estilo Arroyo" loading="lazy" decoding="async" width="1600" height="2048">
                   </picture>
                 </span>
+                <span class="facility-shot facility-shot-photo">
+                  <picture>
+                    <source type="image/webp" srcset="/assets/img/Arroyo/peso-libre-arroyo-03.webp">
+                    <img src="/assets/img/Arroyo/peso-libre-arroyo-03.jpg" alt="Bancos, mancuernas y zona de peso libre en Nuevo Estilo Arroyo de la Miel" loading="lazy" decoding="async" width="1086" height="1448">
+                  </picture>
+                </span>
               </div>
               <button class="gallery-close" type="button" data-gallery-close>Plegar galería</button>
             </div>
           </article>
-          <article class="facility-card facility-cardio" data-reveal>
+          <article class="facility-card facility-photo-card facility-cardio" data-reveal>
+            <picture><source type="image/webp" srcset="/assets/img/Arroyo/cardio-arroyo-01.webp"><img class="facility-photo" src="/assets/img/Arroyo/cardio-arroyo-01.jpg" alt="" loading="lazy" decoding="async" width="1086" height="1448"></picture>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#treadmill"></use></svg>
             <h3>Cardio</h3>
             <p>Área para calentar, completar el entrenamiento y sumar trabajo aeróbico a la semana.</p>
@@ -251,15 +265,25 @@
               Ver galería <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg>
             </button>
             <div class="facility-gallery" id="galeria-cardio" hidden>
-              <div class="facility-gallery-grid" aria-label="Galería de cardio pendiente de fotos">
-                <span class="facility-shot">Foto cardio 01</span>
-                <span class="facility-shot">Foto cardio 02</span>
-                <span class="facility-shot">Foto cardio 03</span>
+              <div class="facility-gallery-grid" aria-label="Galería de cardio">
+                <span class="facility-shot facility-shot-photo">
+                  <picture>
+                    <source type="image/webp" srcset="/assets/img/Arroyo/cardio-arroyo-01.webp">
+                    <img src="/assets/img/Arroyo/cardio-arroyo-01.jpg" alt="Zona de cardio en Nuevo Estilo Arroyo de la Miel" loading="lazy" decoding="async" width="1086" height="1448">
+                  </picture>
+                </span>
+                <span class="facility-shot facility-shot-photo">
+                  <picture>
+                    <source type="image/webp" srcset="/assets/img/Arroyo/cardio-arroyo-02.webp">
+                    <img src="/assets/img/Arroyo/cardio-arroyo-02.jpg" alt="Máquinas de cardio en Nuevo Estilo Arroyo de la Miel" loading="lazy" decoding="async" width="1086" height="1448">
+                  </picture>
+                </span>
               </div>
               <button class="gallery-close" type="button" data-gallery-close>Plegar galería</button>
             </div>
           </article>
-          <article class="facility-card facility-spinning" data-reveal>
+          <article class="facility-card facility-photo-card facility-spinning" data-reveal>
+            <picture><source type="image/webp" srcset="/assets/img/Arroyo/sala-spinning-arroyo-interior.webp"><img class="facility-photo" src="/assets/img/Arroyo/sala-spinning-arroyo-interior.jpg" alt="" loading="lazy" decoding="async" width="650" height="900"></picture>
             <svg class="service-icon" aria-hidden="true"><use href="/assets/icons.svg#treadmill"></use></svg>
             <h3>Spinning</h3>
             <p>Sala para sesiones de bicicleta, ritmo y resistencia dentro de las actividades dirigidas.</p>
@@ -267,8 +291,13 @@
               Ver galería <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg>
             </button>
             <div class="facility-gallery" id="galeria-spinning" hidden>
-              <div class="facility-gallery-grid" aria-label="Galería de sala de spinning pendiente de fotos">
-                <span class="facility-shot">Foto spinning pendiente</span>
+              <div class="facility-gallery-grid" aria-label="Galería de sala de spinning">
+                <span class="facility-shot facility-shot-photo">
+                  <picture>
+                    <source type="image/webp" srcset="/assets/img/Arroyo/sala-spinning-arroyo-interior.webp">
+                    <img src="/assets/img/Arroyo/sala-spinning-arroyo-interior.jpg" alt="Sala de spinning en Nuevo Estilo Arroyo de la Miel" loading="lazy" decoding="async" width="650" height="900">
+                  </picture>
+                </span>
               </div>
               <button class="gallery-close" type="button" data-gallery-close>Plegar galería</button>
             </div>

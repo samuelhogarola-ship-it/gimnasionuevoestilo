@@ -1474,6 +1474,25 @@ h3 {
   filter: saturate(0.88) contrast(1.04);
 }
 
+.facility-card-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.facility-card-slider .freeweight-slide {
+  height: 100%;
+}
+
+.facility-card-slider .facility-photo {
+  height: 100%;
+}
+
+.facility-card-slider .freeweight-controls {
+  right: clamp(14px, 2vw, 20px);
+  bottom: clamp(14px, 2vw, 20px);
+}
+
 .facility-photo-card::after {
   position: absolute;
   inset: 0;
@@ -1484,7 +1503,7 @@ h3 {
   content: "";
 }
 
-.facility-photo-card > *:not(picture) {
+.facility-photo-card > *:not(picture):not(.facility-card-slider) {
   z-index: 2;
 }
 
@@ -1498,8 +1517,15 @@ h3 {
 }
 
 .facility-cardio .facility-photo {
-  object-position: center 52%;
-  opacity: 0.76;
+  object-position: center 46%;
+  opacity: 0.84;
+  filter: saturate(0.98) contrast(1.08) brightness(1.08);
+}
+
+.facility-spinning .facility-photo {
+  object-position: center 44%;
+  opacity: 0.82;
+  filter: saturate(0.98) contrast(1.08) brightness(1.08);
 }
 
 .facility-machines {
@@ -3480,10 +3506,12 @@ body.call-sheet-open {
   .nav-utility {
     justify-content: flex-start;
     flex-wrap: wrap;
+    gap: 14px 18px;
   }
 
   .nav-shell .language-link,
   .nav-shell .location-link {
+    margin: 0;
     border-color: rgba(255, 255, 255, 0.25);
     color: var(--white);
   }
@@ -3494,6 +3522,7 @@ body.call-sheet-open {
 
   .nav-utility .header-call {
     display: inline-flex;
+    margin: 0;
   }
 
   .hero {
@@ -3898,6 +3927,25 @@ body.call-sheet-open {
     padding-top: 96px;
   }
 
+  #horarios.team-deck-section .section-inner,
+  #preguntas.team-deck-section .section-inner {
+    width: var(--wrap);
+  }
+
+  #horarios .info-intro h2,
+  #preguntas .faq-intro h2 {
+    font-size: clamp(3rem, 13.2vw, 4.2rem);
+    line-height: 0.98;
+    overflow-wrap: normal;
+  }
+
+  #horarios .info-intro p,
+  #preguntas .faq-intro p {
+    max-width: 100%;
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+
   .section-heading h2,
   .display-title {
     font-size: clamp(2.9rem, 15vw, 4.55rem);
@@ -4021,10 +4069,11 @@ body.call-sheet-open {
 
   .schedule-table td {
     display: grid;
-    grid-template-columns: minmax(110px, 0.42fr) 1fr;
-    gap: 14px;
-    padding: 5px 0;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 8px 0;
     border: 0;
+    font-size: 1rem;
   }
 
   .schedule-table td::before {
@@ -4034,6 +4083,21 @@ body.call-sheet-open {
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+  }
+
+  #preguntas .faq-grid {
+    gap: 34px;
+  }
+
+  #preguntas .faq-list summary {
+    padding: 24px 44px 24px 0;
+    font-size: 1.08rem;
+    line-height: 1.28;
+  }
+
+  #preguntas .faq-answer {
+    padding-right: 0;
+    font-size: 0.94rem;
   }
 
   .activity-table-wrap {
