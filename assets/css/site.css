@@ -515,21 +515,16 @@ h3 {
   color: var(--ink);
 }
 
-.button-primary:hover {
-  background: var(--paper);
-}
-
-.hero-actions .button-primary {
-  transition: background 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-}
-
-.hero-actions .button-primary:hover {
-  border-color: rgba(255, 77, 123, 0.44);
-  background: linear-gradient(135deg, rgba(198, 37, 82, 0.96), rgba(255, 77, 123, 0.78));
-  box-shadow: 0 16px 34px rgba(198, 37, 82, 0.22);
-  color: var(--white);
-}
-
+.button-primary:hover,
+.button-primary:focus-visible,
+.button-outline:hover,
+.button-outline:focus-visible,
+.button-dark:hover,
+.button-dark:focus-visible,
+.hero-actions .button-primary:hover,
+.hero-actions .button-primary:focus-visible,
+.hero-actions .button-outline:hover,
+.hero-actions .button-outline:focus-visible,
 .legal-hero .button-primary:hover,
 .legal-hero .button-primary:focus-visible,
 .section-dark .button-row .button-primary:hover,
@@ -540,6 +535,17 @@ h3 {
   color: var(--white);
 }
 
+.hero-actions .button-primary,
+.hero-actions .button-outline {
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.button-primary:hover .icon,
+.button-primary:focus-visible .icon,
+.button-outline:hover .icon,
+.button-outline:focus-visible .icon,
+.button-dark:hover .icon,
+.button-dark:focus-visible .icon,
 .hero-actions .button-primary:hover .icon,
 .hero-actions .button-primary:focus-visible .icon,
 .legal-hero .button-primary:hover .icon,
@@ -555,36 +561,9 @@ h3 {
   color: var(--white);
 }
 
-.hero-actions .button-outline {
-  transition: background 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-}
-
-.hero-actions .button-outline:hover,
-.hero-actions .button-outline:focus-visible {
-  border-color: rgba(255, 77, 123, 0.44);
-  background: linear-gradient(135deg, rgba(198, 37, 82, 0.96), rgba(255, 77, 123, 0.78));
-  box-shadow: 0 16px 34px rgba(198, 37, 82, 0.22);
-  color: var(--white);
-}
-
-.hero-actions .button-outline:hover .icon,
-.hero-actions .button-outline:focus-visible .icon {
-  color: currentColor;
-}
-
-.button-outline:hover {
-  border-color: var(--white);
-  background: var(--white);
-  color: var(--ink);
-}
-
 .button-dark {
   background: var(--ink);
   color: var(--white);
-}
-
-.button-dark:hover {
-  background: #222;
 }
 
 .hero-facts {
@@ -2402,20 +2381,10 @@ body.minibar-sheet-open {
   color: var(--white);
 }
 
-.review-band:not(.review-band-dark) .button-primary:hover {
-  background: #222;
-}
-
 .review-band:not(.review-band-dark) .button-outline {
   border-color: rgba(8, 8, 8, 0.34);
   background: rgba(8, 8, 8, 0.04);
   color: var(--ink);
-}
-
-.review-band:not(.review-band-dark) .button-outline:hover {
-  border-color: var(--ink);
-  background: var(--ink);
-  color: var(--white);
 }
 
 .review-band-media {
