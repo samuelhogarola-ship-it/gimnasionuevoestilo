@@ -331,11 +331,11 @@
     const isEnglish = document.documentElement.lang?.toLowerCase().startsWith('en');
     const labels = isEnglish ? {
       title: 'No analytics cookies',
-      message: 'This site does not currently use analytics, advertising or personalisation cookies. It only uses what is technically necessary for the website to work and to remember this choice.',
+      message: 'This site does not currently use analytics, advertising or personalisation cookies. It only uses what is technically necessary for the website to work and to remember this choice. If future features collect data for statistics or improvement, you will be informed and given the option to reject them.',
       preferences: 'Preferences',
       preferencesCopy: 'Technical storage is always active because it is needed for navigation and basic site functions. Analytics and personalisation cookies are not active.',
       accept: 'Accept',
-      reject: 'Reject',
+      reject: 'Necessary only',
       configure: 'Configure preferences',
       save: 'Save preferences',
       cookiesPolicy: 'Cookie Policy',
@@ -344,11 +344,11 @@
       privacyHref: '/en/legal/#privacy',
     } : {
       title: 'Sin cookies de análisis',
-      message: 'Actualmente este sitio no utiliza cookies de análisis, publicidad ni personalización. Solo usa lo técnicamente necesario para que la web funcione y para recordar esta elección.',
+      message: 'Actualmente este sitio no utiliza cookies de análisis, publicidad ni personalización. Solo usa lo técnicamente necesario para que la web funcione y para recordar esta elección. Si en el futuro se añaden funciones que recopilen datos con fines estadísticos o de mejora, se comunicará y se ofrecerá la opción de rechazarlas.',
       preferences: 'Preferencias',
       preferencesCopy: 'El almacenamiento técnico está siempre activo porque es necesario para la navegación y el funcionamiento básico de la web. Las cookies de análisis y personalización no están activas.',
       accept: 'Aceptar',
-      reject: 'Rechazar',
+      reject: 'Solo necesarias',
       configure: 'Configurar preferencias',
       save: 'Guardar preferencias',
       cookiesPolicy: 'Política de Cookies',
