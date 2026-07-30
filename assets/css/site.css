@@ -4562,6 +4562,24 @@ body.call-sheet-open {
   margin-top: 30px;
 }
 
+.arroyo-page .hero-facts {
+  right: clamp(130px, 12vw, 220px);
+  width: min(410px, 42vw);
+}
+
+.arroyo-page .hero-fact {
+  padding: 16px 12px;
+}
+
+.arroyo-page .hero-fact strong {
+  font-size: clamp(1.18rem, 1.55vw, 1.45rem);
+}
+
+.arroyo-page .hero-fact span {
+  font-size: 0.54rem;
+  letter-spacing: 0.065em;
+}
+
 @media (max-width: 760px) {
   .arroyo-page .hero {
     min-height: 560px;
