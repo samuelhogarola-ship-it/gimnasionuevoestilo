@@ -316,6 +316,113 @@
     window.addEventListener('resize', updateMobileActionContrast);
   }
 
+  const initCookieBanner = () => {
+    const storageKey = 'nuevoEstiloCookieConsent';
+    const readStoredChoice = () => {
+      try {
+        return window.localStorage?.getItem(storageKey);
+      } catch (error) {
+        return document.documentElement.dataset.cookieConsent;
+      }
+    };
+
+    if (readStoredChoice()) return;
+
+    const isEnglish = document.documentElement.lang?.toLowerCase().startsWith('en');
+    const labels = isEnglish ? {
+      title: 'No analytics cookies',
+      message: 'This site does not currently use analytics, advertising or personalisation cookies. It only uses what is technically necessary for the website to work and to remember this choice.',
+      preferences: 'Preferences',
+      preferencesCopy: 'Technical storage is always active because it is needed for navigation and basic site functions. Analytics and personalisation cookies are not active.',
+      accept: 'Accept',
+      reject: 'Reject',
+      configure: 'Configure preferences',
+      save: 'Save preferences',
+      cookiesPolicy: 'Cookie Policy',
+      privacyPolicy: 'Privacy Policy',
+      cookiesHref: '/en/legal/#cookies',
+      privacyHref: '/en/legal/#privacy',
+    } : {
+      title: 'Sin cookies de análisis',
+      message: 'Actualmente este sitio no utiliza cookies de análisis, publicidad ni personalización. Solo usa lo técnicamente necesario para que la web funcione y para recordar esta elección.',
+      preferences: 'Preferencias',
+      preferencesCopy: 'El almacenamiento técnico está siempre activo porque es necesario para la navegación y el funcionamiento básico de la web. Las cookies de análisis y personalización no están activas.',
+      accept: 'Aceptar',
+      reject: 'Rechazar',
+      configure: 'Configurar preferencias',
+      save: 'Guardar preferencias',
+      cookiesPolicy: 'Política de Cookies',
+      privacyPolicy: 'Política de Privacidad',
+      cookiesHref: '/legal/#cookies',
+      privacyHref: '/legal/#privacidad',
+    };
+
+    const banner = document.createElement('section');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('aria-label', labels.title);
+    banner.innerHTML = `
+      <picture class="cookie-banner-media">
+        <source type="image/webp" srcset="/assets/img/cookie-consent-galleta.webp">
+        <img src="/assets/img/cookie-consent-galleta.jpg" alt="" loading="lazy" width="575" height="693">
+      </picture>
+      <div class="cookie-banner-copy">
+        <h2>${labels.title}</h2>
+        <p>${labels.message}</p>
+        <div class="cookie-banner-links">
+          <a href="${labels.cookiesHref}">${labels.cookiesPolicy}</a>
+          <a href="${labels.privacyHref}">${labels.privacyPolicy}</a>
+        </div>
+        <div class="cookie-preferences" hidden>
+          <strong>${labels.preferences}</strong>
+          <p>${labels.preferencesCopy}</p>
+        </div>
+      </div>
+      <div class="cookie-banner-actions">
+        <button class="button button-primary" type="button" data-cookie-choice="accepted">${labels.accept}</button>
+        <button class="button button-outline" type="button" data-cookie-choice="rejected">${labels.reject}</button>
+        <button class="button button-outline" type="button" data-cookie-configure aria-expanded="false">${labels.configure}</button>
+      </div>
+    `;
+
+    const preferences = banner.querySelector('.cookie-preferences');
+    const configure = banner.querySelector('[data-cookie-configure]');
+    const storeChoice = (choice) => {
+      try {
+        window.localStorage.setItem(storageKey, JSON.stringify({
+          choice,
+          necessary: true,
+          analytics: false,
+          personalization: false,
+          savedAt: new Date().toISOString(),
+        }));
+      } catch (error) {
+        document.documentElement.dataset.cookieConsent = choice;
+      }
+      banner.classList.add('is-hiding');
+      window.setTimeout(() => banner.remove(), 180);
+    };
+
+    banner.querySelectorAll('[data-cookie-choice]').forEach((button) => {
+      button.addEventListener('click', () => storeChoice(button.dataset.cookieChoice || 'saved'));
+    });
+
+    configure?.addEventListener('click', () => {
+      const willShow = preferences?.hidden;
+      if (preferences) preferences.hidden = !willShow;
+      configure.setAttribute('aria-expanded', String(Boolean(willShow)));
+      if (willShow) {
+        configure.textContent = labels.save;
+        configure.dataset.cookieChoice = 'configured';
+      } else if (configure.dataset.cookieChoice === 'configured') {
+        storeChoice('configured');
+      }
+    });
+
+    document.body.appendChild(banner);
+  };
+
+  initCookieBanner();
+
   document.querySelectorAll('[data-gallery-toggle]').forEach((button) => {
     const panel = document.getElementById(button.getAttribute('aria-controls'));
     if (!panel) return;

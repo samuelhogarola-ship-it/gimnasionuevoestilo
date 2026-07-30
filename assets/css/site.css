@@ -3068,6 +3068,114 @@ body.call-sheet-open {
   overflow: hidden;
 }
 
+.cookie-banner {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 1450;
+  width: min(620px, calc(100vw - 36px));
+  display: grid;
+  grid-template-columns: 106px 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(135deg, rgba(183, 32, 70, 0.16), transparent 42%),
+    rgba(8, 8, 8, 0.96);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.42);
+  color: var(--white);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.cookie-banner.is-hiding {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+.cookie-banner-media {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--ink);
+}
+
+.cookie-banner-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.cookie-banner-copy h2 {
+  margin-bottom: 8px;
+  font-family: var(--display);
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.cookie-banner-copy p,
+.cookie-preferences p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.cookie-banner-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cookie-banner-links a {
+  color: var(--pink-bright);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.cookie-banner-links a:hover {
+  color: var(--white);
+}
+
+.cookie-preferences {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.cookie-preferences strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--white);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cookie-banner-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cookie-banner-actions .button {
+  min-height: 44px;
+  padding-inline: 16px;
+  font-size: 0.68rem;
+}
+
+.cookie-banner-actions .button-outline {
+  background: transparent;
+}
+
 .legal-hero,
 .error-page {
   min-height: 54vh;
@@ -3742,6 +3850,35 @@ body.call-sheet-open {
 
   .service-number {
     display: none;
+  }
+
+  .cookie-banner {
+    right: 12px;
+    bottom: calc(88px + env(safe-area-inset-bottom));
+    width: calc(100vw - 24px);
+    grid-template-columns: 74px 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .cookie-banner-copy h2 {
+    margin-bottom: 5px;
+    font-size: 1.55rem;
+  }
+
+  .cookie-banner-copy p,
+  .cookie-preferences p {
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .cookie-banner-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .cookie-banner-actions .button {
+    width: 100%;
   }
 
   .pricing-inner {

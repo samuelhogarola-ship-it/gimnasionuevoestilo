@@ -26,7 +26,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260729-pink-button-hover">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260730-cookie-banner">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,11 +47,13 @@
         "itemListElement": [
           {"@type": "Offer", "name": "Mensualidad", "price": "40", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"},
           {"@type": "Offer", "name": "Estudiantes y jubilados", "price": "35", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"},
+          {"@type": "Offer", "name": "Trimestre", "price": "100", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"},
+          {"@type": "Offer", "name": "Anual", "price": "350", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"},
+          {"@type": "Offer", "name": "1 día", "price": "5", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"},
           {"@type": "Offer", "name": "Bono 1 semana", "price": "25", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"},
           {"@type": "Offer", "name": "Bono 2 semanas", "price": "35", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"},
           {"@type": "Offer", "name": "Bono 10 entrenos", "price": "30", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"},
-          {"@type": "Offer", "name": "Chip de acceso", "price": "5", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"},
-          {"@type": "Offer", "name": "Trimestre", "price": "100", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"}
+          {"@type": "Offer", "name": "Chip de acceso", "price": "5", "priceCurrency": "EUR", "url": "https://gimnasionuevoestilo.com/servicios/"}
         ]
       },
       {
@@ -73,7 +75,7 @@
     ]
   }
   </script>
-  <script src="/assets/js/site.js?v=20260729-pink-button-hover" defer></script>
+  <script src="/assets/js/site.js?v=20260730-cookie-banner" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -169,6 +171,18 @@
             <a class="table-action" href="tel:+34952470044">Consultar acceso <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
           </article>
           <article class="price-card" data-reveal>
+            <span class="price-kicker">Año</span>
+            <h3>350€</h3>
+            <p>Opción para quienes quieren entrenar todo el año con continuidad.</p>
+            <a class="table-action" href="tel:+34952470044">Consultar acceso <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
+          </article>
+          <article class="price-card" data-reveal>
+            <span class="price-kicker">Entrada puntual</span>
+            <h3>1 día · 5€</h3>
+            <p>Entrada puntual para conocer el gimnasio o entrenar un día suelto.</p>
+            <a class="table-action" href="tel:+34952470044">Consultar entrada <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
+          </article>
+          <article class="price-card" data-reveal>
             <span class="price-kicker">Bono · 1 semana</span>
             <h3>25€</h3>
             <p>Acceso semanal para entrenar sin mensualidad completa.</p>
@@ -181,28 +195,16 @@
             <a class="table-action" href="tel:+34952470044">Consultar bono <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
           </article>
           <article class="price-card" data-reveal>
-            <span class="price-kicker">Chip de acceso</span>
-            <h3>5€</h3>
-            <p>Chip de acceso para entrada al gimnasio.</p>
-            <a class="table-action" href="tel:+34952470044">Consultar alta <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
-          </article>
-          <article class="price-card is-pending" data-reveal>
-            <span class="placeholder-status">Consultar</span>
-            <span class="price-kicker">Anual</span>
-            <h3>1 año</h3>
-            <p>Opción para quienes quieren entrenar todo el año con continuidad.</p>
-          </article>
-          <article class="price-card is-pending" data-reveal>
-            <span class="placeholder-status">Consultar</span>
-            <span class="price-kicker">Entrada puntual</span>
-            <h3>1 día</h3>
-            <p>Entrada puntual para conocer el gimnasio o entrenar un día suelto.</p>
-          </article>
-          <article class="price-card" data-reveal>
             <span class="price-kicker">Bono · 10 entrenos</span>
             <h3>30€</h3>
             <p>Formato pensado para entrenar por sesiones sin mensualidad completa.</p>
             <a class="table-action" href="tel:+34952470044">Consultar bono <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
+          </article>
+          <article class="price-card" data-reveal>
+            <span class="price-kicker">Chip de acceso</span>
+            <h3>5€</h3>
+            <p>Chip de acceso para entrada al gimnasio.</p>
+            <a class="table-action" href="tel:+34952470044">Consultar alta <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"></use></svg></a>
           </article>
         </div>
       </div>
