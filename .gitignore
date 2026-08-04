@@ -7,3 +7,7 @@ hero.jpg
 
 # macOS
 .DS_Store
+
+# Local tooling
+node_modules/
+.tools/

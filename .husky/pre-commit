@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+npm run security:setup
+npx lint-staged
+npm run secrets:scan:staged
+npm run check

@@ -1,0 +1,9 @@
+node_modules
+.tools
+assets/img
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.avif
+*.woff2
