@@ -3,3 +3,4 @@ Allow: /
 Disallow: /asisepodriavertuweb/
 
 Sitemap: https://gimnasionuevoestilo.com/sitemap.xml
+Sitemap: https://gimnasionuevoestilo.com/image-sitemap.xml
