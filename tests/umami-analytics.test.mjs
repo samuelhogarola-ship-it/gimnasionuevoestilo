@@ -6,6 +6,7 @@ import vm from "node:vm";
 
 const projectRoot = process.cwd();
 const bootstrapPath = path.join(projectRoot, "assets/js/umami-analytics.js");
+const personalHost = "https://analytics.187.124.55.36.sslip.io";
 
 function collectHtmlFiles(directory = projectRoot) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -78,4 +79,35 @@ test("fails closed without a website id", async () => {
   });
 
   assert.equal(tracker, null);
+});
+
+test("deployment CSP permits only the personal Umami host", () => {
+  const htaccess = readFileSync(path.join(projectRoot, ".htaccess"), "utf8");
+  const csp = htaccess.match(/Content-Security-Policy "([^"]+)"/)?.[1] ?? "";
+
+  assert.match(csp, new RegExp(`script-src[^;]*${personalHost}`));
+  assert.match(csp, new RegExp(`connect-src[^;]*${personalHost}`));
+});
+
+test("legal pages disclose the cookieless self-hosted analytics", () => {
+  for (const relativePath of ["legal/index.html", "en/legal/index.html"]) {
+    const legal = readFileSync(path.join(projectRoot, relativePath), "utf8");
+    assert.match(legal, /Umami/i);
+    assert.match(
+      legal,
+      /no utiliza(?: ni instala)? cookies|does not (?:use|set)(?: or (?:use|set))? cookies/i,
+    );
+  }
+});
+
+test("the normal project check runs the Umami regression test", () => {
+  const packageJson = JSON.parse(
+    readFileSync(path.join(projectRoot, "package.json"), "utf8"),
+  );
+
+  assert.equal(
+    packageJson.scripts["test:umami"],
+    "node --test tests/umami-analytics.test.mjs",
+  );
+  assert.match(packageJson.scripts.check, /test:umami/);
 });
