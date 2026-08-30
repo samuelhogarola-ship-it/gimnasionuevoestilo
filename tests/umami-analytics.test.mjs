@@ -72,13 +72,30 @@ test("loads personal Umami and covers every HTML entry", async () => {
   assert.equal(tracker.dataset.websiteId, "nuevo-estilo-test-id");
 });
 
-test("fails closed without a website id", async () => {
+test("versioned production config loads the real Gimnasio Nuevo Estilo website", async () => {
+  const config = JSON.parse(
+    readFileSync(path.join(projectRoot, "umami-config.json"), "utf8"),
+  );
+  const tracker = await runBootstrap(config);
+
+  assert.equal(config.hostUrl, personalHost);
+  assert.equal(config.websiteId, "0e7e29b4-169d-4d9a-97c3-6051087f405b");
+  assert.equal(tracker?.src, personalHost + "/script.js");
+  assert.equal(tracker?.dataset.websiteId, config.websiteId);
+});
+
+test("fails closed without a website id or with the wrong host", async () => {
   const tracker = await runBootstrap({
     hostUrl: "https://analytics.187.124.55.36.sslip.io",
     websiteId: "",
   });
+  const wrongHostTracker = await runBootstrap({
+    hostUrl: "https://analytics.2.24.10.239.sslip.io",
+    websiteId: "0e7e29b4-169d-4d9a-97c3-6051087f405b",
+  });
 
   assert.equal(tracker, null);
+  assert.equal(wrongHostTracker, null);
 });
 
 test("deployment CSP permits only the personal Umami host", () => {
