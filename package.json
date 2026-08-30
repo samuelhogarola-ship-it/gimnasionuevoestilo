@@ -5,9 +5,10 @@
   "type": "module",
   "description": "Static website checks and safety rails for Gimnasio Nuevo Estilo.",
   "scripts": {
-    "check": "npm run check:html && npm run check:protected-content",
+    "check": "npm run check:html && npm run check:protected-content && npm run test:umami",
     "check:html": "node scripts/check-html.mjs",
     "check:protected-content": "node scripts/check-protected-content.mjs",
+    "test:umami": "node --test tests/umami-analytics.test.mjs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",

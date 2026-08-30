@@ -1,4 +1,12 @@
 (() => {
+  if (!document.querySelector("script[data-nuevo-estilo-umami-bootstrap]")) {
+    const script = document.createElement("script");
+    script.defer = true;
+    script.dataset.nuevoEstiloUmamiBootstrap = "true";
+    script.src = "/assets/js/umami-analytics.js";
+    document.head.appendChild(script);
+  }
+
   const root = document.documentElement;
   const header = document.querySelector("[data-header]");
   const toggle = document.querySelector("[data-nav-toggle]");
