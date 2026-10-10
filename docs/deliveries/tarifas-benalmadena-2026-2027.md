@@ -21,7 +21,7 @@ La ficha no modifica los horarios, que permanecen como estaban publicados.
 
 Comprobaciones: HTML y contenido protegido correctos; seis pruebas de analítica superadas; datos JSON-LD válidos; tarifas contrastadas con la ficha original; vista de escritorio comprobada en Chromium sin desbordamiento horizontal.
 
-Fusionado: pendiente. Publicado: pendiente. Producción: https://gimnasionuevoestilo.com/arroyo/. PR: pendiente.
+Fusionado: 2026-10-10, PR #22 en `main`, commit `6bf2377`. Publicado: pendiente; producción continúa sirviendo la versión anterior y el repositorio no tiene un webhook de despliegue configurado. Producción: https://gimnasionuevoestilo.com/arroyo/. PR: https://github.com/samuelhogarola-ship-it/gimnasionuevoestilo/pull/22.
 
 Registro en WF-Studio: no aplica. El usuario ha indicado expresamente que esta actualización se limita a la web del gimnasio.
 
