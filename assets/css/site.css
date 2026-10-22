@@ -2227,6 +2227,36 @@ body.minibar-sheet-open {
   font-size: 1.02rem;
 }
 
+.pricing-hours-summary {
+  max-width: 780px;
+  margin: 30px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pricing-hours-summary div {
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.42);
+}
+
+.pricing-hours-summary dt {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pricing-hours-summary dd {
+  margin: 7px 0 0;
+  color: var(--white);
+  font-family: var(--display);
+  font-size: clamp(1.65rem, 2.4vw, 2.25rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .pricing-card {
   padding: 34px;
   background: var(--white);
@@ -2247,6 +2277,10 @@ body.minibar-sheet-open {
   margin-bottom: 25px;
   color: var(--muted-light);
   font-size: 0.79rem;
+}
+
+.pricing-card > strong + .check-list {
+  margin-top: 25px;
 }
 
 .check-list {
@@ -3970,6 +4004,24 @@ body.call-sheet-open {
   :root {
     --wrap: calc(100% - 32px);
     --header-height: 64px;
+  }
+
+  .pricing-hours-summary {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .pricing-hours-summary div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 13px 0;
+  }
+
+  .pricing-hours-summary dd {
+    margin-top: 0;
+    text-align: right;
   }
 
   .brand-main {
