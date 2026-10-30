@@ -6,6 +6,11 @@
   const WEBSITE_ID_PATTERN = /^[A-Za-z0-9_-]{8,128}$/;
   let ready = null;
 
+  const getLocation = () =>
+    /^\/(?:en\/)?arroyo(?:\/|$)/.test(window.location.pathname)
+      ? "arroyo"
+      : "fuengirola";
+
   const installTracker = (config) => {
     const existingTracker = document.querySelector(
       'script[data-umami-tracker="true"]',
@@ -13,8 +18,12 @@
     if (existingTracker) return existingTracker;
     if (!config || config.hostUrl !== PERSONAL_HOST) return null;
 
+    const location = getLocation();
+    const configuredWebsiteId = config.websiteIds
+      ? config.websiteIds[location]
+      : config.websiteId;
     const websiteId =
-      typeof config.websiteId === "string" ? config.websiteId.trim() : "";
+      typeof configuredWebsiteId === "string" ? configuredWebsiteId.trim() : "";
     if (!WEBSITE_ID_PATTERN.test(websiteId)) return null;
 
     const tracker = document.createElement("script");
@@ -22,6 +31,7 @@
     tracker.dataset.domains =
       "gimnasionuevoestilo.com,www.gimnasionuevoestilo.com";
     tracker.dataset.hostUrl = PERSONAL_HOST;
+    tracker.dataset.location = location;
     tracker.dataset.umamiTracker = "true";
     tracker.dataset.websiteId = websiteId;
     tracker.src = `${PERSONAL_HOST}/script.js`;

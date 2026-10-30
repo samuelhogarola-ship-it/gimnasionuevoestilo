@@ -1,4 +1,7 @@
 {
   "hostUrl": "https://analytics.187.124.55.36.sslip.io",
-  "websiteId": "0e7e29b4-169d-4d9a-97c3-6051087f405b"
+  "websiteIds": {
+    "fuengirola": "0e7e29b4-169d-4d9a-97c3-6051087f405b",
+    "arroyo": "c6b29624-2917-40e6-80d7-9c1dcc9550ec"
+  }
 }

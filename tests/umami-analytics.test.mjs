@@ -17,7 +17,7 @@ function collectHtmlFiles(directory = projectRoot) {
   });
 }
 
-async function runBootstrap(config) {
+async function runBootstrap(config, pathname = "/") {
   const source = readFileSync(bootstrapPath, "utf8");
   const appended = [];
   const document = {
@@ -33,7 +33,7 @@ async function runBootstrap(config) {
       return null;
     },
   };
-  const window = {};
+  const window = { location: { pathname } };
   const context = vm.createContext({
     console,
     document,
@@ -76,12 +76,28 @@ test("versioned production config loads the real Gimnasio Nuevo Estilo website",
   const config = JSON.parse(
     readFileSync(path.join(projectRoot, "umami-config.json"), "utf8"),
   );
-  const tracker = await runBootstrap(config);
+  const fuengirolaTracker = await runBootstrap(config, "/servicios/");
+  const arroyoTracker = await runBootstrap(config, "/arroyo/");
+  const englishArroyoTracker = await runBootstrap(config, "/en/arroyo/");
 
   assert.equal(config.hostUrl, personalHost);
-  assert.equal(config.websiteId, "0e7e29b4-169d-4d9a-97c3-6051087f405b");
-  assert.equal(tracker?.src, personalHost + "/script.js");
-  assert.equal(tracker?.dataset.websiteId, config.websiteId);
+  assert.deepEqual(config.websiteIds, {
+    fuengirola: "0e7e29b4-169d-4d9a-97c3-6051087f405b",
+    arroyo: "c6b29624-2917-40e6-80d7-9c1dcc9550ec",
+  });
+  assert.equal(fuengirolaTracker?.src, personalHost + "/script.js");
+  assert.equal(
+    fuengirolaTracker?.dataset.websiteId,
+    config.websiteIds.fuengirola,
+  );
+  assert.equal(fuengirolaTracker?.dataset.location, "fuengirola");
+  assert.equal(arroyoTracker?.dataset.websiteId, config.websiteIds.arroyo);
+  assert.equal(arroyoTracker?.dataset.location, "arroyo");
+  assert.equal(
+    englishArroyoTracker?.dataset.websiteId,
+    config.websiteIds.arroyo,
+  );
+  assert.equal(englishArroyoTracker?.dataset.location, "arroyo");
 });
 
 test("fails closed without a website id or with the wrong host", async () => {
@@ -96,6 +112,19 @@ test("fails closed without a website id or with the wrong host", async () => {
 
   assert.equal(tracker, null);
   assert.equal(wrongHostTracker, null);
+});
+
+test("does not fall back to the legacy id when one location id is missing", async () => {
+  const tracker = await runBootstrap(
+    {
+      hostUrl: personalHost,
+      websiteId: "legacy-combined-id",
+      websiteIds: { fuengirola: "fuengirola-id" },
+    },
+    "/arroyo/",
+  );
+
+  assert.equal(tracker, null);
 });
 
 test("deployment CSP permits only the personal Umami host", () => {
